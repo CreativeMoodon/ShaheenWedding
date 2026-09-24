@@ -1016,7 +1016,59 @@
       color: #fff;
 
     }
+.hero-countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 520px;
+  margin: 30px auto 0;
+}
 
+.hero-countdown div {
+  padding: 12px 8px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(0,0,0,.15);
+  backdrop-filter: blur(5px);
+}
+
+.hero-countdown strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.hero-countdown span {
+  display: block;
+  margin-top: 6px;
+  font-size: .55rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #f9e5ba;
+}
+
+@media (max-width: 520px) {
+
+  .hero-countdown {
+    gap: 5px;
+    max-width: 350px;
+    margin-top: 22px;
+  }
+
+  .hero-countdown div {
+    padding: 10px 4px;
+  }
+
+  .hero-countdown strong {
+    font-size: 1.7rem;
+  }
+
+  .hero-countdown span {
+    font-size: .45rem;
+  }
+
+}
 
     /* =====================================================
        INTRO
@@ -2292,7 +2344,29 @@
       </div>
 
     </section>
+<div class="hero-countdown">
 
+  <div>
+    <strong id="heroDays">00</strong>
+    <span>Days</span>
+  </div>
+
+  <div>
+    <strong id="heroHours">00</strong>
+    <span>Hours</span>
+  </div>
+
+  <div>
+    <strong id="heroMinutes">00</strong>
+    <span>Minutes</span>
+  </div>
+
+  <div>
+    <strong id="heroSeconds">00</strong>
+    <span>Seconds</span>
+  </div>
+
+</div>
 
     <!-- INTRO -->
 
@@ -3112,7 +3186,82 @@
           );
 
         }
+/* =================================================
+   HERO COUNTDOWN
+================================================= */
 
+const weddingDate = new Date(
+  "November 22, 2026 18:00:00"
+).getTime();
+
+const heroDays = document.getElementById("heroDays");
+const heroHours = document.getElementById("heroHours");
+const heroMinutes = document.getElementById("heroMinutes");
+const heroSeconds = document.getElementById("heroSeconds");
+
+function updateHeroCountdown() {
+
+  if (
+    !heroDays ||
+    !heroHours ||
+    !heroMinutes ||
+    !heroSeconds
+  ) {
+    return;
+  }
+
+  const now = Date.now();
+
+  const distance = weddingDate - now;
+
+  if (distance <= 0) {
+
+    heroDays.textContent = "00";
+    heroHours.textContent = "00";
+    heroMinutes.textContent = "00";
+    heroSeconds.textContent = "00";
+
+    return;
+  }
+
+  const days = Math.floor(
+    distance / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) /
+    1000
+  );
+
+  heroDays.textContent =
+    String(days).padStart(2, "0");
+
+  heroHours.textContent =
+    String(hours).padStart(2, "0");
+
+  heroMinutes.textContent =
+    String(minutes).padStart(2, "0");
+
+  heroSeconds.textContent =
+    String(seconds).padStart(2, "0");
+}
+
+updateHeroCountdown();
+
+setInterval(
+  updateHeroCountdown,
+  1000
+);
 
         /* =================================================
            GALLERY LIGHTBOX
