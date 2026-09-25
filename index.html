@@ -30,6 +30,216 @@
 
 <style>
 
+    /* =====================================================
+FINAL WEDDING SECTION
+===================================================== */
+
+.final {
+padding: 110px 20px 100px;
+text-align: center;
+background:
+radial-gradient(
+circle at center,
+rgba(178,138,69,.08) 0%,
+transparent 55%
+),
+var(--cream);
+position: relative;
+overflow: hidden;
+}
+
+/* Subtle decorative lines */
+.final::before,
+.final::after {
+content: "";
+position: absolute;
+left: 50%;
+width: 120px;
+height: 1px;
+background: linear-gradient(
+to right,
+transparent,
+var(--gold),
+transparent
+);
+transform: translateX(-50%);
+}
+
+.final::before {
+top: 55px;
+}
+
+.final::after {
+bottom: 55px;
+}
+
+/* TOP TEXT */
+
+.final-eyebrow {
+margin: 0;
+font-family: var(--script);
+font-size: clamp(1.8rem, 4vw, 2.6rem);
+line-height: 1.2;
+color: var(--gold-dark);
+}
+
+/* DECORATIVE SYMBOL */
+
+.final-divider {
+margin: 20px 0 18px;
+color: var(--gold);
+font-family: var(--serif);
+font-size: 1.15rem;
+letter-spacing: .35em;
+}
+
+/* DATE */
+
+.final-date {
+margin: 0;
+font-family: var(--sans);
+font-size: .78rem;
+font-weight: 600;
+letter-spacing: .28em;
+color: var(--ink);
+}
+
+/* LOCATION */
+
+.final-location {
+margin: 10px 0 0;
+font-family: var(--serif);
+font-size: 1rem;
+font-style: italic;
+letter-spacing: .04em;
+color: var(--muted);
+}
+
+/* COUPLE NAMES */
+
+.final h2 {
+margin: 35px 0 18px;
+font-family: var(--serif);
+font-size: clamp(2.7rem, 6vw, 4.6rem);
+font-weight: 500;
+line-height: 1.05;
+letter-spacing: -.02em;
+color: var(--ink);
+}
+
+.final h2 span {
+color: var(--gold);
+font-weight: 400;
+padding: 0 8px;
+}
+
+/* MESSAGE */
+
+.final-message {
+max-width: 430px;
+margin: 0 auto;
+font-family: var(--serif);
+font-size: 1.25rem;
+line-height: 1.7;
+color: var(--muted);
+}
+
+/* BACK TO TOP */
+
+.back-top {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+
+margin-top: 38px;
+padding: 12px 24px;
+
+border: 1px solid rgba(178,138,69,.45);
+border-radius: 50px;
+
+font-family: var(--sans);
+font-size: .72rem;
+font-weight: 600;
+letter-spacing: .12em;
+text-transform: uppercase;
+
+color: var(--gold-dark);
+text-decoration: none;
+
+background: rgba(255,250,242,.55);
+
+transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+
+
+}
+
+.back-top:hover {
+background: var(--gold);
+color: #fff;
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(47,41,36,.15);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+```
+.final {
+    padding: 85px 20px 80px;
+}
+
+.final::before {
+    top: 35px;
+}
+
+.final::after {
+    bottom: 35px;
+}
+
+.final-eyebrow {
+    font-size: 2rem;
+}
+
+.final-date {
+    font-size: .68rem;
+    letter-spacing: .2em;
+}
+
+.final-location {
+    font-size: .95rem;
+}
+
+.final h2 {
+    margin-top: 30px;
+    font-size: clamp(2.4rem, 11vw, 3.3rem);
+    line-height: 1.1;
+}
+
+.final h2 span {
+    padding: 0 4px;
+}
+
+.final-message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.back-top {
+    margin-top: 30px;
+    padding: 11px 20px;
+    font-size: .65rem;
+}
+
+
+}
+
+
 /* =====================================================
    VARIABLES
 ===================================================== */
@@ -3837,44 +4047,42 @@ footer p {
 </section>
 
 
-<!-- =====================================================
-     FINAL
-===================================================== -->
-
 <section class="final section">
 
 
-    <div class="container narrow reveal">
+<div class="container narrow reveal">
 
+    <p class="final-eyebrow">
+        With love &amp; prayers
+    </p>
 
-        <p class="eyebrow">
-            With love & prayers<br><br> 22 NOVEMBER 2026 <br><br> Andaman and Nicobar Islands
+    <div class="final-divider">✦</div>
 
-        </p>
+    <p class="final-date">
+        22 NOVEMBER 2026
+    </p>
 
+    <p class="final-location">
+        Andaman and Nicobar Islands
+    </p>
 
-        <h2>
-            Dr.Shaheen & Darwesh
-        </h2>
+    <h2>
+        Dr. Shaheen <span>&amp;</span> Darwesh
+    </h2>
 
+    <p class="final-message">
+        We can't wait to celebrate this beautiful day with you.
+    </p>
 
-        <p>
-            We can't wait to celebrate with you.
-        </p>
+    <a href="#top" class="back-top">
+        ↑ &nbsp; Back to top
+    </a>
 
-
-        <a
-            href="#top"
-            class="back-top"
-        >
-            ↑ Back to top
-        </a>
-
-
-    </div>
+</div>
 
 
 </section>
+
 
 
 </main>
