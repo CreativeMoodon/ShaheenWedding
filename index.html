@@ -435,9 +435,6 @@ p {
 
 #letterIntro::after {
 
-    content:
-        "✦   ✧   ☾   ✧   ✦";
-
     position: absolute;
 
     top: 34px;
@@ -773,9 +770,6 @@ p {
 
 .envelope-letter::after {
 
-    content:
-        "✦";
-
     position:
         absolute;
 
@@ -1023,136 +1017,6 @@ p {
 }
 
 
-/* =====================================================
-   GOLD FLAP BORDER
-===================================================== */
-
-.envelope-flap::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        12px;
-
-    left:
-        4%;
-
-    width:
-        92%;
-
-    height:
-        88%;
-
-    border-top:
-        1px solid
-        rgba(239,210,147,.85);
-
-    clip-path:
-        polygon(
-            0 0,
-            100% 0,
-            50% 95%
-        );
-
-    opacity:
-        .9;
-}
-
-
-/* =====================================================
-   CRESCENT + STAR
-===================================================== */
-
-.envelope-flap::before {
-
-    content:
-        "☾  ✦";
-
-    position:
-        absolute;
-
-    top:
-        23px;
-
-    left:
-        50%;
-
-    transform:
-        translateX(-50%)
-        rotate(-7deg);
-
-    color:
-        #e6c47d;
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        25px;
-
-    letter-spacing:
-        .12em;
-
-    text-shadow:
-        0 2px 4px
-        rgba(0,0,0,.3);
-}
-
-
-/* =====================================================
-   GOLD CORNER ORNAMENTS
-===================================================== */
-
-.envelope::before,
-.envelope::after {
-
-    content:
-        "✦";
-
-    position:
-        absolute;
-
-    z-index:
-        12;
-
-    color:
-        #e1bd72;
-
-    font-size:
-        19px;
-
-    text-shadow:
-        0 2px 4px
-        rgba(0,0,0,.35);
-
-    pointer-events:
-        none;
-}
-
-
-.envelope::before {
-
-    top:
-        17px;
-
-    left:
-        20px;
-}
-
-
-.envelope::after {
-
-    top:
-        17px;
-
-    right:
-        20px;
-}
 
 
 /* =====================================================
