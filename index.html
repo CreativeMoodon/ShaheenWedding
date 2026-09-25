@@ -1,1355 +1,981 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Wedding invitation for Dr.Shaheen Salamat & Darwesh Tasleem"
-  >
+<meta
+name="description"
+content="Wedding invitation for Dr. Shaheen Salamat & Darwesh Tasleem"
 
-  <title>
-    Shaheen & Darwesh | Wedding Invitation
-  </title>
+>
 
+<title>Shaheen & Darwesh | Wedding Invitation</title>
 
-  <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+rel="stylesheet"
+>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
-    rel="stylesheet"
-  >
+<style>
 
+/* =====================================================
+   VARIABLES
+===================================================== */
 
-  <style>
+:root {
 
-    /* =====================================================
-       VARIABLES
-    ===================================================== */
+    --cream: #f8f2e8;
+    --paper: #fffaf2;
+    --ink: #2f2924;
+    --muted: #786f66;
+    --gold: #b28a45;
+    --gold-dark: #87682f;
+    --line: rgba(47,41,36,.15);
 
-    :root {
+    --shadow:
+        0 20px 60px rgba(47,41,36,.10);
 
-      --cream: #f8f2e8;
-
-      --paper: #fffaf2;
-
-      --ink: #2f2924;
-
-      --muted: #786f66;
-
-      --gold: #b28a45;
-
-      --gold-dark: #87682f;
-
-      --line: rgba(47, 41, 36, .15);
-
-      --shadow:
-        0 20px 60px rgba(47, 41, 36, .10);
-
-      --serif:
+    --serif:
         "Cormorant Garamond",
         Georgia,
         serif;
 
-      --script:
+    --script:
         "Parisienne",
         cursive;
 
-      --sans:
+    --sans:
         "Montserrat",
         Arial,
         sans-serif;
-
-    }
-
-
-    /* =====================================================
-       RESET
-    ===================================================== */
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-
-    body {
-
-      margin: 0;
-
-      background: var(--cream);
-
-      color: var(--ink);
-
-      font-family: var(--sans);
-
-      line-height: 1.7;
-
-    }
-
-
-    body.locked {
-      overflow: hidden;
-    }
-
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
-
-
-    button {
-      cursor: pointer;
-    }
-
-
-    img {
-      max-width: 100%;
-    }
-
-
-    /* =====================================================
-       GENERAL
-    ===================================================== */
-
-    .container {
-
-      width:
-        min(
-          1120px,
-          calc(100% - 40px)
-        );
-
-      margin: auto;
-
-    }
-
-
-    .narrow {
-
-      width:
-        min(
-          760px,
-          calc(100% - 40px)
-        );
-
-      text-align: center;
-
-    }
-
-
-    .section {
-
-      padding: 100px 0;
-
-      position: relative;
-
-    }
-
-
-    .eyebrow {
-
-      margin: 0 0 10px;
-
-      color: var(--gold-dark);
-
-      letter-spacing: .22em;
-
-      font-size: .72rem;
-
-      font-weight: 600;
-
-      text-transform: uppercase;
-
-    }
-
-
-    h1,
-    h2,
-    h3 {
-
-      font-family: var(--serif);
-
-      font-weight: 500;
-
-      line-height: 1.05;
-
-    }
-
-
-    h2 {
-
-      font-size:
-        clamp(
-          2.5rem,
-          5vw,
-          4.5rem
-        );
-
-      margin: 0 0 18px;
-
-    }
-
-
-    p {
-      margin-top: 0;
-    }
-
-
-    .muted {
-      color: var(--muted);
-    }
-
-
-    /* =====================================================
-       ENVELOPE OPENING
-    ===================================================== */
-
-    #letterIntro {
-
-      position: fixed;
-
-      inset: 0;
-
-      width: 100%;
-
-      height: 100%;
-
-      z-index: 99999;
-
-      overflow: hidden;
-
-      background:
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.7;
+}
+
+body.locked {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: auto;
+}
+
+.narrow {
+    width: min(760px, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--gold-dark);
+    letter-spacing: .22em;
+    font-size: .72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: clamp(2.5rem,5vw,4.5rem);
+    margin: 0 0 18px;
+}
+
+p {
+    margin-top: 0;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   ENVELOPE INTRO
+===================================================== */
+
+#letterIntro {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(30,20,12,.12),
+            rgba(30,20,12,.20)
+        ),
         url("envelope-background2.jpeg")
-        center center /
-        cover
-        no-repeat;
+        center center / cover no-repeat;
 
-      display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      align-items: center;
+    opacity: 1;
+    visibility: visible;
 
-      justify-content: center;
-
-      opacity: 1;
-
-      visibility: visible;
-
-      transition:
+    transition:
         opacity 1s ease,
         visibility 1s ease;
+}
 
-    }
+#letterIntro.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
+.envelope-container {
+    position: relative;
+    width: min(82vw,650px);
+    aspect-ratio: 1.5 / 1;
+    perspective: 1200px;
 
-    #letterIntro.hidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-      opacity: 0;
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
 
-      visibility: hidden;
-
-      pointer-events: none;
-
-    }
-
-
-    .envelope-container {
-
-      position: relative;
-
-      width:
-        min(
-          82vw,
-          650px
-        );
-
-      aspect-ratio: 1.5 / 1;
-
-      perspective: 1200px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-    }
-
-
-    .envelope {
-
-      position: relative;
-
-      width: 100%;
-
-      height: 100%;
-
-      transform-style: preserve-3d;
-
-      filter:
+    filter:
         drop-shadow(
-          0 25px 35px
-          rgba(0,0,0,.20)
+            0 25px 35px rgba(0,0,0,.20)
         );
+}
 
-    }
+.envelope-base {
+    position: absolute;
+    inset: 0;
 
-
-    .envelope-base {
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
+    background:
         linear-gradient(
-          145deg,
-          #fffdf8,
-          #eee3d2
+            145deg,
+            #fffdf8,
+            #eee3d2
         );
 
-      border-radius: 4px;
+    border-radius: 4px;
 
-      box-shadow:
+    box-shadow:
         inset 0 0 0 1px
         rgba(120,90,45,.25);
 
-      overflow: hidden;
+    overflow: hidden;
+}
 
-    }
+.envelope-base::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-
-    .envelope-base::before {
-
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
+    background:
         linear-gradient(
-          135deg,
-          transparent 49.5%,
-          rgba(150,120,70,.18) 50%,
-          transparent 50.5%
+            135deg,
+            transparent 49.5%,
+            rgba(150,120,70,.18) 50%,
+            transparent 50.5%
         ),
         linear-gradient(
-          225deg,
-          transparent 49.5%,
-          rgba(150,120,70,.18) 50%,
-          transparent 50.5%
+            225deg,
+            transparent 49.5%,
+            rgba(150,120,70,.18) 50%,
+            transparent 50.5%
         );
+}
 
-    }
+.envelope-flap {
+    position: absolute;
 
+    left: 0;
+    top: 0;
 
-    .envelope-flap {
+    width: 100%;
+    height: 58%;
 
-      position: absolute;
-
-      left: 0;
-
-      top: 0;
-
-      width: 100%;
-
-      height: 58%;
-
-      background:
+    background:
         linear-gradient(
-          145deg,
-          #fdfaf3,
-          #e8dbc8
+            145deg,
+            #fdfaf3,
+            #e8dbc8
         );
 
-      clip-path:
+    clip-path:
         polygon(
-          0 0,
-          100% 0,
-          50% 100%
+            0 0,
+            100% 0,
+            50% 100%
         );
 
-      transform-origin: top center;
+    transform-origin: top center;
+    transform: rotateX(0deg);
 
-      transform:
-        rotateX(0deg);
-
-      transition:
-        transform
-        1.1s
+    transition:
+        transform 1.1s
         cubic-bezier(.65,.05,.36,1);
 
-      z-index: 5;
+    z-index: 5;
 
-      backface-visibility: hidden;
+    backface-visibility: hidden;
 
-      box-shadow:
-        0 2px 5px
-        rgba(0,0,0,.12);
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.12);
+}
 
-    }
+.envelope-letter {
+    position: absolute;
 
+    left: 8%;
+    right: 8%;
+    bottom: 7%;
 
-    .envelope-letter {
+    height: 80%;
 
-      position: absolute;
-
-      left: 8%;
-
-      right: 8%;
-
-      bottom: 7%;
-
-      height: 80%;
-
-      background:
+    background:
         linear-gradient(
-          #fffdf9,
-          #f8f0e3
+            #fffdf9,
+            #f8f0e3
         );
 
-      border:
+    border:
         1px solid
         rgba(130,100,55,.18);
 
-      z-index: 2;
+    z-index: 2;
 
-      transform:
-        translateY(0);
+    transform: translateY(0);
 
-      transition:
+    transition:
         transform 1s
         cubic-bezier(.65,.05,.36,1);
 
-      display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      align-items: center;
+    text-align: center;
 
-      justify-content: center;
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.08);
+}
 
-      text-align: center;
+.letter-content {
+    padding: 20px;
+}
 
-      box-shadow:
-        0 5px 15px
-        rgba(0,0,0,.08);
+.letter-content .small {
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: var(--gold-dark);
+}
 
-    }
+.letter-content h2 {
+    margin: 10px 0;
 
+    font-family: var(--script);
+    font-size: clamp(2rem,6vw,4rem);
 
-    .letter-content {
+    color: var(--gold-dark);
+    font-weight: 400;
+}
 
-      padding: 20px;
+.letter-content p {
+    margin: 0;
 
-    }
+    font-family: var(--serif);
+    font-size: 1rem;
+    letter-spacing: .08em;
+}
 
+.envelope-bottom {
+    position: absolute;
+    inset: 0;
 
-    .letter-content .small {
-
-      font-size: .65rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: .25em;
-
-      color: var(--gold-dark);
-
-    }
-
-
-    .letter-content h2 {
-
-      margin: 10px 0;
-
-      font-family: var(--script);
-
-      font-size:
-        clamp(
-          2rem,
-          6vw,
-          4rem
-        );
-
-      color: var(--gold-dark);
-
-      font-weight: 400;
-
-    }
-
-
-    .letter-content p {
-
-      margin: 0;
-
-      font-family: var(--serif);
-
-      font-size: 1rem;
-
-      letter-spacing: .08em;
-
-    }
-
-
-    .envelope-bottom {
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
+    background:
         linear-gradient(
-          145deg,
-          #f4eadc,
-          #e6d8c5
+            145deg,
+            #f4eadc,
+            #e6d8c5
         );
 
-      clip-path:
+    clip-path:
         polygon(
-          0 0,
-          50% 55%,
-          100% 0,
-          100% 100%,
-          0 100%
+            0 0,
+            50% 55%,
+            100% 0,
+            100% 100%,
+            0 100%
         );
 
-      z-index: 4;
+    z-index: 4;
+    pointer-events: none;
+}
 
-      pointer-events: none;
+.seal {
+    position: absolute;
 
-    }
+    left: 50%;
+    top: 54%;
 
+    transform:
+        translate(-50%,-50%);
 
-    .seal {
+    width: clamp(58px,9vw,82px);
+    height: clamp(58px,9vw,82px);
 
-      position: absolute;
+    border-radius: 50%;
 
-      left: 50%;
-
-      top: 54%;
-
-      transform:
-        translate(
-          -50%,
-          -50%
-        );
-
-      width:
-        clamp(
-          58px,
-          9vw,
-          82px
-        );
-
-      height:
-        clamp(
-          58px,
-          9vw,
-          82px
-        );
-
-      border-radius: 50%;
-
-      border:
+    border:
         2px solid
         rgba(255,255,255,.6);
 
-      background:
+    background:
         radial-gradient(
-          circle at 35% 30%,
-          #d7b16a,
-          #a57b38
+            circle at 35% 30%,
+            #d7b16a,
+            #a57b38
         );
 
-      color: #fff;
+    color: #fff;
 
-      display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      align-items: center;
+    font-family: var(--serif);
+    font-size: 1.2rem;
 
-      justify-content: center;
-
-      font-family: var(--serif);
-
-      font-size: 1.2rem;
-
-      box-shadow:
+    box-shadow:
         0 8px 18px
         rgba(70,45,15,.28);
 
-      z-index: 10;
+    z-index: 10;
 
-      transition:
+    transition:
         transform .25s ease,
         opacity .4s ease;
+}
 
-    }
-
-
-    .seal:hover {
-
-      transform:
-        translate(
-          -50%,
-          -50%
-        )
+.seal:hover {
+    transform:
+        translate(-50%,-50%)
         scale(1.08);
+}
 
-    }
+.seal span {
+    display: block;
+    transform: rotate(-8deg);
+}
 
+.envelope.open .envelope-flap {
+    transform: rotateX(-180deg);
+}
 
-    .seal span {
+.envelope.open .envelope-letter {
+    transform: translateY(-42%);
+    z-index: 6;
+}
 
-      display: block;
+.envelope.open .seal {
+    opacity: 0;
+    pointer-events: none;
+}
 
-      transform:
-        rotate(-8deg);
+.letter-instruction {
+    position: absolute;
 
-    }
+    bottom: -55px;
+    left: 50%;
 
+    transform: translateX(-50%);
 
-    .envelope.open
-    .envelope-flap {
+    color: #fff;
 
-      transform:
-        rotateX(-180deg);
+    font-size: .7rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
 
-    }
+    white-space: nowrap;
 
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.35);
 
-    .envelope.open
-    .envelope-letter {
+    transition: opacity .3s ease;
+}
 
-      transform:
-        translateY(-42%);
-
-      z-index: 6;
-
-    }
-
-
-    .envelope.open
-    .seal {
-
-      opacity: 0;
-
-      pointer-events: none;
-
-    }
-
-
-    .letter-instruction {
-
-      position: absolute;
-
-      bottom:
-        -55px;
-
-      left: 50%;
-
-      transform:
-        translateX(-50%);
-
-      color: #fff;
-
-      font-size: .7rem;
-
-      letter-spacing: .18em;
-
-      text-transform: uppercase;
-
-      white-space: nowrap;
-
-      text-shadow:
-        0 2px 5px
-        rgba(0,0,0,.35);
-
-      transition:
-        opacity .3s ease;
-
-    }
+.envelope.open ~ .letter-instruction {
+    opacity: 0;
+}
 
 
-    .envelope.open
-    ~ .letter-instruction {
+/* =====================================================
+   HEADER
+===================================================== */
 
-      opacity: 0;
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
-    }
+    z-index: 100;
 
+    background:
+        rgba(248,242,232,.86);
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
+    backdrop-filter: blur(12px);
 
-    .site-header {
-
-      position: fixed;
-
-      top: 0;
-      left: 0;
-      right: 0;
-
-      z-index: 100;
-
-      background:
-        rgba(
-          248,
-          242,
-          232,
-          .86
-        );
-
-      backdrop-filter:
-        blur(12px);
-
-      border-bottom:
+    border-bottom:
         1px solid
-        rgba(
-          47,
-          41,
-          36,
-          .08
-        );
+        rgba(47,41,36,.08);
+}
 
-    }
+.nav {
+    width: min(1180px,calc(100% - 30px));
 
+    min-height: 70px;
 
-    .nav {
+    margin: auto;
 
-      width:
-        min(
-          1180px,
-          calc(100% - 30px)
-        );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-      min-height: 70px;
+    gap: 25px;
+}
 
-      margin: auto;
+.brand {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    color: var(--gold-dark);
+}
 
-      display: flex;
+.nav-links {
+    display: flex;
+    gap: 28px;
 
-      align-items: center;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
 
-      justify-content: space-between;
+.nav-links a:hover {
+    color: var(--gold-dark);
+}
 
-      gap: 25px;
-
-    }
-
-
-    .brand {
-
-      font-family: var(--serif);
-
-      font-size: 1.8rem;
-
-      color: var(--gold-dark);
-
-    }
-
-
-    .nav-links {
-
-      display: flex;
-
-      gap: 28px;
-
-      font-size: .75rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: .1em;
-
-    }
-
-
-    .nav-links a:hover {
-
-      color: var(--gold-dark);
-
-    }
-
-
-    .music-btn,
-    .menu-toggle {
-
-      border:
+.music-btn,
+.menu-toggle {
+    border:
         1px solid
         var(--line);
 
-      background: transparent;
+    background: transparent;
 
-      border-radius: 50%;
+    border-radius: 50%;
 
-      width: 40px;
+    width: 40px;
+    height: 40px;
 
-      height: 40px;
+    color: var(--gold-dark);
+}
 
-      color: var(--gold-dark);
+.music-btn.playing {
+    background: rgba(178,138,69,.12);
 
+    animation:
+        musicPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
     }
 
-
-    .menu-toggle {
-
-      display: none;
-
-      border-radius: 8px;
-
+    50% {
+        transform: scale(1.08);
     }
+}
+
+.menu-toggle {
+    display: none;
+    border-radius: 8px;
+}
 
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+/* =====================================================
+   HERO
+===================================================== */
 
-    .hero {
+.hero {
+    min-height: 100vh;
 
-      min-height: 100vh;
+    display: grid;
+    place-items: center;
 
-      display: grid;
+    text-align: center;
 
-      place-items: center;
+    color: #fff;
 
-      text-align: center;
-
-      color: #fff;
-
-      background:
+    background:
         linear-gradient(
-          rgba(35,25,18,.42),
-          rgba(35,25,18,.52)
+            rgba(35,25,18,.42),
+            rgba(35,25,18,.52)
         ),
-        url(
-          "envelope-background2.jpeg"
-        )
-        center / cover
-        no-repeat;
+        url("envelope-background2.jpeg")
+        center / cover no-repeat;
 
-    }
+    position: relative;
+}
 
+.hero-content {
+    position: relative;
+    z-index: 2;
 
-    .hero-content {
+    padding:
+        100px 20px 80px;
+}
 
-      position: relative;
+.hero .eyebrow {
+    color: #f9e5ba;
+}
 
-      z-index: 2;
+.bismillah {
+    margin: 18px auto 25px;
+}
 
-      padding-top: 50px;
+.bismillah-arabic {
+    font-family: Georgia,serif;
+    font-size: clamp(1.3rem,3vw,2rem);
+    line-height: 1.8;
+    color: #f9e5ba;
+}
 
-    }
+.bismillah-english {
+    max-width: 450px;
+    margin: 5px auto 0;
 
+    font-family: var(--serif);
+    font-size: .9rem;
+    font-style: italic;
 
-    .hero .eyebrow {
+    color: rgba(255,255,255,.82);
+}
 
-      color: #f9e5ba;
+.hero h3 {
+    margin: 15px 0;
 
-    }
+    font-family: var(--serif);
+    font-weight: 500;
 
+    font-size: clamp(3rem,8vw,6rem);
 
-    .hero h3 {
-  margin: 15px 0;
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1;
+    line-height: 1;
 }
 
 .hero h3 > span {
-  display: block;
+    display: block;
 }
 
 .hero h3 .parents {
-  display: block;
-  margin-top: 12px;
-  font-family: var(--sans);
-  font-size: clamp(.55rem, 1.2vw, .8rem);
-  font-weight: 400;
-  letter-spacing: .08em;
-  line-height: 1.5;
-  color: #f9e5ba;
+    display: block;
+
+    margin-top: 12px;
+
+    font-family: var(--sans);
+
+    font-size:
+        clamp(.55rem,1.2vw,.8rem);
+
+    font-weight: 400;
+
+    letter-spacing: .08em;
+
+    line-height: 1.5;
+
+    color: #f9e5ba;
 }
 
 .hero h3 .and {
-  display: block;
-  font-family: var(--script);
-  color: #e6c27d;
-  font-size: .55em;
-  line-height: 1;
-  margin: 8px 0;
+    display: block;
+
+    font-family: var(--script);
+
+    color: #e6c27d;
+
+    font-size: .55em;
+
+    line-height: 1;
+
+    margin: 8px 0;
 }
 
-    .hero-date {
+.hero-date {
+    letter-spacing: .18em;
+    text-transform: uppercase;
 
-      letter-spacing: .18em;
+    font-size: .75rem;
 
-      text-transform: uppercase;
+    margin-bottom: 30px;
+}
 
-      font-size: .75rem;
-
-      margin-bottom: 30px;
-
-    }
-
-
-    .scroll-hint {
-
-      position: absolute;
-
-      bottom: 25px;
-
-      left: 50%;
-
-      transform:
-        translateX(-50%);
-
-      font-size: .65rem;
-
-      letter-spacing: .15em;
-
-      text-transform: uppercase;
-
-      opacity: .85;
-
-    }
-
-
-    .scroll-hint span {
-
-      display: block;
-
-      font-size: 1.2rem;
-
-    }
-
-
-    /* =====================================================
-       BUTTONS
-    ===================================================== */
-
-    .gold-btn,
-    .outline-btn {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      min-height: 48px;
-
-      padding: 12px 25px;
-
-      border-radius: 2px;
-
-      border:
-        1px solid
-        var(--gold);
-
-      text-transform: uppercase;
-
-      letter-spacing: .1em;
-
-      font-size: .7rem;
-
-      transition: .25s ease;
-
-    }
-
-
-    .gold-btn {
-
-      background: var(--gold);
-
-      color: white;
-
-    }
-
-
-    .gold-btn:hover {
-
-      background: var(--gold-dark);
-
-      border-color:
-        var(--gold-dark);
-
-      transform:
-        translateY(-2px);
-
-    }
-
-
-    .outline-btn {
-
-      background: transparent;
-
-      color: var(--gold-dark);
-
-    }
-
-
-    .outline-btn:hover {
-
-      background: var(--gold);
-
-      color: #fff;
-
-    }
 .hero-countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  max-width: 520px;
-  margin: 30px auto 0;
+    position: absolute;
+
+    left: 50%;
+    bottom: 85px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 10px;
+
+    width: min(520px,calc(100% - 30px));
 }
 
 .hero-countdown div {
-  padding: 12px 8px;
-  border: 1px solid rgba(255,255,255,.35);
-  background: rgba(0,0,0,.15);
-  backdrop-filter: blur(5px);
+    padding: 12px 8px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    background:
+        rgba(0,0,0,.15);
+
+    backdrop-filter: blur(5px);
 }
 
 .hero-countdown strong {
-  display: block;
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 400;
-  line-height: 1;
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(1.8rem,4vw,3rem);
+
+    font-weight: 400;
+
+    line-height: 1;
 }
 
 .hero-countdown span {
-  display: block;
-  margin-top: 6px;
-  font-size: .55rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: #f9e5ba;
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: .55rem;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+    color: #f9e5ba;
 }
 
-@media (max-width: 520px) {
+.scroll-hint {
+    position: absolute;
 
-  .hero-countdown {
-    gap: 5px;
-    max-width: 350px;
-    margin-top: 22px;
-  }
+    bottom: 25px;
+    left: 50%;
 
-  .hero-countdown div {
-    padding: 10px 4px;
-  }
+    transform: translateX(-50%);
 
-  .hero-countdown strong {
-    font-size: 1.7rem;
-  }
+    font-size: .65rem;
 
-  .hero-countdown span {
-    font-size: .45rem;
-  }
+    letter-spacing: .15em;
 
+    text-transform: uppercase;
+
+    opacity: .85;
+
+    z-index: 3;
 }
 
-    /* =====================================================
-       INTRO
-    ===================================================== */
-
-    .intro {
-
-      background: var(--paper);
-
-    }
+.scroll-hint span {
+    display: block;
+    font-size: 1.2rem;
+}
 
 
-    .intro h2 {
+/* =====================================================
+   BUTTONS
+===================================================== */
 
-      font-size:
-        clamp(
-          2.5rem,
-          6vw,
-          4.8rem
-        );
+.gold-btn,
+.outline-btn {
+    display: inline-flex;
 
-    }
+    align-items: center;
+    justify-content: center;
 
+    min-height: 48px;
 
-    .intro p:not(.eyebrow) {
+    padding: 12px 25px;
 
-      color: var(--muted);
+    border-radius: 2px;
 
-      font-size: 1rem;
-
-    }
-
-
-    .floral-divider {
-
-      color: var(--gold);
-
-      letter-spacing: .5em;
-
-      margin-top: 25px;
-
-    }
-
-
-    /* =====================================================
-       SECTION HEADINGS
-    ===================================================== */
-
-    .section-heading {
-
-      text-align: center;
-
-      max-width: 700px;
-
-      margin:
-        0 auto 55px;
-
-    }
-
-
-    .section-heading p:last-child {
-
-      color: var(--muted);
-
-    }
-
-
-    /* =====================================================
-       COUNTDOWN
-    ===================================================== */
-
-    .countdown-section {
-
-      background: #332a23;
-
-      color: white;
-
-      text-align: center;
-
-    }
-
-
-    .countdown-section .eyebrow {
-
-      color: #d8b66e;
-
-    }
-
-
-    .countdown {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 15px;
-
-      margin-top: 40px;
-
-    }
-
-
-    .countdown div {
-
-      border:
+    border:
         1px solid
-        rgba(255,255,255,.2);
+        var(--gold);
 
-      padding: 25px 10px;
+    text-transform: uppercase;
 
-    }
+    letter-spacing: .1em;
 
+    font-size: .7rem;
 
-    .countdown strong {
+    transition: .25s ease;
+}
 
-      display: block;
+.gold-btn {
+    background: var(--gold);
+    color: white;
+}
 
-      font-family: var(--serif);
+.gold-btn:hover {
+    background: var(--gold-dark);
 
-      font-size:
-        clamp(
-          2.5rem,
-          6vw,
-          4.5rem
-        );
+    border-color:
+        var(--gold-dark);
 
-      font-weight: 400;
+    transform:
+        translateY(-2px);
+}
 
-    }
+.outline-btn {
+    background: transparent;
+    color: var(--gold-dark);
+}
 
-
-    .countdown span {
-
-      font-size: .65rem;
-
-      letter-spacing: .16em;
-
-      text-transform: uppercase;
-
-      color: #d8d0c8;
-
-    }
-
-
-    /* =====================================================
-       EVENTS
-    ===================================================== */
-
-    .events {
-
-      background: var(--cream);
-
-    }
+.outline-btn:hover {
+    background: var(--gold);
+    color: #fff;
+}
 
 
-    .event-grid {
+/* =====================================================
+   INTRO
+===================================================== */
 
-      display: grid;
+.intro {
+    background: var(--paper);
+}
 
-      grid-template-columns:
-        repeat(4, 1fr);
+.intro h2 {
+    font-size:
+        clamp(2.5rem,6vw,4.8rem);
+}
 
-      gap: 18px;
+.intro p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 1rem;
+}
 
-    }
+.floral-divider {
+    color: var(--gold);
+    letter-spacing: .5em;
+    margin-top: 25px;
+}
 
 
-    .event-card {
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
 
-      padding: 45px 22px;
+.section-heading {
+    text-align: center;
 
-      text-align: center;
+    max-width: 700px;
 
-      border:
+    margin:
+        0 auto 55px;
+}
+
+.section-heading p:last-child {
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+.events {
+    background: var(--cream);
+}
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 18px;
+}
+
+.event-card {
+    padding: 45px 22px;
+
+    text-align: center;
+
+    border:
         1px solid
         var(--line);
 
-      background: var(--paper);
+    background:
+        var(--paper);
 
-      transition:
+    transition:
         transform .3s ease,
         box-shadow .3s ease;
+}
 
-    }
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
 
+.event-card.featured {
+    border-color: var(--gold);
+}
 
-    .event-card:hover {
+.event-icon {
+    font-size: 2rem;
+    color: var(--gold);
+}
 
-      transform:
-        translateY(-5px);
+.event-label {
+    font-size: .62rem;
 
-      box-shadow:
-        var(--shadow);
+    letter-spacing: .15em;
 
-    }
+    color: var(--gold-dark);
+}
 
+.event-card h3 {
+    font-size: 2.2rem;
+    margin: 8px 0;
+}
 
-    .event-card.featured {
+.event-time {
+    font-weight: 600;
+}
 
-      border-color:
-        var(--gold);
+.event-card > p:not(.event-label):not(.event-time) {
+    color: var(--muted);
+    font-size: .85rem;
+}
 
-    }
+.event-card a {
+    color: var(--gold-dark);
 
+    font-size: .7rem;
 
-    .event-icon {
+    text-transform: uppercase;
 
-      font-size: 2rem;
+    letter-spacing: .1em;
 
-      color: var(--gold);
-
-    }
-
-
-    .event-label {
-
-      font-size: .62rem;
-
-      letter-spacing: .15em;
-
-      color: var(--gold-dark);
-
-    }
-
-
-    .event-card h3 {
-
-      font-size: 2.2rem;
-
-      margin: 8px 0;
-
-    }
-
-
-    .event-time {
-
-      font-weight: 600;
-
-    }
-
-
-    .event-card >
-    p:not(.event-label):not(.event-time) {
-
-      color: var(--muted);
-
-      font-size: .85rem;
-
-    }
-
-
-    .event-card a {
-
-      color: var(--gold-dark);
-
-      font-size: .7rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: .1em;
-
-      border-bottom:
+    border-bottom:
         1px solid
         var(--gold);
+}
 
-    }
-
-
-    .calendar-wrap {
-
-      text-align: center;
-
-      margin-top: 45px;
-
-    }
+.calendar-wrap {
+    text-align: center;
+    margin-top: 45px;
+}
 
 
-    /* ==========================================
-   PREMIUM OUR MEMORIES GALLERY
-========================================== */
+/* =====================================================
+   MEMORIES GALLERY
+===================================================== */
 
 .memories-section {
     position: relative;
@@ -1363,13 +989,10 @@
     overflow: hidden;
 }
 
-
-/* Heading */
-
 .memories-label {
     margin: 0 0 12px;
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 10px;
 
@@ -1378,13 +1001,16 @@
     color: #806b5c;
 }
 
-
 .memories-title {
     margin: 0 0 45px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-size: clamp(38px, 6vw, 58px);
+    font-size:
+        clamp(38px,6vw,58px);
 
     font-weight: normal;
 
@@ -1393,13 +1019,7 @@
     color: #40342d;
 }
 
-
-/* ==========================================
-   GALLERY
-========================================== */
-
 .premium-gallery {
-
     position: relative;
 
     width: 100%;
@@ -1415,17 +1035,12 @@
     justify-content: center;
 }
 
-
 .gallery-window {
-
     width: 100%;
-
     overflow: hidden;
 }
 
-
 .gallery-track {
-
     display: flex;
 
     align-items: center;
@@ -1445,30 +1060,24 @@
     padding: 10px 0 25px;
 }
 
-
 .gallery-track::-webkit-scrollbar {
     display: none;
 }
 
-
-/* ==========================================
-   PHOTO
-========================================== */
-
 .gallery-slide {
-
-    flex: 0 0 68%;
+    flex:
+        0 0 68%;
 
     scroll-snap-align: center;
 
     transition:
         transform .5s ease,
         opacity .5s ease;
+
+    cursor: pointer;
 }
 
-
 .gallery-slide img {
-
     display: block;
 
     width: 100%;
@@ -1480,20 +1089,15 @@
     border-radius: 2px;
 
     box-shadow:
-        0 18px 45px rgba(65, 45, 30, .18);
+        0 18px 45px
+        rgba(65,45,30,.18);
 
     user-select: none;
 
     -webkit-user-drag: none;
 }
 
-
-/* ==========================================
-   ARROWS
-========================================== */
-
 .gallery-arrow {
-
     position: absolute;
 
     top: 50%;
@@ -1503,25 +1107,23 @@
     z-index: 10;
 
     width: 48px;
-
     height: 48px;
 
-    border: 1px solid rgba(70,50,40,.25);
+    border:
+        1px solid
+        rgba(70,50,40,.25);
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.88);
+    background:
+        rgba(255,255,255,.88);
 
     color: #58473c;
 
     font-size: 18px;
 
-    cursor: pointer;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     transition:
@@ -1529,9 +1131,7 @@
         transform .3s ease;
 }
 
-
 .gallery-arrow:hover {
-
     background: #fff;
 
     transform:
@@ -1539,34 +1139,25 @@
         scale(1.08);
 }
 
-
 .gallery-prev {
     left: 2%;
 }
-
 
 .gallery-next {
     right: 2%;
 }
 
-
-/* ==========================================
-   COUNTER
-========================================== */
-
 .gallery-counter {
-
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 12px;
 
     margin-top: 12px;
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 10px;
 
@@ -1575,26 +1166,16 @@
     color: #806b5c;
 }
 
-
 .counter-line {
-
     width: 45px;
-
     height: 1px;
-
     background: #b8a89b;
 }
 
-
-/* ==========================================
-   SWIPE TEXT
-========================================== */
-
 .swipe-hint {
-
     margin-top: 18px;
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 9px;
 
@@ -1604,9 +1185,9 @@
 
     color: #a08d7e;
 
-    animation: swipePulse 2s ease-in-out infinite;
+    animation:
+        swipePulse 2s ease-in-out infinite;
 }
-
 
 @keyframes swipePulse {
 
@@ -1621,297 +1202,160 @@
 }
 
 
-/* ==========================================
-   DESKTOP
-========================================== */
+/* =====================================================
+   FINAL
+===================================================== */
 
-@media (min-width: 801px) {
+.final {
+    text-align: center;
+    background: var(--cream);
+}
 
-    .gallery-slide {
+.final h2 {
+    max-width: 750px;
+    margin: 0 auto 15px;
+}
 
-        flex-basis: 55%;
-    }
+.back-top {
+    display: inline-block;
 
-    .gallery-track {
+    margin-top: 25px;
 
-        gap: 35px;
-    }
+    color: var(--gold-dark);
 
+    font-size: .7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
 }
 
 
-/* ==========================================
-   TABLET
-========================================== */
+/* =====================================================
+   FOOTER
+===================================================== */
 
-@media (max-width: 800px) {
+footer {
+    background: #2e2721;
 
-    .memories-section {
+    color: #d7cfc7;
 
-        padding: 80px 15px;
-    }
+    text-align: center;
 
-    .gallery-slide {
+    padding: 25px;
 
-        flex-basis: 72%;
-    }
+    font-size: .65rem;
 
+    letter-spacing: .1em;
+}
+
+footer p {
+    margin: 0;
 }
 
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* =====================================================
+   LIGHTBOX
+===================================================== */
 
-@media (max-width: 600px) {
+.lightbox {
+    position: fixed;
 
-    .memories-section {
+    inset: 0;
 
-        padding: 70px 0 75px;
-    }
+    z-index: 99998;
 
-    .memories-label {
+    background:
+        rgba(20,16,12,.93);
 
-        font-size: 9px;
+    display: grid;
 
-        letter-spacing: 3px;
-    }
+    place-items: center;
 
-    .memories-title {
+    opacity: 0;
 
-        font-size: 36px;
+    visibility: hidden;
 
-        margin-bottom: 30px;
-    }
+    transition: .3s ease;
 
-    .gallery-window {
-
-        width: 100%;
-    }
-
-    .gallery-track {
-
-        gap: 14px;
-
-        padding-left: 14%;
-
-        padding-right: 14%;
-
-        scroll-padding-left: 14%;
-
-        scroll-padding-right: 14%;
-    }
-
-    .gallery-slide {
-
-        flex: 0 0 72%;
-    }
-
-    .gallery-slide img {
-
-        aspect-ratio: 4 / 5;
-
-        box-shadow:
-            0 12px 30px rgba(65,45,30,.18);
-    }
-
-    /* Hide arrows on phones */
-
-    .gallery-arrow {
-
-        display: none;
-    }
-
+    padding: 40px;
 }
-    /* =====================================================
-       FINAL
-    ===================================================== */
 
-    .final {
+.lightbox.open {
+    opacity: 1;
+    visibility: visible;
+}
 
-      text-align: center;
+.lightbox img {
+    max-width: 95vw;
+    max-height: 90vh;
 
-      background: var(--cream);
+    object-fit: contain;
 
-    }
+    border-radius: 2px;
+}
 
+.lightbox-close {
+    position: absolute;
 
-    .final h2 {
+    right: 25px;
+    top: 15px;
 
-      max-width: 750px;
+    background: transparent;
 
-      margin:
-        0 auto 15px;
+    border: 0;
 
-    }
+    color: white;
 
+    font-size: 3rem;
 
-    .back-top {
+    line-height: 1;
+}
 
-      display: inline-block;
 
-      margin-top: 25px;
+/* =====================================================
+   REVEAL
+===================================================== */
 
-      color: var(--gold-dark);
+.reveal {
+    opacity: 0;
 
-      font-size: .7rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: .12em;
-
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    footer {
-
-      background: #2e2721;
-
-      color: #d7cfc7;
-
-      text-align: center;
-
-      padding: 25px;
-
-      font-size: .65rem;
-
-      letter-spacing: .1em;
-
-    }
-
-
-    /* =====================================================
-       LIGHTBOX
-    ===================================================== */
-
-    .lightbox {
-
-      position: fixed;
-
-      inset: 0;
-
-      z-index: 9998;
-
-      background:
-        rgba(
-          20,
-          16,
-          12,
-          .93
-        );
-
-      display: grid;
-
-      place-items: center;
-
-      opacity: 0;
-
-      visibility: hidden;
-
-      transition: .3s ease;
-
-      padding: 40px;
-
-    }
-
-
-    .lightbox.open {
-
-      opacity: 1;
-
-      visibility: visible;
-
-    }
-
-
-    .lightbox img {
-
-      max-width: 95vw;
-
-      max-height: 90vh;
-
-      object-fit: contain;
-
-    }
-
-
-    .lightbox-close {
-
-      position: absolute;
-
-      right: 25px;
-
-      top: 15px;
-
-      background: transparent;
-
-      border: 0;
-
-      color: white;
-
-      font-size: 3rem;
-
-      line-height: 1;
-
-    }
-
-
-    /* =====================================================
-       REVEAL ANIMATION
-    ===================================================== */
-
-    .reveal {
-
-      opacity: 0;
-
-      transform:
+    transform:
         translateY(30px);
 
-      transition:
+    transition:
         opacity .8s ease,
         transform .8s ease;
+}
 
-    }
+.reveal.visible {
+    opacity: 1;
 
-
-    .reveal.visible {
-
-      opacity: 1;
-
-      transform:
+    transform:
         translateY(0);
+}
 
-    }
 
+/* =====================================================
+   TABLET
+===================================================== */
 
-    /* =====================================================
-       TABLET
-    ===================================================== */
+@media (max-width:1000px) {
 
-    @media (max-width: 1000px) {
-
-      .event-grid {
-
+    .event-grid {
         grid-template-columns:
-          repeat(2, 1fr);
-
-      }
-
+            repeat(2,1fr);
     }
+}
 
 
-    /* =====================================================
-       MOBILE
-    ===================================================== */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-    @media (max-width: 800px) {
+@media (max-width:800px) {
 
-      .nav-links {
-
+    .nav-links {
         display: none;
 
         position: absolute;
@@ -1919,7 +1363,6 @@
         top: 70px;
 
         left: 0;
-
         right: 0;
 
         background: var(--paper);
@@ -1931,1828 +1374,1632 @@
         text-align: center;
 
         border-bottom:
-          1px solid
-          var(--line);
+            1px solid
+            var(--line);
+    }
 
-      }
-
-
-      .nav-links.open {
-
+    .nav-links.open {
         display: flex;
+    }
 
-      }
-
-
-      .menu-toggle {
-
+    .menu-toggle {
         display: block;
+    }
 
-      }
+    .nav {
+        justify-content: space-between;
+    }
 
-
-      .nav {
-
-        justify-content:
-          space-between;
-
-      }
-
-
-      .music-btn {
-
+    .music-btn {
         order: 2;
+    }
 
-      }
-
-
-      .menu-toggle {
-
+    .menu-toggle {
         order: 3;
+    }
 
-      }
-
-
-      .brand {
-
+    .brand {
         order: 1;
+    }
 
-      }
+    .hero-content {
+        padding-top: 100px;
+        padding-bottom: 160px;
+    }
 
+    .hero-countdown {
+        bottom: 70px;
+    }
 
-      .venue-grid {
+    .gallery-arrow {
+        display: none;
+    }
 
-        grid-template-columns:
-          1fr;
+    .gallery-slide {
+        flex-basis: 72%;
+    }
 
-      }
+    .gallery-track {
+        gap: 14px;
 
+        padding-left: 14%;
+        padding-right: 14%;
 
-      .gallery-grid {
+        scroll-padding-left: 14%;
+        scroll-padding-right: 14%;
+    }
 
-        grid-template-columns:
-          1fr 1fr;
-
-        grid-auto-rows:
-          210px;
-
-      }
-
-
-      .gallery-item.tall {
-
-        grid-row: span 1;
-
-      }
-
-
-      .timeline-item {
-
-        grid-template-columns:
-          50px 1fr;
-
-        gap: 15px;
-
-      }
-
-
-      .timeline-dot {
-
-        width: 50px;
-
-        height: 50px;
-
-        font-size: .8rem;
-
-      }
-
-
-      .timeline-item:not(:last-child)::after {
-
-        left: 24px;
-
-        top: 50px;
-
-      }
-
-
-      .countdown {
-
-        gap: 8px;
-
-      }
-
-
-      .countdown div {
-
-        padding: 18px 5px;
-
-      }
-
-
-      .envelope-container {
-
+    .envelope-container {
         width: 88vw;
-
-      }
-
     }
+}
 
 
-    /* =====================================================
-       SMALL MOBILE
-    ===================================================== */
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
-    @media (max-width: 520px) {
+@media (max-width:520px) {
 
-      .section {
-
+    .section {
         padding: 75px 0;
-
-      }
-
-
-      .hero h1 {
-
-        font-size: 4rem;
-
-      }
-
-
-      .countdown strong {
-
-        font-size: 2.2rem;
-
-      }
-
-
-      .countdown span {
-
-        font-size: .52rem;
-
-        letter-spacing: .08em;
-
-      }
-
-
-      .gallery-grid {
-
-        grid-template-columns:
-          1fr 1fr;
-
-        gap: 7px;
-
-      }
-
-
-      .gallery-grid .gallery-item {
-
-        height: 180px;
-
-      }
-
-
-      .button-row > * {
-
-        width: 100%;
-
-      }
-
-
-      .event-grid {
-
-        grid-template-columns:
-          1fr;
-
-      }
-
-
-      .envelope-container {
-
-        width: 92vw;
-
-      }
-
-
-      .letter-instruction {
-
-        bottom: -45px;
-
-        font-size: .58rem;
-
-      }
-
     }
 
-  </style>
+    .hero h3 {
+        font-size: clamp(2.5rem,12vw,4rem);
+    }
+
+    .hero-countdown {
+        gap: 5px;
+
+        width:
+            calc(100% - 24px);
+
+        bottom: 62px;
+    }
+
+    .hero-countdown div {
+        padding: 10px 4px;
+    }
+
+    .hero-countdown strong {
+        font-size: 1.7rem;
+    }
+
+    .hero-countdown span {
+        font-size: .45rem;
+        letter-spacing: .08em;
+    }
+
+    .bismillah-arabic {
+        font-size: 1.2rem;
+    }
+
+    .bismillah-english {
+        font-size: .75rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memories-section {
+        padding: 70px 0 75px;
+    }
+
+    .memories-label {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .memories-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .gallery-slide {
+        flex: 0 0 72%;
+    }
+
+    .gallery-slide img {
+        aspect-ratio: 4 / 5;
+
+        box-shadow:
+            0 12px 30px
+            rgba(65,45,30,.18);
+    }
+
+    .envelope-container {
+        width: 92vw;
+    }
+
+    .letter-instruction {
+        bottom: -45px;
+        font-size: .58rem;
+    }
+}
+
+</style>
 
 </head>
 
-
 <body class="locked">
 
+<!-- =====================================================
+     ENVELOPE INTRO
+====================================================== -->
 
-  <!-- =====================================================
-       ENVELOPE INTRO
-  ====================================================== -->
+<div id="letterIntro">
 
-  <div id="letterIntro">
+```
+<div class="envelope-container">
 
-    <div class="envelope-container">
-
-      <div class="envelope" id="envelope">
-
-        <!-- Letter -->
+    <div class="envelope" id="envelope">
 
         <div class="envelope-letter">
 
-          <div class="letter-content">
+            <div class="letter-content">
 
-            <div class="small">
-              Together with their families
+                <div class="small">
+                    Together with their families
+                </div>
+
+                <h2>
+                    Shaheen &amp; Darwesh
+                </h2>
+
+                <p>
+                    22 · 11 · 2026
+                </p>
+
             </div>
-
-            <h2>
-              Shaheen & Darwesh
-            </h2>
-
-            <p>
-              22 · 11 · 2026
-            </p>
-
-          </div>
 
         </div>
 
 
-        <!-- Envelope base -->
-
         <div class="envelope-base"></div>
 
-
-        <!-- Bottom fold -->
-
         <div class="envelope-bottom"></div>
-
-
-        <!-- Flap -->
 
         <div class="envelope-flap"></div>
 
 
-        <!-- Seal -->
-
         <button
-          class="seal"
-          id="seal"
-          type="button"
-          aria-label="Open wedding invitation"
+            class="seal"
+            id="seal"
+            type="button"
+            aria-label="Open wedding invitation"
         >
 
-          <span>
-            S ♥ D
-          </span>
+            <span>
+                S ♥ D
+            </span>
 
         </button>
 
-      </div>
+    </div>
 
 
-      <div class="letter-instruction">
+    <div class="letter-instruction">
         Tap the seal to open
-      </div>
+    </div>
+
+</div>
+```
+
+</div>
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="site-header" id="top">
+
+```
+<nav class="nav">
+
+    <a
+        class="brand"
+        href="#top"
+    >
+        S &amp; D
+    </a>
+
+
+    <div
+        class="nav-links"
+        id="navLinks"
+    >
+
+        <a href="#home">Home</a>
+
+        <a href="#story">Our Story</a>
+
+        <a href="#events">Events</a>
+
+        <a href="#memories">Gallery</a>
 
     </div>
 
-  </div>
+
+    <button
+        class="music-btn"
+        id="musicBtn"
+        type="button"
+        aria-label="Play music"
+    >
+        ♫
+    </button>
 
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
-
-  <header class="site-header" id="top">
-
-    <nav class="nav">
-
-      <a class="brand" href="#top">
-        S & D
-      </a>
-
-
-      <button
+    <button
         class="menu-toggle"
         id="menuToggle"
         type="button"
         aria-label="Open menu"
-      >
+        aria-expanded="false"
+    >
         ☰
-      </button>
+    </button>
 
+</nav>
+```
 
-      <div class="nav-links" id="navLinks">
+</header>
 
-  <a href="#home">Home</a>
-  <a href="#story">Our Story</a>
-  <a href="#events">Events</a>
-  <a href="#gallery">Gallery</a>
+<!-- =====================================================
+     MAIN
+====================================================== -->
 
-</div>
+<main>
 
+<!-- =====================================================
+     HERO
+====================================================== -->
 
-      <button
-        id="musicBtn"
-        class="music-btn"
-        type="button"
-        aria-label="Play music"
-      >
-        ♫
-      </button>
-
-    </nav>
-
-  </header>
-
-
-  <!-- =====================================================
-       MAIN
-  ====================================================== -->
-
-  <main>
-
-
-    <!-- HERO -->
-
-    ```html
 <section
-  class="hero section"
-  id="home"
+    class="hero section"
+    id="home"
 >
 
-  <div class="hero-content reveal">
+```
+<div class="hero-content reveal">
 
     <p class="eyebrow">
-      Nikah Invitation · 2026
+        Nikah Invitation · 2026
     </p>
 
 
     <div class="bismillah">
 
-      <div class="bismillah-arabic" dir="rtl">
-        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-      </div>
+        <div
+            class="bismillah-arabic"
+            dir="rtl"
+        >
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </div>
 
-      <div class="bismillah-english">
-        In the name of Allah, the Most Gracious,
-        the Most Merciful
-      </div>
+        <div class="bismillah-english">
+            In the name of Allah, the Most Gracious,
+            the Most Merciful
+        </div>
 
     </div>
 
 
     <h3>
 
-      <span>
-        Dr. Shaheen Salamat
+        <span>
 
-        <small class="parents">
-          D/o Mr. Salamat Ali &amp; Mrs. Radha Bai
+            Dr. Shaheen Salamat
+
+            <small class="parents">
+                D/o Mr. Salamat Ali &amp; Mrs. Radha Bai
+            </small>
+
+        </span>
+
+
+        <small class="and">
+            &amp;
         </small>
 
-      </span>
 
+        <span>
 
-      <small class="and">
-        &
-      </small>
+            Darwesh Tasleem
 
+            <small class="parents">
+                S/o Mr. Taquim &amp; Mrs. Chandralekha Reddy
+            </small>
 
-      <span>
-        Darwesh Tasleem
-
-        <small class="parents">
-          S/o Mr. Taquim &amp; Mrs. Chandralekha Reddy
-        </small>
-
-      </span>
+        </span>
 
     </h3>
 
 
     <p class="hero-date">
-      Sunday · 22 November 2026
+        Sunday · 22 November 2026
     </p>
 
 
     <a
-      class="gold-btn"
-      href="#events"
+        class="gold-btn"
+        href="#events"
     >
-      View Celebration
+        View Celebration
     </a>
 
-  </div>
+</div>
 
-
-  <div class="scroll-hint">
-
-    Scroll to explore
-
-    <span>
-      ↓
-    </span>
-
-  </div>
-
-</section>
 
 <div class="hero-countdown">
 
-  <div>
-    <strong id="heroDays">00</strong>
-    <span>Days</span>
-  </div>
+    <div>
+        <strong id="heroDays">00</strong>
+        <span>Days</span>
+    </div>
 
-  <div>
-    <strong id="heroHours">00</strong>
-    <span>Hours</span>
-  </div>
+    <div>
+        <strong id="heroHours">00</strong>
+        <span>Hours</span>
+    </div>
 
-  <div>
-    <strong id="heroMinutes">00</strong>
-    <span>Minutes</span>
-  </div>
+    <div>
+        <strong id="heroMinutes">00</strong>
+        <span>Minutes</span>
+    </div>
 
-  <div>
-    <strong id="heroSeconds">00</strong>
-    <span>Seconds</span>
-  </div>
+    <div>
+        <strong id="heroSeconds">00</strong>
+        <span>Seconds</span>
+    </div>
 
 </div>
 
-    <!-- INTRO -->
 
-    <section class="intro section">
+<div class="scroll-hint">
 
-      <div class="container narrow reveal">
+    Scroll to explore
 
-        <p class="eyebrow">
-          A beautiful beginning
-        </p>
+    <span>↓</span>
 
-
-        <h2>
-          Two hearts, one beautiful journey.
-        </h2>
-
-
-        <p>
-          With joyful hearts and the blessings
-          of our families, we invite you to
-          celebrate the beginning of our forever.
-        </p>
-
-
-        <div class="floral-divider">
-          ✦ ❦ ✦
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- EVENTS -->
-
-    <section
-      class="events section"
-      id="events"
-    >
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Join us
-          </p>
-
-          <h2>
-            The Wedding Celebrations
-          </h2>
-
-          <p>
-            We would be delighted to have you
-            with us for these special moments.
-          </p>
-
-        </div>
-
-
-        <div class="event-grid">
-
-
-          <!-- Engagement -->
-
-          <article class="event-card reveal">
-
-            <div class="event-icon engagement-ring">
-  💍
 </div>
-
-            <p class="event-label">
-              SUNDAY · 25 OCTOBER
-            </p>
-
-            <h3>
-              Engagement
-            </h3>
-
-            <p class="event-time">
-              6:00 PM onwards
-            </p>
-
-            <p>
-              Megapode Resort
-            </p>
-
-            <a
-              href="https://maps.app.goo.gl/ociKsQ4F3346cstN6"
-              target="_blank"
-              rel="noopener"
-            >
-              View Map
-            </a>
-
-          </article>
-
-
-          <!-- Haldi -->
-
-          <article
-            class="event-card featured reveal"
-          >
-
-            <div class="event-icon">
-              ✿
-            </div>
-
-            <p class="event-label">
-              THURSDAY · 19 NOVEMBER
-            </p>
-
-            <h3>
-              Haldi
-            </h3>
-
-            <p class="event-time">
-              6:00 PM onwards
-            </p>
-
-            <p>
-              Birdline Junction Pvt. Property
-            </p>
-
-            <a
-              href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
-              target="_blank"
-              rel="noopener"
-            >
-              View Map
-            </a>
-
-          </article>
-
-
-          <!-- Mehendi -->
-
-          <article class="event-card reveal">
-
-            <div class="event-icon">
-              ✦
-            </div>
-
-            <p class="event-label">
-              FRIDAY · 20 NOVEMBER
-            </p>
-
-            <h3>
-              Mehendi &amp; Sangeet
-            </h3>
-
-            <p class="event-time">
-              6:00 PM onwards
-            </p>
-
-            <p>
-              Birdline Junction Pvt.
-            </p>
-
-            <a
-              href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
-              target="_blank"
-              rel="noopener"
-            >
-              View Map
-            </a>
-
-          </article>
-
-
-          <!-- Nikah -->
-
-          <article class="event-card reveal">
-
-            <div class="event-icon">
-              ♡
-            </div>
-
-            <p class="event-label">
-              SUNDAY · 22 NOVEMBER
-            </p>
-
-            <h3>
-              Nikah &amp; Walima
-            </h3>
-
-            <p class="event-time">
-              6:00 PM onwards
-            </p>
-
-            <p>
-              Birdline Junction Pvt.
-              <br><br>
-              <strong>
-                In case of heavy rainfall,
-                the venue shifts to
-                Ograbraj Community Hall.
-              </strong>
-            </p>
-
-            <a
-              href="https://maps.app.goo.gl/VNNzFQfXAAVM1hQG7"
-              target="_blank"
-              rel="noopener"
-            >
-              View Map
-            </a>
-
-          </article>
-
-
-        </div>
-
-
-        <div class="calendar-wrap reveal">
-
-          <button
-            class="outline-btn"
-            id="calendarBtn"
-            type="button"
-          >
-            ＋ Add Wedding to Calendar
-          </button>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section class="memories-section" id="memories">
-
-    <p class="memories-label">OUR MEMORIES</p>
-
-    <h2 class="memories-title">
-        Moments we cherish
-    </h2>
-
-    <div class="premium-gallery">
-
-        <button class="gallery-arrow gallery-prev" aria-label="Previous">
-            &#10094;
-        </button>
-
-        <div class="gallery-window">
-
-            <div class="gallery-track">
-
-                <div class="gallery-slide">
-                    <img src="memory1.jpg" alt="Our memory 1">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="memory2.jpg" alt="Our memory 2">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="memory3.jpg" alt="Our memory 3">
-                </div>
-
-            </div>
-
-        </div>
-
-        <button class="gallery-arrow gallery-next" aria-label="Next">
-            &#10095;
-        </button>
-
-    </div>
-
-    <div class="gallery-counter">
-        <span id="currentPhoto">01</span>
-        <span class="counter-line"></span>
-        <span id="totalPhotos">03</span>
-    </div>
-
-    <p class="swipe-hint">
-        Swipe to explore
-    </p>
+```
 
 </section>
 
-    <!-- FINAL -->
+<!-- =====================================================
+     STORY / INTRO
+====================================================== -->
 
-    <section class="final section">
+<section
+    class="intro section"
+    id="story"
+>
 
-      <div class="container narrow reveal">
+```
+<div class="container narrow reveal">
 
-        <div class="ornament">
-          ❦
-        </div>
+    <p class="eyebrow">
+        A beautiful beginning
+    </p>
+
+
+    <h2>
+        Two hearts, one beautiful journey.
+    </h2>
+
+
+    <p>
+        With joyful hearts and the blessings
+        of our families, we invite you to
+        celebrate the beginning of our forever.
+    </p>
+
+
+    <div class="floral-divider">
+        ✦ ❦ ✦
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     EVENTS
+====================================================== -->
+
+<section
+    class="events section"
+    id="events"
+>
+
+```
+<div class="container">
+
+    <div class="section-heading reveal">
 
         <p class="eyebrow">
-          With love
+            Join us
         </p>
 
         <h2>
-          We can't wait to celebrate with you.
+            The Wedding Celebrations
         </h2>
 
         <p>
-          Thank you for being a part of our story.
+            We would be delighted to have you
+            with us for these special moments.
         </p>
 
-        <a
-          href="#top"
-          class="back-top"
+    </div>
+
+
+    <div class="event-grid">
+
+
+        <!-- ENGAGEMENT -->
+
+        <article class="event-card reveal">
+
+            <div class="event-icon">
+                💍
+            </div>
+
+            <p class="event-label">
+                SUNDAY · 25 OCTOBER
+            </p>
+
+            <h3>
+                Engagement
+            </h3>
+
+            <p class="event-time">
+                6:00 PM onwards
+            </p>
+
+            <p>
+                Megapode Resort
+            </p>
+
+            <a
+                href="https://maps.app.goo.gl/ociKsQ4F3346cstN6"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Map
+            </a>
+
+        </article>
+
+
+        <!-- HALDI -->
+
+        <article class="event-card featured reveal">
+
+            <div class="event-icon">
+                ✿
+            </div>
+
+            <p class="event-label">
+                THURSDAY · 19 NOVEMBER
+            </p>
+
+            <h3>
+                Haldi
+            </h3>
+
+            <p class="event-time">
+                6:00 PM onwards
+            </p>
+
+            <p>
+                Birdline Junction Pvt. Property
+            </p>
+
+            <a
+                href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Map
+            </a>
+
+        </article>
+
+
+        <!-- MEHENDI -->
+
+        <article class="event-card reveal">
+
+            <div class="event-icon">
+                ✦
+            </div>
+
+            <p class="event-label">
+                FRIDAY · 20 NOVEMBER
+            </p>
+
+            <h3>
+                Mehendi &amp; Sangeet
+            </h3>
+
+            <p class="event-time">
+                6:00 PM onwards
+            </p>
+
+            <p>
+                Birdline Junction Pvt.
+            </p>
+
+            <a
+                href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Map
+            </a>
+
+        </article>
+
+
+        <!-- NIKAH -->
+
+        <article class="event-card reveal">
+
+            <div class="event-icon">
+                ♡
+            </div>
+
+            <p class="event-label">
+                SUNDAY · 22 NOVEMBER
+            </p>
+
+            <h3>
+                Nikah &amp; Walima
+            </h3>
+
+            <p class="event-time">
+                6:00 PM onwards
+            </p>
+
+            <p>
+                Birdline Junction Pvt.
+                <br><br>
+
+                <strong>
+                    In case of heavy rainfall,
+                    the venue shifts to
+                    Ograbraj Community Hall.
+                </strong>
+            </p>
+
+            <a
+                href="https://maps.app.goo.gl/VNNzFQfXAAVM1hQG7"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Map
+            </a>
+
+        </article>
+
+
+    </div>
+
+
+    <div class="calendar-wrap reveal">
+
+        <button
+            class="outline-btn"
+            id="calendarBtn"
+            type="button"
         >
-          ↑ Back to top
-        </a>
+            ＋ Add Wedding to Calendar
+        </button>
 
-      </div>
+    </div>
 
-    </section>
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     MEMORIES
+====================================================== -->
+
+<section
+    class="memories-section"
+    id="memories"
+>
+
+```
+<p class="memories-label">
+    OUR MEMORIES
+</p>
 
 
-  </main>
+<h2 class="memories-title">
+    Moments we cherish
+</h2>
 
 
-  <!-- FOOTER -->
+<div class="premium-gallery">
 
-  <footer>
+    <button
+        class="gallery-arrow gallery-prev"
+        id="galleryPrev"
+        type="button"
+        aria-label="Previous photo"
+    >
+        &#10094;
+    </button>
 
-    <p>
-      Crafted by Creative_MoodOn ♥
+
+    <div class="gallery-window">
+
+        <div class="gallery-track">
+
+
+            <div
+                class="gallery-slide"
+                tabindex="0"
+            >
+
+                <img
+                    src="memory1.jpg"
+                    alt="Our memory 1"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-slide"
+                tabindex="0"
+            >
+
+                <img
+                    src="memory2.jpg"
+                    alt="Our memory 2"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-slide"
+                tabindex="0"
+            >
+
+                <img
+                    src="memory3.jpg"
+                    alt="Our memory 3"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="gallery-arrow gallery-next"
+        id="galleryNext"
+        type="button"
+        aria-label="Next photo"
+    >
+        &#10095;
+    </button>
+
+</div>
+
+
+<div class="gallery-counter">
+
+    <span id="currentPhoto">
+        01
+    </span>
+
+    <span class="counter-line"></span>
+
+    <span id="totalPhotos">
+        03
+    </span>
+
+</div>
+
+
+<p class="swipe-hint">
+    Swipe to explore
+</p>
+```
+
+</section>
+
+<!-- =====================================================
+     FINAL
+====================================================== -->
+
+<section class="final section">
+
+```
+<div class="container narrow reveal">
+
+    <div class="ornament">
+        ❦
+    </div>
+
+    <p class="eyebrow">
+        With love
     </p>
 
-  </footer>
+    <h2>
+        We can't wait to celebrate with you.
+    </h2>
 
+    <p>
+        Thank you for being a part of our story.
+    </p>
 
-  <!-- LIGHTBOX -->
+    <a
+        href="#top"
+        class="back-top"
+    >
+        ↑ Back to top
+    </a>
 
-  <div
+</div>
+```
+
+</section>
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+```
+<p>
+    Crafted by Creative_MoodOn ♥
+</p>
+```
+
+</footer>
+
+<!-- =====================================================
+     LIGHTBOX
+====================================================== -->
+
+<div
     class="lightbox"
     id="lightbox"
     aria-hidden="true"
-  >
+>
 
-    <button
-      class="lightbox-close"
-      id="lightboxClose"
-      type="button"
-      aria-label="Close"
-    >
-      ×
-    </button>
-
-    <img
-      id="lightboxImage"
-      src=""
-      alt="Gallery image"
-    >
-
-  </div>
+```
+<button
+    class="lightbox-close"
+    id="lightboxClose"
+    type="button"
+    aria-label="Close image"
+>
+    ×
+</button>
 
 
-  <!-- AUDIO -->
+<img
+    id="lightboxImage"
+    src=""
+    alt="Gallery image"
+>
+```
 
-  <audio
-    id="weddingAudio"
-    loop
-    preload="none"
-  >
+</div>
 
-    <source
-      src="audio/wedding-music.mp3"
-      type="audio/mpeg"
-    >
+<!-- =====================================================
+     AUDIO
+====================================================== -->
 
-  </audio>
+<audio
+id="weddingAudio"
+loop
+preload="none"
 
+>
 
-  <!-- =====================================================
-       JAVASCRIPT
-  ====================================================== -->
+```
+<source
+    src="audio/wedding-music.mp3"
+    type="audio/mpeg"
+>
+```
 
-  <script>
+</audio>
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      () => {
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
 
+<script>
 
-        /* =================================================
-           ENVELOPE OPENING
-        ================================================= */
-
-        const letterIntro =
-          document.getElementById(
-            "letterIntro"
-          );
-
-        const envelope =
-          document.getElementById(
-            "envelope"
-          );
-
-        const seal =
-          document.getElementById(
-            "seal"
-          );
+document.addEventListener("DOMContentLoaded", function () {
 
 
-        document.body.classList.add(
-          "locked"
-        );
+    /* =================================================
+       ENVELOPE OPENING
+    ================================================= */
+
+    const letterIntro =
+        document.getElementById("letterIntro");
+
+    const envelope =
+        document.getElementById("envelope");
+
+    const seal =
+        document.getElementById("seal");
 
 
-        seal.addEventListener(
-          "click",
-          () => {
-
-            envelope.classList.add(
-              "open"
-            );
+    document.body.classList.add("locked");
 
 
-            /*
-              Wait for the envelope animation
-              before removing the intro.
-            */
+    if (seal && envelope && letterIntro) {
 
-            setTimeout(
-              () => {
+        seal.addEventListener("click", function () {
 
-                letterIntro.classList.add(
-                  "hidden"
-                );
+            envelope.classList.add("open");
 
-                document.body.classList.remove(
-                  "locked"
-                );
+            setTimeout(function () {
 
-                /*
-                  Move the wedding page
-                  back to the top.
-                */
+                letterIntro.classList.add("hidden");
 
-                window.scrollTo(
-                  0,
-                  0
-                );
+                document.body.classList.remove("locked");
 
-              },
-              1500
-            );
+                window.scrollTo({
+                    top: 0,
+                    behavior: "instant"
+                });
 
-          }
-        );
+            }, 1500);
+
+        });
+
+    }
 
 
-        /* =================================================
-           MUSIC
-        ================================================= */
+    /* =================================================
+       MUSIC
+    ================================================= */
 
-        const musicBtn =
-          document.getElementById(
-            "musicBtn"
-          );
+    const musicBtn =
+        document.getElementById("musicBtn");
 
-        const audio =
-          document.getElementById(
-            "weddingAudio"
-          );
+    const audio =
+        document.getElementById("weddingAudio");
 
 
-        if (
-          musicBtn &&
-          audio
-        ) {
+    if (musicBtn && audio) {
 
-          musicBtn.addEventListener(
-            "click",
-            async () => {
+        musicBtn.addEventListener("click", async function () {
 
-              if (
-                audio.paused
-              ) {
+            if (audio.paused) {
 
                 try {
 
-                  await audio.play();
+                    await audio.play();
 
-                  musicBtn.textContent =
-                    "❚❚";
+                    musicBtn.textContent = "❚❚";
 
-                  musicBtn.setAttribute(
-                    "aria-label",
-                    "Pause music"
-                  );
+                    musicBtn.classList.add("playing");
+
+                    musicBtn.setAttribute(
+                        "aria-label",
+                        "Pause music"
+                    );
 
                 }
 
                 catch (error) {
 
-                  alert(
-                    "Please make sure your music file is located at audio/wedding-music.mp3"
-                  );
+                    alert(
+                        "Music could not be played. Please check that audio/wedding-music.mp3 exists in your website folder."
+                    );
 
                 }
 
-              }
+            }
 
-              else {
+            else {
 
                 audio.pause();
 
-                musicBtn.textContent =
-                  "♫";
+                musicBtn.textContent = "♫";
+
+                musicBtn.classList.remove("playing");
 
                 musicBtn.setAttribute(
-                  "aria-label",
-                  "Play music"
+                    "aria-label",
+                    "Play music"
                 );
-
-              }
 
             }
-          );
 
-        }
-
-
-        /* =================================================
-           MOBILE MENU
-        ================================================= */
-
-        const menuToggle =
-          document.getElementById(
-            "menuToggle"
-          );
-
-        const navLinks =
-          document.getElementById(
-            "navLinks"
-          );
+        });
 
 
-        if (
-          menuToggle &&
-          navLinks
-        ) {
+        audio.addEventListener("ended", function () {
 
-          menuToggle.addEventListener(
-            "click",
-            () => {
+            musicBtn.textContent = "♫";
 
-              navLinks.classList.toggle(
-                "open"
-              );
+            musicBtn.classList.remove("playing");
+
+        });
+
+    }
 
 
-              const isOpen =
-                navLinks.classList.contains(
-                  "open"
-                );
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navLinks =
+        document.getElementById("navLinks");
 
 
-              menuToggle.setAttribute(
-                "aria-label",
-                isOpen
-                  ? "Close menu"
-                  : "Open menu"
-              );
+    if (menuToggle && navLinks) {
 
-            }
-          );
+        menuToggle.addEventListener("click", function () {
 
+            navLinks.classList.toggle("open");
 
-          navLinks
-            .querySelectorAll("a")
-            .forEach(
-              link => {
+            const isOpen =
+                navLinks.classList.contains("open");
 
-                link.addEventListener(
-                  "click",
-                  () => {
-
-                    navLinks.classList.remove(
-                      "open"
-                    );
-
-                  }
-                );
-
-              }
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
             );
 
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close menu"
+                    : "Open menu"
+            );
+
+        });
+
+
+        navLinks
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navLinks.classList.remove("open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open menu"
+                    );
+
+                });
+
+            });
+
+    }
+
+
+    /* =================================================
+       COUNTDOWN
+    ================================================= */
+
+    const weddingDate =
+        new Date(
+            "November 22, 2026 18:00:00"
+        ).getTime();
+
+
+    const heroDays =
+        document.getElementById("heroDays");
+
+    const heroHours =
+        document.getElementById("heroHours");
+
+    const heroMinutes =
+        document.getElementById("heroMinutes");
+
+    const heroSeconds =
+        document.getElementById("heroSeconds");
+
+
+    function updateCountdown() {
+
+        if (
+            !heroDays ||
+            !heroHours ||
+            !heroMinutes ||
+            !heroSeconds
+        ) {
+            return;
         }
 
 
-        /* =================================================
-           COUNTDOWN
-        ================================================= */
-
-        /*
-          Wedding date:
-          22 November 2026
-          6:00 PM
-
-          Change the time if your actual
-          ceremony starts at another time.
-        */
-
-        const weddingDate =
-          new Date(
-            "November 22, 2026 18:00:00"
-          ).getTime();
-
-
-        const daysElement =
-          document.getElementById(
-            "days"
-          );
-
-        const hoursElement =
-          document.getElementById(
-            "hours"
-          );
-
-        const minutesElement =
-          document.getElementById(
-            "minutes"
-          );
-
-        const secondsElement =
-          document.getElementById(
-            "seconds"
-          );
-
-
-        function updateCountdown() {
-
-          if (
-            !daysElement ||
-            !hoursElement ||
-            !minutesElement ||
-            !secondsElement
-          ) {
-
-            return;
-
-          }
-
-
-          const now =
+        const now =
             Date.now();
 
 
-          const distance =
+        const distance =
             weddingDate - now;
 
 
-          if (
-            distance <= 0
-          ) {
+        if (distance <= 0) {
 
-            daysElement.textContent =
-              "00";
-
-            hoursElement.textContent =
-              "00";
-
-            minutesElement.textContent =
-              "00";
-
-            secondsElement.textContent =
-              "00";
+            heroDays.textContent = "00";
+            heroHours.textContent = "00";
+            heroMinutes.textContent = "00";
+            heroSeconds.textContent = "00";
 
             return;
 
-          }
+        }
 
 
-          const days =
+        const days =
             Math.floor(
-              distance /
-              (1000 * 60 * 60 * 24)
-            );
-
-
-          const hours =
-            Math.floor(
-              (
-                distance %
+                distance /
                 (1000 * 60 * 60 * 24)
-              ) /
-              (1000 * 60 * 60)
             );
 
 
-          const minutes =
+        const hours =
             Math.floor(
-              (
-                distance %
+                (
+                    distance %
+                    (1000 * 60 * 60 * 24)
+                ) /
                 (1000 * 60 * 60)
-              ) /
-              (1000 * 60)
             );
 
 
-          const seconds =
+        const minutes =
             Math.floor(
-              (
-                distance %
+                (
+                    distance %
+                    (1000 * 60 * 60)
+                ) /
                 (1000 * 60)
-              ) /
-              1000
             );
 
 
-          daysElement.textContent =
-            String(days)
-              .padStart(2, "0");
+        const seconds =
+            Math.floor(
+                (
+                    distance %
+                    (1000 * 60)
+                ) /
+                1000
+            );
 
 
-          hoursElement.textContent =
-            String(hours)
-              .padStart(2, "0");
+        heroDays.textContent =
+            String(days).padStart(2,"0");
+
+        heroHours.textContent =
+            String(hours).padStart(2,"0");
+
+        heroMinutes.textContent =
+            String(minutes).padStart(2,"0");
+
+        heroSeconds.textContent =
+            String(seconds).padStart(2,"0");
+
+    }
 
 
-          minutesElement.textContent =
-            String(minutes)
-              .padStart(2, "0");
+    updateCountdown();
+
+    setInterval(
+        updateCountdown,
+        1000
+    );
 
 
-          secondsElement.textContent =
-            String(seconds)
-              .padStart(2, "0");
+    /* =================================================
+       SCROLL REVEAL
+    ================================================= */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver =
+            new IntersectionObserver(
+                function (entries, observer) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(function (element) {
+
+            revealObserver.observe(element);
+
+        });
+
+    }
+
+    else {
+
+        revealElements.forEach(function (element) {
+
+            element.classList.add("visible");
+
+        });
+
+    }
+
+
+    /* =================================================
+       GALLERY
+    ================================================= */
+
+    const galleryTrack =
+        document.querySelector(".gallery-track");
+
+    const gallerySlides =
+        document.querySelectorAll(".gallery-slide");
+
+    const previousButton =
+        document.getElementById("galleryPrev");
+
+    const nextButton =
+        document.getElementById("galleryNext");
+
+    const currentPhoto =
+        document.getElementById("currentPhoto");
+
+    const totalPhotos =
+        document.getElementById("totalPhotos");
+
+
+    if (
+        galleryTrack &&
+        gallerySlides.length &&
+        currentPhoto &&
+        totalPhotos
+    ) {
+
+
+        totalPhotos.textContent =
+            String(
+                gallerySlides.length
+            ).padStart(2,"0");
+
+
+        function updateGalleryCounter() {
+
+            const trackCenter =
+                galleryTrack.scrollLeft +
+                galleryTrack.clientWidth / 2;
+
+
+            let closestIndex = 0;
+
+            let closestDistance =
+                Infinity;
+
+
+            gallerySlides.forEach(
+                function (slide,index) {
+
+                    const slideCenter =
+                        slide.offsetLeft +
+                        slide.offsetWidth / 2;
+
+
+                    const distance =
+                        Math.abs(
+                            trackCenter -
+                            slideCenter
+                        );
+
+
+                    if (
+                        distance <
+                        closestDistance
+                    ) {
+
+                        closestDistance =
+                            distance;
+
+                        closestIndex =
+                            index;
+
+                    }
+
+                }
+            );
+
+
+            currentPhoto.textContent =
+                String(
+                    closestIndex + 1
+                ).padStart(2,"0");
 
         }
 
 
-        updateCountdown();
+        function goToSlide(index) {
+
+            index =
+                Math.max(
+                    0,
+                    Math.min(
+                        index,
+                        gallerySlides.length - 1
+                    )
+                );
 
 
-        setInterval(
-          updateCountdown,
-          1000
+            const slide =
+                gallerySlides[index];
+
+
+            if (!slide) {
+                return;
+            }
+
+
+            const left =
+                slide.offsetLeft -
+                (
+                    galleryTrack.clientWidth -
+                    slide.offsetWidth
+                ) / 2;
+
+
+            galleryTrack.scrollTo({
+
+                left: Math.max(0,left),
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        if (nextButton) {
+
+            nextButton.addEventListener(
+                "click",
+                function () {
+
+                    const current =
+                        Number(
+                            currentPhoto.textContent
+                        ) - 1;
+
+
+                    goToSlide(current + 1);
+
+                }
+            );
+
+        }
+
+
+        if (previousButton) {
+
+            previousButton.addEventListener(
+                "click",
+                function () {
+
+                    const current =
+                        Number(
+                            currentPhoto.textContent
+                        ) - 1;
+
+
+                    goToSlide(current - 1);
+
+                }
+            );
+
+        }
+
+
+        galleryTrack.addEventListener(
+            "scroll",
+            function () {
+
+                window.requestAnimationFrame(
+                    updateGalleryCounter
+                );
+
+            }
         );
 
 
-        /* =================================================
-           SCROLL REVEAL
-        ================================================= */
+        updateGalleryCounter();
 
-        const revealElements =
-          document.querySelectorAll(
-            ".reveal"
-          );
+    }
 
 
-        if (
-          "IntersectionObserver"
-          in window
-        ) {
+    /* =================================================
+       LIGHTBOX
+    ================================================= */
 
-          const revealObserver =
-            new IntersectionObserver(
-              (
-                entries,
-                observer
-              ) => {
+    const lightbox =
+        document.getElementById("lightbox");
 
-                entries.forEach(
-                  entry => {
+    const lightboxImage =
+        document.getElementById("lightboxImage");
 
-                    if (
-                      entry.isIntersecting
-                    ) {
+    const lightboxClose =
+        document.getElementById("lightboxClose");
 
-                      entry.target
-                        .classList
-                        .add(
-                          "visible"
+
+    if (
+        lightbox &&
+        lightboxImage &&
+        lightboxClose
+    ) {
+
+
+        document
+            .querySelectorAll(".gallery-slide img")
+            .forEach(function (image) {
+
+                image.addEventListener(
+                    "click",
+                    function () {
+
+                        lightboxImage.src =
+                            image.src;
+
+                        lightboxImage.alt =
+                            image.alt;
+
+
+                        lightbox.classList.add(
+                            "open"
                         );
 
-                      observer.unobserve(
-                        entry.target
-                      );
+
+                        lightbox.setAttribute(
+                            "aria-hidden",
+                            "false"
+                        );
+
+
+                        document.body.classList.add(
+                            "locked"
+                        );
 
                     }
-
-                  }
                 );
 
-              },
-              {
-                threshold: 0.12
-              }
-            );
+            });
 
 
-          revealElements.forEach(
-            element => {
-
-              revealObserver.observe(
-                element
-              );
-
-            }
-          );
-
-        }
-
-        else {
-
-          revealElements.forEach(
-            element => {
-
-              element.classList.add(
-                "visible"
-              );
-
-            }
-          );
-
-        }
-/* =================================================
-   HERO COUNTDOWN
-================================================= */
-
-const weddingDate = new Date(
-  "November 22, 2026 18:00:00"
-).getTime();
-
-const heroDays = document.getElementById("heroDays");
-const heroHours = document.getElementById("heroHours");
-const heroMinutes = document.getElementById("heroMinutes");
-const heroSeconds = document.getElementById("heroSeconds");
-
-function updateHeroCountdown() {
-
-  if (
-    !heroDays ||
-    !heroHours ||
-    !heroMinutes ||
-    !heroSeconds
-  ) {
-    return;
-  }
-
-  const now = Date.now();
-
-  const distance = weddingDate - now;
-
-  if (distance <= 0) {
-
-    heroDays.textContent = "00";
-    heroHours.textContent = "00";
-    heroMinutes.textContent = "00";
-    heroSeconds.textContent = "00";
-
-    return;
-  }
-
-  const days = Math.floor(
-    distance / (1000 * 60 * 60 * 24)
-  );
-
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) /
-    (1000 * 60 * 60)
-  );
-
-  const minutes = Math.floor(
-    (distance % (1000 * 60 * 60)) /
-    (1000 * 60)
-  );
-
-  const seconds = Math.floor(
-    (distance % (1000 * 60)) /
-    1000
-  );
-
-  heroDays.textContent =
-    String(days).padStart(2, "0");
-
-  heroHours.textContent =
-    String(hours).padStart(2, "0");
-
-  heroMinutes.textContent =
-    String(minutes).padStart(2, "0");
-
-  heroSeconds.textContent =
-    String(seconds).padStart(2, "0");
-}
-
-updateHeroCountdown();
-
-setInterval(
-  updateHeroCountdown,
-  1000
-);
-
-        /* =================================================
-           GALLERY LIGHTBOX
-        ================================================= */
-
-        const lightbox =
-          document.getElementById(
-            "lightbox"
-          );
-
-        const lightboxImage =
-          document.getElementById(
-            "lightboxImage"
-          );
-
-        const lightboxClose =
-          document.getElementById(
-            "lightboxClose"
-          );
-
-
-        if (
-          lightbox &&
-          lightboxImage &&
-          lightboxClose
-        ) {
-
-          document
-            .querySelectorAll(
-              ".gallery-item"
-            )
-            .forEach(
-              item => {
-
-                item.addEventListener(
-                  "click",
-                  () => {
-
-                    const image =
-                      item.querySelector(
-                        "img"
-                      );
-
-
-                    if (!image) {
-                      return;
-                    }
-
-
-                    lightboxImage.src =
-                      image.src;
-
-                    lightboxImage.alt =
-                      image.alt;
-
-
-                    lightbox.classList.add(
-                      "open"
-                    );
-
-
-                    lightbox.setAttribute(
-                      "aria-hidden",
-                      "false"
-                    );
-
-
-                    document.body
-                      .classList
-                      .add(
-                        "locked"
-                      );
-
-                  }
-                );
-
-              }
-            );
-
-
-          function closeLightbox() {
+        function closeLightbox() {
 
             lightbox.classList.remove(
-              "open"
+                "open"
             );
 
 
             lightbox.setAttribute(
-              "aria-hidden",
-              "true"
+                "aria-hidden",
+                "true"
             );
 
 
-            document.body
-              .classList
-              .remove(
+            document.body.classList.remove(
                 "locked"
-              );
+            );
 
 
             setTimeout(
-              () => {
+                function () {
 
-                if (
-                  !lightbox.classList.contains(
-                    "open"
-                  )
-                ) {
+                    if (
+                        !lightbox.classList.contains(
+                            "open"
+                        )
+                    ) {
 
-                  lightboxImage.src =
-                    "";
+                        lightboxImage.src = "";
 
-                }
-
-              },
-              300
-            );
-
-          }
-
-
-          lightboxClose.addEventListener(
-            "click",
-            closeLightbox
-          );
-
-
-          lightbox.addEventListener(
-            "click",
-            event => {
-
-              if (
-                event.target ===
-                lightbox
-              ) {
-
-                closeLightbox();
-
-              }
-
-            }
-          );
-
-
-          document.addEventListener(
-            "keydown",
-            event => {
-
-              if (
-                event.key === "Escape" &&
-                lightbox.classList.contains(
-                  "open"
-                )
-              ) {
-
-                closeLightbox();
-
-              }
-
-            }
-          );
-
-        }
-
-
-        /* =================================================
-           CALENDAR
-        ================================================= */
-
-        const calendarBtn =
-          document.getElementById(
-            "calendarBtn"
-          );
-
-
-        if (calendarBtn) {
-
-          calendarBtn.addEventListener(
-            "click",
-            () => {
-
-              const ics = [
-
-                "BEGIN:VCALENDAR",
-
-                "VERSION:2.0",
-
-                "PRODID:-//Shaheen and Darwesh Wedding//EN",
-
-                "CALSCALE:GREGORIAN",
-
-                "BEGIN:VEVENT",
-
-                "UID:shaheen-darwesh-wedding-2026@shaheenwedding",
-
-                "DTSTAMP:20260924T000000Z",
-
-                "DTSTART:20261122T180000",
-
-                "DTEND:20261122T220000",
-
-                "SUMMARY:Shaheen & Darwesh Wedding",
-
-                "LOCATION:Birdline Junction Pvt.",
-
-                "DESCRIPTION:Nikah & Walima of Dr. Shaheen Salamat and Darwesh Tasleem.",
-
-                "END:VEVENT",
-
-                "END:VCALENDAR"
-
-              ].join(
-                "\r\n"
-              );
-
-
-              const blob =
-                new Blob(
-                  [ics],
-                  {
-                    type:
-                      "text/calendar;charset=utf-8"
-                  }
-                );
-
-
-              const url =
-                URL.createObjectURL(
-                  blob
-                );
-
-
-              const link =
-                document.createElement(
-                  "a"
-                );
-
-
-              link.href =
-                url;
-
-
-              link.download =
-                "Shaheen-Darwesh-Wedding.ics";
-
-
-              document.body.appendChild(
-                link
-              );
-
-
-              link.click();
-
-
-              link.remove();
-
-
-              setTimeout(
-                () => {
-
-                  URL.revokeObjectURL(
-                    url
-                  );
+                    }
 
                 },
-                1000
-              );
-
-            }
-          );
+                300
+            );
 
         }
 
 
-        /* =================================================
-           RSVP
-        ================================================= */
-
-        const rsvpBtn =
-          document.getElementById(
-            "rsvpBtn"
-          );
-
-
-        if (rsvpBtn) {
-
-          rsvpBtn.addEventListener(
+        lightboxClose.addEventListener(
             "click",
-            event => {
-
-              event.preventDefault();
-
-
-              /*
-                Replace this alert with
-                your WhatsApp or Google
-                Form RSVP link.
-              */
-
-              alert(
-                "Please add your RSVP link here."
-              );
-
-            }
-          );
-
-        }
-
-      }
-    );
-	  
-	  /* ==========================================
-   PREMIUM MEMORIES GALLERY
-========================================== */
-
-const galleryTrack =
-    document.querySelector(".gallery-track");
-
-const gallerySlides =
-    document.querySelectorAll(".gallery-slide");
-
-const previousButton =
-    document.querySelector(".gallery-prev");
-
-const nextButton =
-    document.querySelector(".gallery-next");
-
-const currentPhoto =
-    document.getElementById("currentPhoto");
-
-const totalPhotos =
-    document.getElementById("totalPhotos");
+            closeLightbox
+        );
 
 
-if (
-    galleryTrack &&
-    gallerySlides.length > 0
-) {
-
-    /* Total photos */
-
-    totalPhotos.textContent =
-        String(gallerySlides.length).padStart(2, "0");
-
-
-    /* ======================================
-       FIND CURRENT SLIDE
-    ====================================== */
-
-    function updateGalleryCounter() {
-
-        const trackCenter =
-            galleryTrack.scrollLeft +
-            galleryTrack.clientWidth / 2;
-
-        let closestIndex = 0;
-
-        let closestDistance = Infinity;
-
-
-        gallerySlides.forEach(
-            (slide, index) => {
-
-                const slideCenter =
-                    slide.offsetLeft +
-                    slide.offsetWidth / 2;
-
-                const distance =
-                    Math.abs(
-                        trackCenter -
-                        slideCenter
-                    );
+        lightbox.addEventListener(
+            "click",
+            function (event) {
 
                 if (
-                    distance <
-                    closestDistance
+                    event.target === lightbox
                 ) {
 
-                    closestDistance =
-                        distance;
+                    closeLightbox();
 
-                    closestIndex =
-                        index;
                 }
 
             }
         );
 
 
-        currentPhoto.textContent =
-            String(
-                closestIndex + 1
-            ).padStart(2, "0");
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    lightbox.classList.contains("open")
+                ) {
+
+                    closeLightbox();
+
+                }
+
+            }
+        );
+
     }
 
 
-    /* ======================================
-       NEXT
-    ====================================== */
+    /* =================================================
+       CALENDAR
+    ================================================= */
 
-    nextButton.addEventListener(
-        "click",
-        function () {
-
-            const currentScroll =
-                galleryTrack.scrollLeft;
-
-            galleryTrack.scrollTo({
-
-                left:
-                    currentScroll +
-                    galleryTrack.clientWidth * .65,
-
-                behavior: "smooth"
-
-            });
-
-        }
-    );
+    const calendarBtn =
+        document.getElementById("calendarBtn");
 
 
-    /* ======================================
-       PREVIOUS
-    ====================================== */
+    if (calendarBtn) {
 
-    previousButton.addEventListener(
-        "click",
-        function () {
-
-            const currentScroll =
-                galleryTrack.scrollLeft;
-
-            galleryTrack.scrollTo({
-
-                left:
-                    currentScroll -
-                    galleryTrack.clientWidth * .65,
-
-                behavior: "smooth"
-
-            });
-
-        }
-    );
+        calendarBtn.addEventListener(
+            "click",
+            function () {
 
 
-    /* ======================================
-       UPDATE COUNTER WHEN SWIPING
-    ====================================== */
+                const ics = [
 
-    galleryTrack.addEventListener(
-        "scroll",
-        function () {
+                    "BEGIN:VCALENDAR",
 
-            window.requestAnimationFrame(
-                updateGalleryCounter
-            );
+                    "VERSION:2.0",
 
-        }
-    );
+                    "PRODID:-//Shaheen and Darwesh Wedding//EN",
+
+                    "CALSCALE:GREGORIAN",
+
+                    "BEGIN:VEVENT",
+
+                    "UID:shaheen-darwesh-wedding-2026@shaheenwedding",
+
+                    "DTSTAMP:20260925T000000Z",
+
+                    "DTSTART:20261122T180000",
+
+                    "DTEND:20261122T220000",
+
+                    "SUMMARY:Shaheen & Darwesh Wedding",
+
+                    "LOCATION:Birdline Junction Pvt.",
+
+                    "DESCRIPTION:Nikah & Walima of Dr. Shaheen Salamat and Darwesh Tasleem.",
+
+                    "END:VEVENT",
+
+                    "END:VCALENDAR"
+
+                ].join("\r\n");
 
 
-    /* Initial counter */
+                const blob =
+                    new Blob(
+                        [ics],
+                        {
+                            type:
+                                "text/calendar;charset=utf-8"
+                        }
+                    );
 
-    updateGalleryCounter();
 
-}
+                const url =
+                    URL.createObjectURL(blob);
 
-  </script>
+
+                const link =
+                    document.createElement("a");
+
+
+                link.href = url;
+
+                link.download =
+                    "Shaheen-Darwesh-Wedding.ics";
+
+
+                document.body.appendChild(link);
+
+                link.click();
+
+                link.remove();
+
+
+                setTimeout(
+                    function () {
+
+                        URL.revokeObjectURL(url);
+
+                    },
+                    1000
+                );
+
+            }
+        );
+
+    }
+
+
+});
+
+</script>
 
 </body>
 
