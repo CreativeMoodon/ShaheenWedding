@@ -1003,474 +1003,273 @@ p {
 
 
 /* =====================================================
-   3D WAX SEAL
+   3D ANTIQUE GOLD WAX SEAL
 ===================================================== */
 
 .seal {
+    position: absolute;
+    left: 50%;
+    top: 55%;
 
-    position:
-        absolute;
+    transform: translate(-50%, -50%) rotate(-3deg);
 
-    left:
-        50%;
+    width: 104px;
+    height: 104px;
 
-    top:
-        55%;
+    z-index: 20;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
 
-    transform:
-        translate(-50%,-50%)
-        rotate(-3deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    width:
-        104px;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 
-    height:
-        104px;
+    font-family: var(--serif);
 
-    z-index:
-        20;
-
-    border:
-        none;
-
-    padding:
-        0;
-
-    border-radius:
-        50%;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    cursor:
-        pointer;
-
-    touch-action:
-        manipulation;
-
-    -webkit-tap-highlight-color:
-        transparent;
-
-    user-select:
-        none;
-
-    -webkit-user-select:
-        none;
-
-    font-family:
-        var(--serif);
-
+    /* GOLD 3D WAX */
     background:
-
         radial-gradient(
-            circle at 32% 25%,
-            rgba(255,255,255,.30) 0%,
-            rgba(255,255,255,.10) 10%,
-            transparent 25%
+            circle at 30% 22%,
+            rgba(255,255,255,.48) 0%,
+            rgba(255,255,255,.18) 12%,
+            transparent 27%
         ),
-
         radial-gradient(
-            circle at 62% 70%,
-            rgba(55,0,8,.32) 0%,
-            transparent 35%
+            circle at 65% 72%,
+            rgba(91,57,8,.30) 0%,
+            transparent 38%
         ),
-
         radial-gradient(
-            circle at 48% 45%,
-            #b83c4d 0%,
-            #9c293b 38%,
-            #7b1c2d 68%,
-            #57101d 100%
+            circle at 48% 42%,
+            #f4d98b 0%,
+            #d9b45b 30%,
+            #b88a32 58%,
+            #8a641f 80%,
+            #654714 100%
         );
 
+    /* 3D DEPTH */
     box-shadow:
-
-        0 7px 0 #4b0d18,
-
-        0 10px 16px
-        rgba(0,0,0,.35),
-
-        0 0 0 4px
-        rgba(105,18,32,.35),
-
-        inset 4px 5px 7px
-        rgba(255,255,255,.18),
-
-        inset -6px -8px 10px
-        rgba(48,0,8,.42),
-
-        inset 0 0 0 2px
-        rgba(255,210,210,.12);
+        0 7px 0 #604414,
+        0 11px 18px rgba(0,0,0,.38),
+        0 0 0 4px rgba(180,140,55,.28),
+        inset 4px 5px 8px rgba(255,255,255,.35),
+        inset -7px -9px 12px rgba(74,48,8,.45),
+        inset 0 0 0 2px rgba(255,235,170,.25);
 
     transition:
         transform .3s ease,
         box-shadow .3s ease,
         opacity .4s ease;
 
-    animation:
-        waxSealFloat
-        3s ease-in-out infinite;
+    animation: goldSealFloat 3s ease-in-out infinite;
 }
 
 
-/* =====================================================
-   IRREGULAR MELTED WAX EDGE
-===================================================== */
-
+/* IRREGULAR RAISED WAX EDGE */
 .seal::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
 
-    content:
-        "";
-
-    position:
-        absolute;
-
-    inset:
-        -5px;
-
-    z-index:
-        -1;
+    z-index: -1;
 
     border-radius:
         47% 53% 49% 51% /
         53% 46% 54% 47%;
 
     background:
-
         radial-gradient(
-            circle at 35% 30%,
-            #a83243,
-            #7b1b2b 70%,
-            #54101b 100%
+            circle at 32% 28%,
+            #e6c66f 0%,
+            #c39a3c 45%,
+            #8a641f 78%,
+            #614512 100%
         );
 
     box-shadow:
-
-        0 5px 8px
-        rgba(0,0,0,.30),
-
-        inset 2px 2px 4px
-        rgba(255,255,255,.12),
-
-        inset -3px -4px 5px
-        rgba(35,0,5,.30);
-
-    pointer-events:
-        none;
+        0 5px 9px rgba(0,0,0,.32),
+        inset 2px 2px 5px rgba(255,255,255,.20),
+        inset -4px -5px 6px rgba(55,35,5,.32);
 }
 
 
-/* =====================================================
-   RAISED INNER WAX RIM
-===================================================== */
-
+/* INNER PRESSED RING */
 .seal::after {
+    content: "";
 
-    content:
-        "";
+    position: absolute;
+    inset: 9px;
 
-    position:
-        absolute;
+    border-radius: 50%;
 
-    inset:
-        9px;
-
-    border-radius:
-        50%;
-
-    border:
-        2px solid
-        rgba(255,190,195,.22);
+    border: 2px solid rgba(255,230,160,.42);
 
     box-shadow:
+        inset 2px 2px 4px rgba(255,255,255,.22),
+        inset -3px -4px 5px rgba(70,45,8,.38);
 
-        inset 2px 2px 4px
-        rgba(255,255,255,.12),
-
-        inset -3px -4px 5px
-        rgba(45,0,8,.35);
-
-    pointer-events:
-        none;
+    pointer-events: none;
 }
 
 
-/* =====================================================
-   3D WAX INITIALS
-===================================================== */
-
+/* INITIALS */
 .seal span {
+    position: relative;
+    z-index: 3;
 
-    position:
-        relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    z-index:
-        3;
+    width: 66px;
+    height: 66px;
 
-    display:
-        flex;
+    border-radius: 50%;
 
-    align-items:
-        center;
+    color: #6f5017;
 
-    justify-content:
-        center;
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: .05em;
 
-    width:
-        66px;
+    transform: rotate(-4deg);
 
-    height:
-        66px;
-
-    border-radius:
-        50%;
-
-    color:
-        #651321;
-
-    font-family:
-        var(--serif);
-
-    font-size:
-        1.15rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        .04em;
-
-    transform:
-        rotate(-4deg);
-
+    /* EMBOSSED GOLD EFFECT */
     text-shadow:
-
-        -1px -1px 1px
-        rgba(255,190,195,.32),
-
-        2px 2px 3px
-        rgba(48,0,8,.55);
+        -1px -1px 1px rgba(255,235,175,.75),
+        2px 2px 3px rgba(72,47,7,.65);
 
     box-shadow:
-
-        inset 2px 2px 3px
-        rgba(55,0,8,.22);
+        inset 2px 2px 4px rgba(65,42,5,.25),
+        inset -2px -2px 4px rgba(255,235,175,.18);
 }
 
 
-/* =====================================================
-   SMALL HEART
-===================================================== */
+/* SMALL HIGHLIGHT */
+.seal span::before {
+    content: "";
 
+    position: absolute;
+    top: 7px;
+    left: 10px;
+
+    width: 22px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.18);
+
+    filter: blur(2px);
+
+    transform: rotate(-25deg);
+}
+
+
+/* TINY DECORATIVE HEART */
 .seal span::after {
+    content: "♥";
 
-    content:
-        "♥";
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
 
-    position:
-        absolute;
+    font-size: 9px;
 
-    bottom:
-        4px;
-
-    right:
-        8px;
-
-    font-size:
-        9px;
-
-    color:
-        rgba(255,215,215,.30);
+    color: rgba(255,239,185,.55);
 
     text-shadow:
-        1px 1px 2px
-        rgba(50,0,5,.5);
+        1px 1px 2px rgba(65,40,5,.5);
 }
 
 
-/* =====================================================
-   NATURAL WAX HIGHLIGHT
-===================================================== */
+/* GENTLE FLOAT */
+@keyframes goldSealFloat {
 
-.seal span::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        7px;
-
-    left:
-        10px;
-
-    width:
-        22px;
-
-    height:
-        8px;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(255,255,255,.12);
-
-    filter:
-        blur(2px);
-
-    transform:
-        rotate(-25deg);
-}
-
-
-/* =====================================================
-   SUBTLE MOVEMENT
-===================================================== */
-
-@keyframes waxSealFloat {
-
-    0%,
-    100% {
-
+    0%, 100% {
         transform:
-            translate(-50%,-50%)
+            translate(-50%, -50%)
             rotate(-3deg);
     }
 
     50% {
-
         transform:
-            translate(-50%,-53%)
+            translate(-50%, -53%)
             rotate(-1deg);
     }
 }
 
 
-/* =====================================================
-   HOVER
-===================================================== */
-
+/* DESKTOP HOVER */
 .seal:hover {
-
     transform:
-        translate(-50%,-50%)
+        translate(-50%, -50%)
         rotate(0deg)
         scale(1.07);
 
     box-shadow:
-
-        0 8px 0 #4b0d18,
-
-        0 15px 25px
-        rgba(0,0,0,.40),
-
-        0 0 0 6px
-        rgba(105,18,32,.28),
-
-        0 0 25px
-        rgba(180,55,75,.25),
-
-        inset 4px 5px 7px
-        rgba(255,255,255,.20),
-
-        inset -6px -8px 10px
-        rgba(48,0,8,.42);
+        0 8px 0 #604414,
+        0 15px 26px rgba(0,0,0,.42),
+        0 0 0 6px rgba(180,140,55,.25),
+        0 0 25px rgba(218,177,83,.28),
+        inset 4px 5px 8px rgba(255,255,255,.38),
+        inset -7px -9px 12px rgba(74,48,8,.45);
 }
 
 
-/* =====================================================
-   PRESS EFFECT
-===================================================== */
-
+/* PRESS EFFECT */
 .seal:active {
-
     transform:
-        translate(-50%,-48%)
+        translate(-50%, -48%)
         rotate(-1deg)
         scale(.94);
 
     box-shadow:
-
-        0 3px 0 #4b0d18,
-
-        0 6px 10px
-        rgba(0,0,0,.30),
-
-        inset 4px 5px 8px
-        rgba(255,255,255,.10),
-
-        inset -5px -7px 9px
-        rgba(40,0,5,.45);
+        0 3px 0 #604414,
+        0 6px 10px rgba(0,0,0,.30),
+        inset 4px 5px 8px rgba(255,255,255,.18),
+        inset -5px -7px 9px rgba(55,35,5,.45);
 }
 
 
-/* =====================================================
-   WHEN ENVELOPE OPENS
-===================================================== */
-
+/* WHEN ENVELOPE OPENS */
 .envelope.open .seal {
-
-    opacity:
-        0;
-
-    pointer-events:
-        none;
-
-    animation:
-        none;
+    opacity: 0;
+    pointer-events: none;
+    animation: none;
 
     transform:
-        translate(-50%,-50%)
+        translate(-50%, -50%)
         scale(1.25);
 }
 
 
-/* =====================================================
-   WAX SEAL MOBILE
-===================================================== */
-
+/* MOBILE */
 @media (max-width:800px) {
 
     .seal {
-
-        width:
-            82px;
-
-        height:
-            82px;
+        width: 82px;
+        height: 82px;
     }
 
     .seal span {
-
-        width:
-            54px;
-
-        height:
-            54px;
-
-        font-size:
-            .92rem;
+        width: 54px;
+        height: 54px;
+        font-size: .92rem;
     }
 
     .seal span::after {
-
-        font-size:
-            7px;
-
-        bottom:
-            2px;
-
-        right:
-            6px;
+        font-size: 7px;
+        bottom: 2px;
+        right: 6px;
     }
 }
 
@@ -1478,24 +1277,14 @@ p {
 @media (max-width:520px) {
 
     .seal {
-
-        width:
-            74px;
-
-        height:
-            74px;
+        width: 74px;
+        height: 74px;
     }
 
     .seal span {
-
-        width:
-            48px;
-
-        height:
-            48px;
-
-        font-size:
-            .82rem;
+        width: 48px;
+        height: 48px;
+        font-size: .82rem;
     }
 }
 
@@ -3401,18 +3190,14 @@ footer p {
 
             <!-- 3D WAX SEAL -->
 
-            <button
-                class="seal"
-                id="seal"
-                type="button"
-                aria-label="Open wedding invitation"
-            >
-
-                <span>
-                    S &amp; D
-                </span>
-
-            </button>
+           <button
+    class="seal"
+    id="seal"
+    type="button"
+    aria-label="Open wedding invitation"
+>
+    <span>S &amp; D</span>
+</button>
 
 
         </div>
