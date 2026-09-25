@@ -946,34 +946,22 @@ p {
 
 .event-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 18px;
 }
 
 .event-card {
     padding: 45px 22px;
-
     text-align: center;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
 
-    border:
-        1px solid
-        var(--line);
-
-    background:
-        var(--paper);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-   
-   first-child .event-label {
+/* Only ENGAGEMENT — green */
+.event-card:first-child .event-label {
     color: #5f7f5a;
 }
-}
-
 .event-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow);
