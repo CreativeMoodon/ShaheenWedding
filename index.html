@@ -391,48 +391,10 @@ p {
 }
 
 .seal {
-    position: absolute;
-
-    left: 50%;
-    top: 54%;
-
-    transform:
-        translate(-50%,-50%);
-
-    width: clamp(58px,9vw,82px);
-    height: clamp(58px,9vw,82px);
-
-    border-radius: 50%;
-
-    border:
-        2px solid
-        rgba(255,255,255,.6);
-
-    background:
-        radial-gradient(
-            circle at 35% 30%,
-            #d7b16a,
-            #a57b38
-        );
-
-    color: #fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: var(--serif);
-    font-size: 1.2rem;
-
-    box-shadow:
-        0 8px 18px
-        rgba(70,45,15,.28);
-
-    z-index: 10;
-
-    transition:
-        transform .25s ease,
-        opacity .4s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .seal:hover {
@@ -446,13 +408,37 @@ p {
     transform: rotate(-8deg);
 }
 
+/* =====================================================
+   ENVELOPE OPEN STATE
+===================================================== */
+
+.envelope-flap {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+    transition:
+        transform 1s cubic-bezier(.65,.05,.36,1);
+    z-index: 5;
+}
+
 .envelope.open .envelope-flap {
     transform: rotateX(-180deg);
 }
 
+.envelope-letter {
+    transform: translateY(0);
+    transition:
+        transform 1s cubic-bezier(.65,.05,.36,1);
+    z-index: 2;
+}
+
 .envelope.open .envelope-letter {
-    transform: translateY(-42%);
+    transform: translateY(-48%);
     z-index: 6;
+}
+
+.envelope.open .seal {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .envelope.open .seal {
@@ -1585,7 +1571,7 @@ footer p {
     </div>
 
 </div>
-```
+
 
 </div>
 
@@ -1595,7 +1581,7 @@ footer p {
 
 <header class="site-header" id="top">
 
-```
+
 <nav class="nav">
 
     <a
@@ -2254,28 +2240,67 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("locked");
 
 
-    if (seal && envelope && letterIntro) {
+/* =================================================
+   ENVELOPE OPENING
+================================================= */
 
-        seal.addEventListener("click", function () {
+const letterIntro = document.getElementById("letterIntro");
+const envelope = document.getElementById("envelope");
+const seal = document.getElementById("seal");
 
-            envelope.classList.add("open");
+if (letterIntro && envelope && seal) {
 
-            setTimeout(function () {
+    function openEnvelope(event) {
 
-                letterIntro.classList.add("hidden");
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
 
-                document.body.classList.remove("locked");
+        /* Prevent double clicking */
+        if (envelope.classList.contains("open")) {
+            return;
+        }
 
-                window.scrollTo({
-                    top: 0,
-                    behavior: "instant"
-                });
+        /* Open envelope */
+        envelope.classList.add("open");
 
-            }, 1500);
+        /* Hide instruction immediately */
+        const instruction =
+            document.querySelector(".letter-instruction");
 
-        });
+        if (instruction) {
+            instruction.style.opacity = "0";
+        }
 
+        /* Remove intro after animation */
+        setTimeout(function () {
+
+            letterIntro.classList.add("hidden");
+
+            document.body.classList.remove("locked");
+
+            window.scrollTo(0, 0);
+
+        }, 1400);
     }
+
+
+    /* Desktop mouse */
+    seal.addEventListener(
+        "click",
+        openEnvelope
+    );
+
+
+    /* Mobile touch */
+    seal.addEventListener(
+        "touchend",
+        openEnvelope,
+        { passive: false }
+    );
+
+}
 
 
     /* =================================================
