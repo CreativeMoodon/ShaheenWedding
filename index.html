@@ -239,7 +239,252 @@ p {
 
     pointer-events: none;
 }
+/* =====================================================
+   LUXURY GOLD ENVELOPE ORNAMENTS
+===================================================== */
 
+/* Gold decorative corner frame */
+.envelope-base {
+    border: 1px solid rgba(224, 190, 119, .75);
+}
+
+.envelope-base::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+
+    border: 1px solid rgba(224, 190, 119, .55);
+
+    background:
+        /* top-left diagonal */
+        linear-gradient(
+            45deg,
+            transparent 48%,
+            rgba(224,190,119,.75) 49%,
+            rgba(224,190,119,.75) 51%,
+            transparent 52%
+        ) top left / 28px 28px no-repeat,
+
+        /* top-right diagonal */
+        linear-gradient(
+            -45deg,
+            transparent 48%,
+            rgba(224,190,119,.75) 49%,
+            rgba(224,190,119,.75) 51%,
+            transparent 52%
+        ) top right / 28px 28px no-repeat,
+
+        /* bottom-left diagonal */
+        linear-gradient(
+            -45deg,
+            transparent 48%,
+            rgba(224,190,119,.75) 49%,
+            rgba(224,190,119,.75) 51%,
+            transparent 52%
+        ) bottom left / 28px 28px no-repeat,
+
+        /* bottom-right diagonal */
+        linear-gradient(
+            45deg,
+            transparent 48%,
+            rgba(224,190,119,.75) 49%,
+            rgba(224,190,119,.75) 51%,
+            transparent 52%
+        ) bottom right / 28px 28px no-repeat;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   GOLD GEOMETRIC PATTERN
+===================================================== */
+
+.envelope-base::after {
+    content: "";
+
+    position: absolute;
+    inset: 35px;
+
+    opacity: .28;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 46%,
+            #dcb96f 48%,
+            #dcb96f 52%,
+            transparent 54%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 46%,
+            #dcb96f 48%,
+            #dcb96f 52%,
+            transparent 54%
+        );
+
+    background-size: 42px 42px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   GOLD ORNAMENT ON TOP FLAP
+===================================================== */
+
+.envelope-flap {
+    border-top: 1px solid rgba(232,202,137,.7);
+}
+
+
+/* Decorative gold line inside flap */
+.envelope-flap::after {
+    content: "";
+
+    position: absolute;
+
+    top: 16px;
+    left: 7%;
+
+    width: 86%;
+    height: 82%;
+
+    border-top: 1px solid rgba(231,198,126,.75);
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 94%
+        );
+
+    filter:
+        drop-shadow(
+            0 1px 1px rgba(0,0,0,.15)
+        );
+}
+
+
+/* =====================================================
+   CENTRAL GOLD ORNAMENT
+===================================================== */
+
+.envelope-flap::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #e1bd70;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    border:
+        1px solid
+        rgba(225,189,112,.65);
+
+    border-radius: 50%;
+
+    text-shadow:
+        0 1px 3px rgba(0,0,0,.35);
+}
+
+
+/* =====================================================
+   GOLD CORNER DIAMONDS
+===================================================== */
+
+.envelope {
+    --gold-design: #dfbd72;
+}
+
+
+/* top-left */
+.envelope::before {
+    content: "◆";
+
+    position: absolute;
+
+    top: 22px;
+    left: 24px;
+
+    z-index: 12;
+
+    color: var(--gold-design);
+
+    font-size: 11px;
+
+    text-shadow:
+        0 1px 2px rgba(0,0,0,.3);
+}
+
+
+/* top-right */
+.envelope::after {
+    content: "◆";
+
+    position: absolute;
+
+    top: 22px;
+    right: 24px;
+
+    z-index: 12;
+
+    color: var(--gold-design);
+
+    font-size: 11px;
+
+    text-shadow:
+        0 1px 2px rgba(0,0,0,.3);
+}
+
+
+/* =====================================================
+   GOLD SEAL ENHANCEMENT
+===================================================== */
+
+.seal {
+    border:
+        3px solid #e0bd72;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.35),
+
+        0 0 0 3px
+        rgba(224,189,114,.16),
+
+        inset 0 0 0 2px
+        rgba(255,255,255,.22);
+}
+
+.seal::before {
+    border:
+        1px solid
+        rgba(255,239,190,.8);
+}
 
 /* =====================================================
    ENVELOPE CONTAINER
