@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -9,9 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta
-name="description"
-content="Wedding invitation for Dr. Shaheen Salamat & Darwesh Tasleem"
-
+    name="description"
+    content="Wedding invitation for Dr. Shaheen Salamat & Darwesh Tasleem"
 >
 
 <title>Shaheen & Darwesh | Wedding Invitation</title>
@@ -19,15 +17,16 @@ content="Wedding invitation for Dr. Shaheen Salamat & Darwesh Tasleem"
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
 >
 
 <link
-href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
-rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+    rel="stylesheet"
 >
+
 
 <style>
 
@@ -41,8 +40,11 @@ rel="stylesheet"
     --paper: #fffaf2;
     --ink: #2f2924;
     --muted: #786f66;
+
     --gold: #b28a45;
     --gold-dark: #87682f;
+    --gold-light: #e1bd72;
+
     --line: rgba(47,41,36,.15);
 
     --shadow:
@@ -78,9 +80,13 @@ html {
 
 body {
     margin: 0;
+
     background: var(--cream);
+
     color: var(--ink);
+
     font-family: var(--sans);
+
     line-height: 1.7;
 }
 
@@ -115,27 +121,36 @@ img {
 
 .container {
     width: min(1120px, calc(100% - 40px));
+
     margin: auto;
 }
 
 .narrow {
     width: min(760px, calc(100% - 40px));
+
     margin-left: auto;
     margin-right: auto;
+
     text-align: center;
 }
 
 .section {
     padding: 100px 0;
+
     position: relative;
 }
 
 .eyebrow {
     margin: 0 0 10px;
+
     color: var(--gold-dark);
+
     letter-spacing: .22em;
+
     font-size: .72rem;
+
     font-weight: 600;
+
     text-transform: uppercase;
 }
 
@@ -143,12 +158,16 @@ h1,
 h2,
 h3 {
     font-family: var(--serif);
+
     font-weight: 500;
+
     line-height: 1.05;
 }
 
 h2 {
-    font-size: clamp(2.5rem,5vw,4.5rem);
+    font-size:
+        clamp(2.5rem,5vw,4.5rem);
+
     margin: 0 0 18px;
 }
 
@@ -162,35 +181,220 @@ p {
 
 
 /* =====================================================
-   LUXURY GREEN MUSLIM WEDDING ENVELOPE
+   FALLING ROSE PETALS
 ===================================================== */
 
-#letterIntro {
+#petalContainer {
     position: fixed;
+
     inset: 0;
+
     width: 100%;
     height: 100%;
-    z-index: 99999;
+
     overflow: hidden;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    pointer-events: none;
+
+    /*
+       Below envelope intro,
+       above normal website
+    */
+    z-index: 9990;
+}
+
+
+.rose-petal {
+    position: absolute;
+
+    top: -60px;
+
+    width: 17px;
+    height: 25px;
+
+    border-radius:
+        85% 15% 75% 25%;
 
     background:
         radial-gradient(
-            circle at 50% 45%,
-            rgba(255,255,255,.08),
-            transparent 45%
+            ellipse at 28% 22%,
+            rgba(255,255,255,.42),
+            transparent 25%
         ),
+
         linear-gradient(
             135deg,
-            #18382b 0%,
-            #2d5944 48%,
-            #163225 100%
+            #701c2b 0%,
+            #a82f42 35%,
+            #d04d60 65%,
+            #7c1d2d 100%
+        );
+
+    box-shadow:
+        0 3px 7px rgba(0,0,0,.2),
+
+        inset -2px -3px 5px
+        rgba(65,0,10,.18);
+
+    opacity: .8;
+
+    transform-origin:
+        center center;
+
+    animation:
+        rosePetalFall
+        linear
+        infinite;
+}
+
+
+/* Petal highlight */
+
+.rose-petal::after {
+    content: "";
+
+    position: absolute;
+
+    left: 13%;
+    top: 8%;
+
+    width: 68%;
+    height: 72%;
+
+    border-radius:
+        70% 30% 65% 35%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.2),
+            transparent 60%
+        );
+
+    transform:
+        rotate(25deg);
+}
+
+
+@keyframes rosePetalFall {
+
+    0% {
+
+        transform:
+            translate3d(
+                0,
+                -70px,
+                0
+            )
+            rotate(0deg)
+            rotateX(0deg)
+            rotateY(0deg);
+    }
+
+    20% {
+
+        transform:
+            translate3d(
+                45px,
+                20vh,
+                0
+            )
+            rotate(95deg)
+            rotateX(25deg)
+            rotateY(20deg);
+    }
+
+    40% {
+
+        transform:
+            translate3d(
+                -35px,
+                42vh,
+                0
+            )
+            rotate(190deg)
+            rotateX(60deg)
+            rotateY(45deg);
+    }
+
+    60% {
+
+        transform:
+            translate3d(
+                50px,
+                64vh,
+                0
+            )
+            rotate(275deg)
+            rotateX(35deg)
+            rotateY(70deg);
+    }
+
+    80% {
+
+        transform:
+            translate3d(
+                -25px,
+                84vh,
+                0
+            )
+            rotate(365deg)
+            rotateX(65deg)
+            rotateY(35deg);
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                30px,
+                115vh,
+                0
+            )
+            rotate(480deg)
+            rotateX(10deg)
+            rotateY(80deg);
+    }
+}
+
+
+/* =====================================================
+   LUXURY DESIGNER ENVELOPE
+===================================================== */
+
+#letterIntro {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(220,190,115,.16),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            #0b2017 0%,
+            #153a29 48%,
+            #0a1c14 100%
         );
 
     opacity: 1;
+
     visibility: visible;
 
     transition:
@@ -198,310 +402,111 @@ p {
         visibility 1s ease;
 }
 
+
+/* Fade intro away */
+
 #letterIntro.hidden {
+
     opacity: 0;
+
     visibility: hidden;
+
     pointer-events: none;
 }
 
 
 /* =====================================================
-   DECORATIVE GOLD BORDER
+   OUTER GOLD FRAME
 ===================================================== */
 
 #letterIntro::before {
-    content: "";
-    position: absolute;
-    inset: 24px;
 
-    border: 1px solid rgba(218,184,112,.35);
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border:
+        1px solid
+        rgba(224,190,119,.65);
+
+    box-shadow:
+
+        inset 0 0 0 7px
+        rgba(224,190,119,.035),
+
+        inset 0 0 70px
+        rgba(0,0,0,.18);
 
     pointer-events: none;
 }
+
+
+/* Top decoration */
 
 #letterIntro::after {
-    content: "✦     ✧     ✦     ✧     ✦";
 
-    position: absolute;
-    top: 42px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    color: rgba(224,190,119,.55);
-
-    font-family: var(--serif);
-    font-size: 12px;
-
-    letter-spacing: .35em;
-
-    white-space: nowrap;
-
-    pointer-events: none;
-}
-/* =====================================================
-   LUXURY GOLD ENVELOPE ORNAMENTS
-===================================================== */
-
-/* Gold decorative corner frame */
-.envelope-base {
-    border: 1px solid rgba(224, 190, 119, .75);
-}
-
-.envelope-base::before {
-    content: "";
-    position: absolute;
-    inset: 12px;
-
-    border: 1px solid rgba(224, 190, 119, .55);
-
-    background:
-        /* top-left diagonal */
-        linear-gradient(
-            45deg,
-            transparent 48%,
-            rgba(224,190,119,.75) 49%,
-            rgba(224,190,119,.75) 51%,
-            transparent 52%
-        ) top left / 28px 28px no-repeat,
-
-        /* top-right diagonal */
-        linear-gradient(
-            -45deg,
-            transparent 48%,
-            rgba(224,190,119,.75) 49%,
-            rgba(224,190,119,.75) 51%,
-            transparent 52%
-        ) top right / 28px 28px no-repeat,
-
-        /* bottom-left diagonal */
-        linear-gradient(
-            -45deg,
-            transparent 48%,
-            rgba(224,190,119,.75) 49%,
-            rgba(224,190,119,.75) 51%,
-            transparent 52%
-        ) bottom left / 28px 28px no-repeat,
-
-        /* bottom-right diagonal */
-        linear-gradient(
-            45deg,
-            transparent 48%,
-            rgba(224,190,119,.75) 49%,
-            rgba(224,190,119,.75) 51%,
-            transparent 52%
-        ) bottom right / 28px 28px no-repeat;
-
-    pointer-events: none;
-}
-
-
-/* =====================================================
-   GOLD GEOMETRIC PATTERN
-===================================================== */
-
-.envelope-base::after {
-    content: "";
-
-    position: absolute;
-    inset: 35px;
-
-    opacity: .28;
-
-    background:
-        linear-gradient(
-            45deg,
-            transparent 46%,
-            #dcb96f 48%,
-            #dcb96f 52%,
-            transparent 54%
-        ),
-        linear-gradient(
-            -45deg,
-            transparent 46%,
-            #dcb96f 48%,
-            #dcb96f 52%,
-            transparent 54%
-        );
-
-    background-size: 42px 42px;
-
-    mask-image:
-        radial-gradient(
-            ellipse at center,
-            black 0%,
-            transparent 72%
-        );
-
-    pointer-events: none;
-}
-
-
-/* =====================================================
-   GOLD ORNAMENT ON TOP FLAP
-===================================================== */
-
-.envelope-flap {
-    border-top: 1px solid rgba(232,202,137,.7);
-}
-
-
-/* Decorative gold line inside flap */
-.envelope-flap::after {
-    content: "";
+    content:
+        "✦   ✧   ☾   ✧   ✦";
 
     position: absolute;
 
-    top: 16px;
-    left: 7%;
+    top: 34px;
 
-    width: 86%;
-    height: 82%;
-
-    border-top: 1px solid rgba(231,198,126,.75);
-
-    clip-path:
-        polygon(
-            0 0,
-            100% 0,
-            50% 94%
-        );
-
-    filter:
-        drop-shadow(
-            0 1px 1px rgba(0,0,0,.15)
-        );
-}
-
-
-/* =====================================================
-   CENTRAL GOLD ORNAMENT
-===================================================== */
-
-.envelope-flap::before {
-    content: "✦";
-
-    position: absolute;
-
-    top: 20px;
     left: 50%;
 
     transform:
         translateX(-50%);
 
-    width: 42px;
-    height: 42px;
+    color:
+        #dfbd72;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family:
+        var(--serif);
 
-    color: #e1bd70;
+    font-size:
+        13px;
 
-    font-family: Georgia, serif;
+    letter-spacing:
+        .28em;
 
-    font-size: 24px;
+    white-space:
+        nowrap;
 
-    border:
-        1px solid
-        rgba(225,189,112,.65);
+    opacity:
+        .9;
 
-    border-radius: 50%;
-
-    text-shadow:
-        0 1px 3px rgba(0,0,0,.35);
+    pointer-events:
+        none;
 }
 
 
 /* =====================================================
-   GOLD CORNER DIAMONDS
-===================================================== */
-
-.envelope {
-    --gold-design: #dfbd72;
-}
-
-
-/* top-left */
-.envelope::before {
-    content: "◆";
-
-    position: absolute;
-
-    top: 22px;
-    left: 24px;
-
-    z-index: 12;
-
-    color: var(--gold-design);
-
-    font-size: 11px;
-
-    text-shadow:
-        0 1px 2px rgba(0,0,0,.3);
-}
-
-
-/* top-right */
-.envelope::after {
-    content: "◆";
-
-    position: absolute;
-
-    top: 22px;
-    right: 24px;
-
-    z-index: 12;
-
-    color: var(--gold-design);
-
-    font-size: 11px;
-
-    text-shadow:
-        0 1px 2px rgba(0,0,0,.3);
-}
-
-
-/* =====================================================
-   GOLD SEAL ENHANCEMENT
-===================================================== */
-
-.seal {
-    border:
-        3px solid #e0bd72;
-
-    box-shadow:
-        0 8px 22px rgba(0,0,0,.35),
-
-        0 0 0 3px
-        rgba(224,189,114,.16),
-
-        inset 0 0 0 2px
-        rgba(255,255,255,.22);
-}
-
-.seal::before {
-    border:
-        1px solid
-        rgba(255,239,190,.8);
-}
-
-/* =====================================================
-   ENVELOPE CONTAINER
+   ENVELOPE STAGE
 ===================================================== */
 
 .envelope-container {
+
     position: relative;
 
-    width: min(86vw, 680px);
+    width:
+        min(88vw, 720px);
 
-    aspect-ratio: 1.55 / 1;
+    aspect-ratio:
+        1.55 / 1;
 
-    perspective: 1400px;
+    perspective:
+        1800px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 }
 
 
@@ -510,50 +515,94 @@ p {
 ===================================================== */
 
 .envelope {
-    position: relative;
 
-    width: 100%;
-    height: 100%;
+    position:
+        relative;
 
-    transform-style: preserve-3d;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    transform-style:
+        preserve-3d;
 
     filter:
         drop-shadow(
-            0 30px 35px rgba(0,0,0,.30)
+            0 35px 45px rgba(0,0,0,.48)
         );
+
+    animation:
+        envelopeFloat
+        4s ease-in-out infinite;
+}
+
+
+/* Gentle floating */
+
+@keyframes envelopeFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-6px);
+    }
+}
+
+
+.envelope.open {
+    animation: none;
 }
 
 
 /* =====================================================
-   MAIN GREEN ENVELOPE
+   MAIN GREEN ENVELOPE BODY
 ===================================================== */
 
 .envelope-base {
-    position: absolute;
-    inset: 0;
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        5px;
 
     background:
+
         linear-gradient(
-            145deg,
-            #3d6851 0%,
-            #2b513e 48%,
-            #19392b 100%
+            135deg,
+            #3f6f55 0%,
+            #28523e 38%,
+            #193d2e 72%,
+            #102d21 100%
         );
 
-    border-radius: 4px;
-
     border:
-        1px solid
-        rgba(224,190,119,.55);
-
-    overflow: hidden;
+        2px solid
+        rgba(225,190,112,.9);
 
     box-shadow:
-        inset 0 0 0 1px
-        rgba(255,255,255,.06),
 
-        inset 0 0 50px
-        rgba(0,0,0,.18);
+        inset 0 0 0 1px
+        rgba(255,255,255,.08),
+
+        inset 0 0 80px
+        rgba(0,0,0,.25),
+
+        0 0 0 1px
+        rgba(0,0,0,.25);
 }
 
 
@@ -562,51 +611,83 @@ p {
 ===================================================== */
 
 .envelope-base::before {
+
     content: "";
 
-    position: absolute;
-    inset: 13px;
+    position:
+        absolute;
+
+    inset:
+        13px;
 
     border:
         1px solid
-        rgba(220,185,110,.42);
+        rgba(231,198,126,.75);
 
-    pointer-events: none;
+    box-shadow:
+
+        inset 0 0 0 7px
+        rgba(224,190,119,.035);
+
+    pointer-events:
+        none;
 }
 
 
 /* =====================================================
-   SUBTLE GEOMETRIC PATTERN
+   GEOMETRIC GOLD PATTERN
 ===================================================== */
 
 .envelope-base::after {
+
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 28px;
+    inset:
+        25px;
 
-    opacity: .12;
+    opacity:
+        .14;
 
-    background-image:
+    background:
+
         linear-gradient(
             45deg,
-            transparent 46%,
-            #d9b66e 47%,
-            #d9b66e 53%,
-            transparent 54%
+            transparent 43%,
+            #e2bf78 44%,
+            #e2bf78 46%,
+            transparent 47%
         ),
+
         linear-gradient(
             -45deg,
-            transparent 46%,
-            #d9b66e 47%,
-            #d9b66e 53%,
-            transparent 54%
+            transparent 43%,
+            #e2bf78 44%,
+            #e2bf78 46%,
+            transparent 47%
         );
 
-    background-size: 38px 38px;
+    background-size:
+        42px 42px;
 
-    pointer-events: none;
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            transparent 78%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            transparent 78%
+        );
+
+    pointer-events:
+        none;
 }
 
 
@@ -615,81 +696,115 @@ p {
 ===================================================== */
 
 .envelope-letter {
-    position: absolute;
 
-    left: 9%;
-    right: 9%;
-    bottom: 6%;
+    position:
+        absolute;
 
-    height: 79%;
+    left:
+        8%;
+
+    right:
+        8%;
+
+    bottom:
+        6%;
+
+    height:
+        82%;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
 
     background:
+
         linear-gradient(
             145deg,
-            #fffdf8,
-            #f5ead8
+            #fffef9 0%,
+            #f8efdf 55%,
+            #efe0c7 100%
         );
 
     border:
         1px solid
-        rgba(178,138,69,.4);
-
-    z-index: 2;
-
-    transform: translateY(0);
-
-    transition:
-        transform 1s
-        cubic-bezier(.65,.05,.36,1);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
+        rgba(186,145,68,.75);
 
     box-shadow:
-        0 12px 30px
-        rgba(0,0,0,.18);
+
+        0 18px 40px
+        rgba(0,0,0,.28),
+
+        inset 0 0 25px
+        rgba(178,138,69,.06);
+
+    transform:
+        translateY(0);
+
+    transition:
+        transform 1.2s
+        cubic-bezier(.22,.61,.36,1);
+
+    overflow:
+        hidden;
 }
 
 
-/* =====================================================
-   GOLD CARD FRAME
-===================================================== */
+/* Card inner frame */
 
 .envelope-letter::before {
+
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 13px;
+    inset:
+        12px;
 
     border:
         1px solid
-        rgba(178,138,69,.38);
+        rgba(178,138,69,.48);
 
-    pointer-events: none;
+    pointer-events:
+        none;
 }
 
 
-/* =====================================================
-   CARD ORNAMENT
-===================================================== */
+/* Card top ornament */
 
 .envelope-letter::after {
-    content: "✦";
 
-    position: absolute;
+    content:
+        "✦";
 
-    top: 7px;
-    left: 50%;
+    position:
+        absolute;
 
-    transform: translateX(-50%);
+    top:
+        8px;
 
-    color: #b28a45;
+    left:
+        50%;
 
-    font-size: 14px;
+    transform:
+        translateX(-50%);
+
+    color:
+        #b28a45;
+
+    font-size:
+        15px;
 }
 
 
@@ -698,67 +813,109 @@ p {
 ===================================================== */
 
 .letter-content {
-    position: relative;
-    z-index: 2;
 
-    padding: 30px;
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    padding:
+        25px;
 }
+
 
 .letter-content .small {
-    margin-bottom: 8px;
 
-    font-family: var(--sans);
+    margin-bottom:
+        8px;
 
-    font-size: .62rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: .22em;
-
-    color: #87682f;
-}
-
-.letter-content h2 {
-    margin: 8px 0 10px;
-
-    font-family: var(--script);
+    font-family:
+        var(--sans);
 
     font-size:
-        clamp(2.2rem, 6vw, 4.2rem);
+        .62rem;
 
-    font-weight: 400;
+    text-transform:
+        uppercase;
 
-    line-height: 1;
+    letter-spacing:
+        .22em;
 
-    color: #315943;
+    color:
+        #87682f;
 }
 
+
+.letter-content h2 {
+
+    margin:
+        8px 0 12px;
+
+    font-family:
+        var(--script);
+
+    font-size:
+        clamp(2.5rem,6vw,4.4rem);
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    color:
+        #315c47;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.8);
+}
+
+
 .letter-content p {
-    margin: 0;
 
-    font-family: var(--serif);
+    margin:
+        0;
 
-    font-size: .95rem;
+    font-family:
+        var(--serif);
 
-    letter-spacing: .15em;
+    font-size:
+        .95rem;
 
-    color: #78664e;
+    letter-spacing:
+        .18em;
+
+    color:
+        #79664d;
 }
 
 
 /* =====================================================
-   LOWER ENVELOPE FLAP
+   LOWER ENVELOPE FOLD
 ===================================================== */
 
 .envelope-bottom {
-    position: absolute;
-    inset: 0;
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        4;
+
+    pointer-events:
+        none;
 
     background:
+
         linear-gradient(
             145deg,
-            #315a45,
-            #1c3d2e
+            #345f48 0%,
+            #244936 55%,
+            #173728 100%
         );
 
     clip-path:
@@ -770,13 +927,46 @@ p {
             0 100%
         );
 
-    z-index: 4;
-
-    pointer-events: none;
-
     border-bottom:
         1px solid
-        rgba(220,185,110,.25);
+        rgba(225,190,112,.45);
+}
+
+
+/* Gold fold details */
+
+.envelope-bottom::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            31deg,
+            transparent 49.5%,
+            rgba(224,190,119,.5) 50%,
+            transparent 50.5%
+        ),
+
+        linear-gradient(
+            -31deg,
+            transparent 49.5%,
+            rgba(224,190,119,.5) 50%,
+            transparent 50.5%
+        );
+
+    opacity:
+        .65;
+
+    pointer-events:
+        none;
 }
 
 
@@ -785,19 +975,32 @@ p {
 ===================================================== */
 
 .envelope-flap {
-    position: absolute;
 
-    left: 0;
-    top: 0;
+    position:
+        absolute;
 
-    width: 100%;
-    height: 59%;
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        61%;
+
+    z-index:
+        5;
 
     background:
+
         linear-gradient(
-            145deg,
-            #416e55,
-            #274b39
+            135deg,
+            #4a785c 0%,
+            #315d46 38%,
+            #1d402f 100%
         );
 
     clip-path:
@@ -807,191 +1010,382 @@ p {
             50% 100%
         );
 
-    transform-origin: top center;
+    transform-origin:
+        top center;
 
-    transform: rotateX(0deg);
+    transform:
+        rotateX(0deg);
 
     transition:
-        transform 1.05s
+        transform 1.15s
         cubic-bezier(.65,.05,.36,1);
 
-    z-index: 5;
+    backface-visibility:
+        hidden;
 
-    backface-visibility: hidden;
+    -webkit-backface-visibility:
+        hidden;
 
     box-shadow:
-        0 4px 8px
-        rgba(0,0,0,.15);
+        0 5px 12px
+        rgba(0,0,0,.22);
+
+    pointer-events:
+        none;
 }
 
 
 /* =====================================================
-   GOLD DETAIL ON FLAP
+   GOLD FLAP BORDER
 ===================================================== */
 
 .envelope-flap::after {
-    content: "";
 
-    position: absolute;
+    content:
+        "";
 
-    top: 12px;
-    left: 2%;
+    position:
+        absolute;
 
-    width: 96%;
-    height: 90%;
+    top:
+        12px;
+
+    left:
+        4%;
+
+    width:
+        92%;
+
+    height:
+        88%;
 
     border-top:
         1px solid
-        rgba(224,190,119,.55);
+        rgba(239,210,147,.85);
 
     clip-path:
         polygon(
             0 0,
             100% 0,
-            50% 96%
+            50% 95%
         );
+
+    opacity:
+        .9;
 }
 
 
 /* =====================================================
-   CRESCENT DETAIL
+   CRESCENT + STAR
 ===================================================== */
 
 .envelope-flap::before {
-    content: "☾";
 
-    position: absolute;
+    content:
+        "☾  ✦";
 
-    top: 24px;
-    left: 50%;
+    position:
+        absolute;
+
+    top:
+        23px;
+
+    left:
+        50%;
 
     transform:
         translateX(-50%)
-        rotate(-15deg);
-
-    font-family: Georgia, serif;
-
-    font-size: 27px;
+        rotate(-7deg);
 
     color:
-        rgba(230,198,130,.75);
+        #e6c47d;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        25px;
+
+    letter-spacing:
+        .12em;
+
+    text-shadow:
+        0 2px 4px
+        rgba(0,0,0,.3);
 }
 
 
 /* =====================================================
-   GOLD WAX SEAL
+   GOLD CORNER ORNAMENTS
+===================================================== */
+
+.envelope::before,
+.envelope::after {
+
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    z-index:
+        12;
+
+    color:
+        #e1bd72;
+
+    font-size:
+        19px;
+
+    text-shadow:
+        0 2px 4px
+        rgba(0,0,0,.35);
+
+    pointer-events:
+        none;
+}
+
+
+.envelope::before {
+
+    top:
+        17px;
+
+    left:
+        20px;
+}
+
+
+.envelope::after {
+
+    top:
+        17px;
+
+    right:
+        20px;
+}
+
+
+/* =====================================================
+   GOLD SEAL
 ===================================================== */
 
 .seal {
-    position: absolute;
 
-    left: 50%;
-    top: 54%;
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        55%;
 
     transform:
         translate(-50%, -50%);
 
-    width: 88px;
-    height: 88px;
+    width:
+        96px;
 
-    border-radius: 50%;
+    height:
+        96px;
+
+    z-index:
+        20;
+
+    border-radius:
+        50%;
 
     border:
-        2px solid
-        #dfbd73;
+        3px solid
+        #e5c47d;
 
     background:
+
         radial-gradient(
-            circle at 35% 28%,
-            #dfc17b,
-            #b28a45 50%,
-            #7c5d2b 100%
+            circle at 30% 25%,
+            #f0d58e 0%,
+            #d0a957 28%,
+            #aa7e35 62%,
+            #725323 100%
         );
 
-    color: #fffaf2;
+    color:
+        #fffaf0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:
+        flex;
 
-    font-family: var(--serif);
+    align-items:
+        center;
 
-    font-size: 1rem;
-    font-weight: 600;
+    justify-content:
+        center;
+
+    font-family:
+        var(--serif);
+
+    font-size:
+        1rem;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    touch-action:
+        manipulation;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    user-select:
+        none;
+
+    -webkit-user-select:
+        none;
 
     box-shadow:
-        0 8px 22px rgba(0,0,0,.32),
+
+        0 10px 25px
+        rgba(0,0,0,.42),
+
+        0 0 0 4px
+        rgba(224,190,112,.13),
 
         inset 0 0 0 3px
-        rgba(255,255,255,.18);
-
-    z-index: 20;
-
-    cursor: pointer;
-
-    touch-action: manipulation;
-
-    -webkit-tap-highlight-color: transparent;
-
-    user-select: none;
-    -webkit-user-select: none;
+        rgba(255,255,255,.22);
 
     transition:
+
         transform .3s ease,
+
         box-shadow .3s ease,
+
         opacity .4s ease;
+
+    animation:
+        luxurySealGlow
+        2.8s ease-in-out infinite;
 }
 
 
-/* INNER SEAL RING */
+/* Inner seal ring */
 
 .seal::before {
-    content: "";
 
-    position: absolute;
+    content:
+        "";
 
-    inset: 7px;
+    position:
+        absolute;
+
+    inset:
+        8px;
 
     border:
         1px solid
-        rgba(255,250,230,.6);
+        rgba(255,246,215,.85);
 
-    border-radius: 50%;
+    border-radius:
+        50%;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(255,255,255,.12);
 }
 
 
-/* SMALL STAR */
+/* Seal star */
 
 .seal::after {
-    content: "✦";
 
-    position: absolute;
+    content:
+        "✦";
 
-    top: 7px;
-    right: 16px;
+    position:
+        absolute;
 
-    font-size: 9px;
+    top:
+        8px;
+
+    right:
+        17px;
+
+    font-size:
+        10px;
 
     color:
-        rgba(255,248,220,.85);
+        rgba(255,248,220,.95);
 }
 
 
-/* SEAL TEXT */
+/* Seal text */
 
 .seal span {
-    position: relative;
-    z-index: 2;
 
-    display: block;
+    position:
+        relative;
 
-    transform: rotate(-8deg);
+    z-index:
+        2;
 
-    color: #fffaf2;
+    color:
+        #fffaf2;
 
-    font-family: var(--serif);
+    font-family:
+        var(--serif);
 
-    letter-spacing: .04em;
+    font-size:
+        1rem;
+
+    letter-spacing:
+        .05em;
+
+    transform:
+        rotate(-7deg);
+}
+
+
+/* =====================================================
+   SEAL GLOW
+===================================================== */
+
+@keyframes luxurySealGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+
+            0 10px 25px
+            rgba(0,0,0,.42),
+
+            0 0 0 4px
+            rgba(224,190,112,.13),
+
+            inset 0 0 0 3px
+            rgba(255,255,255,.22);
+    }
+
+    50% {
+
+        box-shadow:
+
+            0 12px 30px
+            rgba(0,0,0,.46),
+
+            0 0 0 8px
+            rgba(224,190,112,.12),
+
+            0 0 25px
+            rgba(224,190,112,.22),
+
+            inset 0 0 0 3px
+            rgba(255,255,255,.25);
+    }
 }
 
 
@@ -1000,44 +1394,62 @@ p {
 ===================================================== */
 
 .seal:hover {
+
     transform:
         translate(-50%, -50%)
         scale(1.08);
-
-    box-shadow:
-        0 11px 28px
-        rgba(0,0,0,.38),
-
-        inset 0 0 0 3px
-        rgba(255,255,255,.22);
 }
 
+
 .seal:active {
+
     transform:
         translate(-50%, -50%)
-        scale(.95);
+        scale(.94);
 }
 
 
 /* =====================================================
-   OPEN ANIMATION
+   OPENING ANIMATION
 ===================================================== */
 
 .envelope.open .envelope-flap {
+
     transform:
         rotateX(-180deg);
 }
 
+
 .envelope.open .envelope-letter {
+
     transform:
         translateY(-48%);
 
-    z-index: 6;
+    z-index:
+        6;
 }
 
+
 .envelope.open .seal {
-    opacity: 0;
-    pointer-events: none;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    animation:
+        none;
+}
+
+
+.envelope.open {
+
+    filter:
+        drop-shadow(
+            0 40px 55px
+            rgba(0,0,0,.5)
+        );
 }
 
 
@@ -1046,214 +1458,378 @@ p {
 ===================================================== */
 
 .letter-instruction {
-    position: absolute;
 
-    bottom: -58px;
-    left: 50%;
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        -58px;
 
     transform:
         translateX(-50%);
 
-    color: #f3dfb4;
+    white-space:
+        nowrap;
 
-    font-family: var(--sans);
+    color:
+        #f3dfb4;
 
-    font-size: .68rem;
+    font-family:
+        var(--sans);
 
-    letter-spacing: .2em;
+    font-size:
+        .68rem;
 
-    text-transform: uppercase;
+    letter-spacing:
+        .22em;
 
-    white-space: nowrap;
+    text-transform:
+        uppercase;
 
     text-shadow:
-        0 2px 5px rgba(0,0,0,.4);
+        0 2px 6px
+        rgba(0,0,0,.5);
 
     transition:
         opacity .4s ease;
 }
 
-.envelope.open ~ .letter-instruction {
-    opacity: 0;
-}
-
 
 /* =====================================================
-   MOBILE
+   MOBILE ENVELOPE
 ===================================================== */
 
 @media (max-width: 800px) {
 
     #letterIntro::before {
-        inset: 18px;
+        inset:
+            15px;
     }
 
     #letterIntro::after {
-        top: 32px;
-        font-size: 9px;
+
+        top:
+            28px;
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            .18em;
     }
 
     .envelope-container {
-        width: 88vw;
+
+        width:
+            90vw;
     }
 
     .seal {
-        width: 74px;
-        height: 74px;
-        font-size: .85rem;
+
+        width:
+            78px;
+
+        height:
+            78px;
+
+        font-size:
+            .82rem;
+    }
+
+    .seal span {
+        font-size:
+            .85rem;
     }
 
     .letter-content {
-        padding: 20px;
+        padding:
+            18px;
     }
 
     .letter-content h2 {
+
         font-size:
-            clamp(2rem, 8vw, 3rem);
+            clamp(
+                2.1rem,
+                8vw,
+                3.2rem
+            );
+    }
+
+    .letter-content .small {
+        font-size:
+            .52rem;
+    }
+
+    .letter-content p {
+        font-size:
+            .78rem;
     }
 }
 
 
 @media (max-width: 520px) {
 
-    .envelope-container {
-        width: 92vw;
-    }
-
     #letterIntro::before {
-        inset: 12px;
+        inset:
+            10px;
     }
 
     #letterIntro::after {
-        top: 25px;
-        font-size: 8px;
+
+        top:
+            20px;
+
+        font-size:
+            7px;
+    }
+
+    .envelope-container {
+
+        width:
+            93vw;
     }
 
     .envelope-base::before {
-        inset: 9px;
+
+        inset:
+            9px;
+    }
+
+    .envelope-letter {
+
+        left:
+            7%;
+
+        right:
+            7%;
     }
 
     .envelope-letter::before {
-        inset: 9px;
+
+        inset:
+            8px;
     }
 
     .seal {
-        width: 68px;
-        height: 68px;
-        font-size: .78rem;
+
+        width:
+            70px;
+
+        height:
+            70px;
     }
 
-    .letter-content .small {
-        font-size: .5rem;
-        letter-spacing: .15em;
+    .seal span {
+
+        font-size:
+            .78rem;
     }
 
-    .letter-content h2 {
-        font-size: 2rem;
+    .envelope-flap::before {
+
+        top:
+            18px;
+
+        font-size:
+            20px;
     }
 
-    .letter-content p {
-        font-size: .75rem;
+    .envelope::before {
+
+        top:
+            13px;
+
+        left:
+            14px;
+
+        font-size:
+            13px;
+    }
+
+    .envelope::after {
+
+        top:
+            13px;
+
+        right:
+            14px;
+
+        font-size:
+            13px;
     }
 
     .letter-instruction {
-        bottom: -43px;
-        font-size: .55rem;
+
+        bottom:
+            -43px;
+
+        font-size:
+            .55rem;
+
+        letter-spacing:
+            .16em;
     }
 }
+
+
 /* =====================================================
    HEADER
 ===================================================== */
 
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 
-    z-index: 100;
+    position:
+        fixed;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    z-index:
+        100;
 
     background:
         rgba(248,242,232,.86);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter:
+        blur(12px);
 
     border-bottom:
         1px solid
         rgba(47,41,36,.08);
 }
 
+
 .nav {
-    width: min(1180px,calc(100% - 30px));
 
-    min-height: 70px;
+    width:
+        min(1180px,calc(100% - 30px));
 
-    margin: auto;
+    min-height:
+        70px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin:
+        auto;
 
-    gap: 25px;
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        25px;
 }
+
 
 .brand {
-    font-family: var(--serif);
-    font-size: 1.8rem;
-    color: var(--gold-dark);
+
+    font-family:
+        var(--serif);
+
+    font-size:
+        1.8rem;
+
+    color:
+        var(--gold-dark);
 }
+
 
 .nav-links {
-    display: flex;
-    gap: 28px;
 
-    font-size: .75rem;
-    text-transform: uppercase;
-    letter-spacing: .1em;
+    display:
+        flex;
+
+    gap:
+        28px;
+
+    font-size:
+        .75rem;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .1em;
 }
+
 
 .nav-links a:hover {
-    color: var(--gold-dark);
+
+    color:
+        var(--gold-dark);
 }
+
 
 .music-btn,
 .menu-toggle {
+
     border:
         1px solid
         var(--line);
 
-    background: transparent;
+    background:
+        transparent;
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
-    width: 40px;
-    height: 40px;
+    width:
+        40px;
 
-    color: var(--gold-dark);
+    height:
+        40px;
+
+    color:
+        var(--gold-dark);
 }
+
 
 .music-btn.playing {
-    background: rgba(178,138,69,.12);
+
+    background:
+        rgba(178,138,69,.12);
 
     animation:
-        musicPulse 1.5s ease-in-out infinite;
+        musicPulse
+        1.5s ease-in-out infinite;
 }
+
 
 @keyframes musicPulse {
 
     0%,
     100% {
-        transform: scale(1);
+        transform:
+            scale(1);
     }
 
     50% {
-        transform: scale(1.08);
+        transform:
+            scale(1.08);
     }
 }
 
+
 .menu-toggle {
-    display: none;
-    border-radius: 8px;
+
+    display:
+        none;
+
+    border-radius:
+        8px;
 }
 
 
@@ -1262,139 +1838,244 @@ p {
 ===================================================== */
 
 .hero {
-    min-height: 100vh;
 
-    display: grid;
-    place-items: center;
+    min-height:
+        100vh;
 
-    text-align: center;
+    display:
+        grid;
 
-    color: #fff;
+    place-items:
+        center;
+
+    text-align:
+        center;
+
+    color:
+        #fff;
 
     background:
+
         linear-gradient(
             rgba(35,25,18,.42),
             rgba(35,25,18,.52)
         ),
+
         url("envelope-background2.jpeg")
         center / cover no-repeat;
 
-    position: relative;
+    position:
+        relative;
 }
 
+
 .hero-content {
-    position: relative;
-    z-index: 2;
+
+    position:
+        relative;
+
+    z-index:
+        2;
 
     padding:
         100px 20px 80px;
 }
 
+
 .hero .eyebrow {
-    color: #f9e5ba;
+
+    color:
+        #f9e5ba;
 }
+
 
 .bismillah {
-    margin: 18px auto 25px;
+
+    margin:
+        18px auto 25px;
 }
+
 
 .bismillah-arabic {
-    font-family: Georgia,serif;
-    font-size: clamp(1.3rem,3vw,2rem);
-    line-height: 1.8;
-    color: #f9e5ba;
-}
 
-.bismillah-english {
-    max-width: 450px;
-    margin: 5px auto 0;
-
-    font-family: var(--serif);
-    font-size: .9rem;
-    font-style: italic;
-
-    color: rgba(255,255,255,.82);
-}
-
-.hero h3 {
-    margin: 15px 0;
-
-    font-family: var(--serif);
-    font-weight: 500;
-
-    font-size: clamp(3rem,8vw,6rem);
-
-    line-height: 1;
-}
-
-.hero h3 > span {
-    display: block;
-}
-
-.hero h3 .parents {
-    display: block;
-
-    margin-top: 12px;
-
-    font-family: var(--sans);
+    font-family:
+        Georgia,serif;
 
     font-size:
-        clamp(.55rem,1.2vw,.8rem);
+        clamp(
+            1.3rem,
+            3vw,
+            2rem
+        );
 
-    font-weight: 400;
+    line-height:
+        1.8;
 
-    letter-spacing: .08em;
-
-    line-height: 1.5;
-
-    color: #f9e5ba;
+    color:
+        #f9e5ba;
 }
+
+
+.bismillah-english {
+
+    max-width:
+        450px;
+
+    margin:
+        5px auto 0;
+
+    font-family:
+        var(--serif);
+
+    font-size:
+        .9rem;
+
+    font-style:
+        italic;
+
+    color:
+        rgba(255,255,255,.82);
+}
+
+
+.hero h3 {
+
+    margin:
+        15px 0;
+
+    font-family:
+        var(--serif);
+
+    font-weight:
+        500;
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            6rem
+        );
+
+    line-height:
+        1;
+}
+
+
+.hero h3 > span {
+
+    display:
+        block;
+}
+
+
+.hero h3 .parents {
+
+    display:
+        block;
+
+    margin-top:
+        12px;
+
+    font-family:
+        var(--sans);
+
+    font-size:
+        clamp(
+            .55rem,
+            1.2vw,
+            .8rem
+        );
+
+    font-weight:
+        400;
+
+    letter-spacing:
+        .08em;
+
+    line-height:
+        1.5;
+
+    color:
+        #f9e5ba;
+}
+
 
 .hero h3 .and {
-    display: block;
 
-    font-family: var(--script);
+    display:
+        block;
 
-    color: #e6c27d;
+    font-family:
+        var(--script);
 
-    font-size: .55em;
+    color:
+        #e6c27d;
 
-    line-height: 1;
+    font-size:
+        .55em;
 
-    margin: 8px 0;
+    line-height:
+        1;
+
+    margin:
+        8px 0;
 }
+
 
 .hero-date {
-    letter-spacing: .18em;
-    text-transform: uppercase;
 
-    font-size: .75rem;
+    letter-spacing:
+        .18em;
 
-    margin-bottom: 30px;
+    text-transform:
+        uppercase;
+
+    font-size:
+        .75rem;
+
+    margin-bottom:
+        30px;
 }
 
+
 .hero-countdown {
-    position: absolute;
 
-    left: 50%;
-    bottom: 85px;
+    position:
+        absolute;
 
-    transform: translateX(-50%);
+    left:
+        50%;
 
-    z-index: 5;
+    bottom:
+        85px;
 
-    display: grid;
+    transform:
+        translateX(-50%);
+
+    z-index:
+        5;
+
+    display:
+        grid;
 
     grid-template-columns:
         repeat(4,1fr);
 
-    gap: 10px;
+    gap:
+        10px;
 
-    width: min(520px,calc(100% - 30px));
+    width:
+        min(
+            520px,
+            calc(100% - 30px)
+        );
 }
 
+
 .hero-countdown div {
-    padding: 12px 8px;
+
+    padding:
+        12px 8px;
 
     border:
         1px solid
@@ -1403,58 +2084,94 @@ p {
     background:
         rgba(0,0,0,.15);
 
-    backdrop-filter: blur(5px);
+    backdrop-filter:
+        blur(5px);
 }
+
 
 .hero-countdown strong {
-    display: block;
 
-    font-family: var(--serif);
+    display:
+        block;
+
+    font-family:
+        var(--serif);
 
     font-size:
-        clamp(1.8rem,4vw,3rem);
+        clamp(
+            1.8rem,
+            4vw,
+            3rem
+        );
 
-    font-weight: 400;
+    font-weight:
+        400;
 
-    line-height: 1;
+    line-height:
+        1;
 }
+
 
 .hero-countdown span {
-    display: block;
 
-    margin-top: 6px;
+    display:
+        block;
 
-    font-size: .55rem;
+    margin-top:
+        6px;
 
-    letter-spacing: .14em;
+    font-size:
+        .55rem;
 
-    text-transform: uppercase;
+    letter-spacing:
+        .14em;
 
-    color: #f9e5ba;
+    text-transform:
+        uppercase;
+
+    color:
+        #f9e5ba;
 }
+
 
 .scroll-hint {
-    position: absolute;
 
-    bottom: 25px;
-    left: 50%;
+    position:
+        absolute;
 
-    transform: translateX(-50%);
+    bottom:
+        25px;
 
-    font-size: .65rem;
+    left:
+        50%;
 
-    letter-spacing: .15em;
+    transform:
+        translateX(-50%);
 
-    text-transform: uppercase;
+    font-size:
+        .65rem;
 
-    opacity: .85;
+    letter-spacing:
+        .15em;
 
-    z-index: 3;
+    text-transform:
+        uppercase;
+
+    opacity:
+        .85;
+
+    z-index:
+        3;
 }
 
+
 .scroll-hint span {
-    display: block;
-    font-size: 1.2rem;
+
+    display:
+        block;
+
+    font-size:
+        1.2rem;
 }
 
 
@@ -1464,37 +2181,57 @@ p {
 
 .gold-btn,
 .outline-btn {
-    display: inline-flex;
 
-    align-items: center;
-    justify-content: center;
+    display:
+        inline-flex;
 
-    min-height: 48px;
+    align-items:
+        center;
 
-    padding: 12px 25px;
+    justify-content:
+        center;
 
-    border-radius: 2px;
+    min-height:
+        48px;
+
+    padding:
+        12px 25px;
+
+    border-radius:
+        2px;
 
     border:
         1px solid
         var(--gold);
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    letter-spacing: .1em;
+    letter-spacing:
+        .1em;
 
-    font-size: .7rem;
+    font-size:
+        .7rem;
 
-    transition: .25s ease;
+    transition:
+        .25s ease;
 }
+
 
 .gold-btn {
-    background: var(--gold);
-    color: white;
+
+    background:
+        var(--gold);
+
+    color:
+        white;
 }
 
+
 .gold-btn:hover {
-    background: var(--gold-dark);
+
+    background:
+        var(--gold-dark);
 
     border-color:
         var(--gold-dark);
@@ -1503,14 +2240,24 @@ p {
         translateY(-2px);
 }
 
+
 .outline-btn {
-    background: transparent;
-    color: var(--gold-dark);
+
+    background:
+        transparent;
+
+    color:
+        var(--gold-dark);
 }
 
+
 .outline-btn:hover {
-    background: var(--gold);
-    color: #fff;
+
+    background:
+        var(--gold);
+
+    color:
+        #fff;
 }
 
 
@@ -1519,23 +2266,43 @@ p {
 ===================================================== */
 
 .intro {
-    background: var(--paper);
+
+    background:
+        var(--paper);
 }
+
 
 .intro h2 {
+
     font-size:
-        clamp(2.5rem,6vw,4.8rem);
+        clamp(
+            2.5rem,
+            6vw,
+            4.8rem
+        );
 }
+
 
 .intro p:not(.eyebrow) {
-    color: var(--muted);
-    font-size: 1rem;
+
+    color:
+        var(--muted);
+
+    font-size:
+        1rem;
 }
 
+
 .floral-divider {
-    color: var(--gold);
-    letter-spacing: .5em;
-    margin-top: 25px;
+
+    color:
+        var(--gold);
+
+    letter-spacing:
+        .5em;
+
+    margin-top:
+        25px;
 }
 
 
@@ -1544,16 +2311,22 @@ p {
 ===================================================== */
 
 .section-heading {
-    text-align: center;
 
-    max-width: 700px;
+    text-align:
+        center;
+
+    max-width:
+        700px;
 
     margin:
         0 auto 55px;
 }
 
+
 .section-heading p:last-child {
-    color: var(--muted);
+
+    color:
+        var(--muted);
 }
 
 
@@ -1562,76 +2335,140 @@ p {
 ===================================================== */
 
 .events {
-    background: var(--cream);
+
+    background:
+        var(--cream);
 }
+
 
 .event-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:
+        18px;
 }
+
 
 .event-card {
-    padding: 45px 22px;
-    text-align: center;
-    border: 1px solid var(--line);
-    background: var(--paper);
-    transition: transform .3s ease, box-shadow .3s ease;
+
+    padding:
+        45px 22px;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        var(--line);
+
+    background:
+        var(--paper);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 }
+
 
 .event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow);
 }
+
 
 .event-card.featured {
-    border-color: var(--gold);
+
+    border-color:
+        var(--gold);
 }
+
 
 .event-icon {
-    font-size: 2rem;
-    color: var(--gold);
+
+    font-size:
+        2rem;
+
+    color:
+        var(--gold);
 }
+
 
 .event-label {
-    font-size: .62rem;
 
-    letter-spacing: .15em;
+    font-size:
+        .62rem;
 
-    color: var(--gold-dark);
+    letter-spacing:
+        .15em;
+
+    color:
+        var(--gold-dark);
 }
+
 
 .event-card h3 {
-    font-size: 2.2rem;
-    margin: 8px 0;
+
+    font-size:
+        2.2rem;
+
+    margin:
+        8px 0;
 }
+
 
 .event-time {
-    font-weight: 600;
+
+    font-weight:
+        600;
 }
+
 
 .event-card > p:not(.event-label):not(.event-time) {
-    color: var(--muted);
-    font-size: .85rem;
+
+    color:
+        var(--muted);
+
+    font-size:
+        .85rem;
 }
 
+
 .event-card a {
-    color: var(--gold-dark);
 
-    font-size: .7rem;
+    color:
+        var(--gold-dark);
 
-    text-transform: uppercase;
+    font-size:
+        .7rem;
 
-    letter-spacing: .1em;
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .1em;
 
     border-bottom:
         1px solid
         var(--gold);
 }
 
+
 .calendar-wrap {
-    text-align: center;
-    margin-top: 45px;
+
+    text-align:
+        center;
+
+    margin-top:
+        45px;
 }
 
 
@@ -1640,31 +2477,47 @@ p {
 ===================================================== */
 
 .memories-section {
-    position: relative;
 
-    padding: 100px 20px 90px;
+    position:
+        relative;
 
-    text-align: center;
+    padding:
+        100px 20px 90px;
 
-    background: #f7f0e8;
+    text-align:
+        center;
 
-    overflow: hidden;
+    background:
+        #f7f0e8;
+
+    overflow:
+        hidden;
 }
+
 
 .memories-label {
-    margin: 0 0 12px;
 
-    font-family: Arial,sans-serif;
+    margin:
+        0 0 12px;
 
-    font-size: 10px;
+    font-family:
+        Arial,sans-serif;
 
-    letter-spacing: 4px;
+    font-size:
+        10px;
 
-    color: #806b5c;
+    letter-spacing:
+        4px;
+
+    color:
+        #806b5c;
 }
 
+
 .memories-title {
-    margin: 0 0 45px;
+
+    margin:
+        0 0 45px;
 
     font-family:
         Georgia,
@@ -1672,194 +2525,296 @@ p {
         serif;
 
     font-size:
-        clamp(38px,6vw,58px);
+        clamp(
+            38px,
+            6vw,
+            58px
+        );
 
-    font-weight: normal;
+    font-weight:
+        normal;
 
-    font-style: italic;
+    font-style:
+        italic;
 
-    color: #40342d;
+    color:
+        #40342d;
 }
+
 
 .premium-gallery {
-    position: relative;
 
-    width: 100%;
+    position:
+        relative;
 
-    max-width: 1100px;
+    width:
+        100%;
 
-    margin: auto;
+    max-width:
+        1100px;
 
-    display: flex;
+    margin:
+        auto;
 
-    align-items: center;
+    display:
+        flex;
 
-    justify-content: center;
+    align-items:
+        center;
+
+    justify-content:
+        center;
 }
+
 
 .gallery-window {
-    width: 100%;
-    overflow: hidden;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
 }
+
 
 .gallery-track {
-    display: flex;
 
-    align-items: center;
+    display:
+        flex;
 
-    gap: 20px;
+    align-items:
+        center;
 
-    overflow-x: auto;
+    gap:
+        20px;
 
-    scroll-snap-type: x mandatory;
+    overflow-x:
+        auto;
 
-    scroll-behavior: smooth;
+    scroll-snap-type:
+        x mandatory;
 
-    scrollbar-width: none;
+    scroll-behavior:
+        smooth;
 
-    -webkit-overflow-scrolling: touch;
+    scrollbar-width:
+        none;
 
-    padding: 10px 0 25px;
+    -webkit-overflow-scrolling:
+        touch;
+
+    padding:
+        10px 0 25px;
 }
+
 
 .gallery-track::-webkit-scrollbar {
-    display: none;
+    display:
+        none;
 }
 
+
 .gallery-slide {
+
     flex:
         0 0 68%;
 
-    scroll-snap-align: center;
+    scroll-snap-align:
+        center;
 
     transition:
         transform .5s ease,
         opacity .5s ease;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 }
 
+
 .gallery-slide img {
-    display: block;
 
-    width: 100%;
+    display:
+        block;
 
-    aspect-ratio: 4 / 5;
+    width:
+        100%;
 
-    object-fit: cover;
+    aspect-ratio:
+        4 / 5;
 
-    border-radius: 2px;
+    object-fit:
+        cover;
+
+    border-radius:
+        2px;
 
     box-shadow:
         0 18px 45px
         rgba(65,45,30,.18);
 
-    user-select: none;
+    user-select:
+        none;
 
-    -webkit-user-drag: none;
+    -webkit-user-drag:
+        none;
 }
 
+
 .gallery-arrow {
-    position: absolute;
 
-    top: 50%;
+    position:
+        absolute;
 
-    transform: translateY(-50%);
+    top:
+        50%;
 
-    z-index: 10;
+    transform:
+        translateY(-50%);
 
-    width: 48px;
-    height: 48px;
+    z-index:
+        10;
+
+    width:
+        48px;
+
+    height:
+        48px;
 
     border:
         1px solid
         rgba(70,50,40,.25);
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
     background:
         rgba(255,255,255,.88);
 
-    color: #58473c;
+    color:
+        #58473c;
 
-    font-size: 18px;
+    font-size:
+        18px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     transition:
         background .3s ease,
         transform .3s ease;
 }
 
+
 .gallery-arrow:hover {
-    background: #fff;
+
+    background:
+        #fff;
 
     transform:
         translateY(-50%)
         scale(1.08);
 }
 
+
 .gallery-prev {
-    left: 2%;
+    left:
+        2%;
 }
+
 
 .gallery-next {
-    right: 2%;
+    right:
+        2%;
 }
+
 
 .gallery-counter {
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+    display:
+        flex;
 
-    gap: 12px;
+    align-items:
+        center;
 
-    margin-top: 12px;
+    justify-content:
+        center;
 
-    font-family: Arial,sans-serif;
+    gap:
+        12px;
 
-    font-size: 10px;
+    margin-top:
+        12px;
 
-    letter-spacing: 2px;
+    font-family:
+        Arial,sans-serif;
 
-    color: #806b5c;
+    font-size:
+        10px;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #806b5c;
 }
+
 
 .counter-line {
-    width: 45px;
-    height: 1px;
-    background: #b8a89b;
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    background:
+        #b8a89b;
 }
+
 
 .swipe-hint {
-    margin-top: 18px;
 
-    font-family: Arial,sans-serif;
+    margin-top:
+        18px;
 
-    font-size: 9px;
+    font-family:
+        Arial,sans-serif;
 
-    letter-spacing: 2px;
+    font-size:
+        9px;
 
-    text-transform: uppercase;
+    letter-spacing:
+        2px;
 
-    color: #a08d7e;
+    text-transform:
+        uppercase;
+
+    color:
+        #a08d7e;
 
     animation:
-        swipePulse 2s ease-in-out infinite;
+        swipePulse
+        2s ease-in-out infinite;
 }
+
 
 @keyframes swipePulse {
 
     0%,
     100% {
-        opacity: .45;
+        opacity:
+            .45;
     }
 
     50% {
-        opacity: 1;
+        opacity:
+            1;
     }
 }
 
@@ -1869,27 +2824,44 @@ p {
 ===================================================== */
 
 .final {
-    text-align: center;
-    background: var(--cream);
+
+    text-align:
+        center;
+
+    background:
+        var(--cream);
 }
+
 
 .final h2 {
-    max-width: 750px;
-    margin: 0 auto 15px;
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto 15px;
 }
 
+
 .back-top {
-    display: inline-block;
 
-    margin-top: 25px;
+    display:
+        inline-block;
 
-    color: var(--gold-dark);
+    margin-top:
+        25px;
 
-    font-size: .7rem;
+    color:
+        var(--gold-dark);
 
-    text-transform: uppercase;
+    font-size:
+        .7rem;
 
-    letter-spacing: .12em;
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .12em;
 }
 
 
@@ -1898,21 +2870,30 @@ p {
 ===================================================== */
 
 footer {
-    background: #2e2721;
 
-    color: #d7cfc7;
+    background:
+        #2e2721;
 
-    text-align: center;
+    color:
+        #d7cfc7;
 
-    padding: 25px;
+    text-align:
+        center;
 
-    font-size: .65rem;
+    padding:
+        25px;
 
-    letter-spacing: .1em;
+    font-size:
+        .65rem;
+
+    letter-spacing:
+        .1em;
 }
 
+
 footer p {
-    margin: 0;
+    margin:
+        0;
 }
 
 
@@ -1921,57 +2902,90 @@ footer p {
 ===================================================== */
 
 .lightbox {
-    position: fixed;
 
-    inset: 0;
+    position:
+        fixed;
 
-    z-index: 99998;
+    inset:
+        0;
+
+    z-index:
+        99998;
 
     background:
         rgba(20,16,12,.93);
 
-    display: grid;
+    display:
+        grid;
 
-    place-items: center;
+    place-items:
+        center;
 
-    opacity: 0;
+    opacity:
+        0;
 
-    visibility: hidden;
+    visibility:
+        hidden;
 
-    transition: .3s ease;
+    transition:
+        .3s ease;
 
-    padding: 40px;
+    padding:
+        40px;
 }
+
 
 .lightbox.open {
-    opacity: 1;
-    visibility: visible;
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
 }
+
 
 .lightbox img {
-    max-width: 95vw;
-    max-height: 90vh;
 
-    object-fit: contain;
+    max-width:
+        95vw;
 
-    border-radius: 2px;
+    max-height:
+        90vh;
+
+    object-fit:
+        contain;
+
+    border-radius:
+        2px;
 }
 
+
 .lightbox-close {
-    position: absolute;
 
-    right: 25px;
-    top: 15px;
+    position:
+        absolute;
 
-    background: transparent;
+    right:
+        25px;
 
-    border: 0;
+    top:
+        15px;
 
-    color: white;
+    background:
+        transparent;
 
-    font-size: 3rem;
+    border:
+        0;
 
-    line-height: 1;
+    color:
+        white;
+
+    font-size:
+        3rem;
+
+    line-height:
+        1;
 }
 
 
@@ -1980,7 +2994,9 @@ footer p {
 ===================================================== */
 
 .reveal {
-    opacity: 0;
+
+    opacity:
+        0;
 
     transform:
         translateY(30px);
@@ -1990,8 +3006,11 @@ footer p {
         transform .8s ease;
 }
 
+
 .reveal.visible {
-    opacity: 1;
+
+    opacity:
+        1;
 
     transform:
         translateY(0);
@@ -2005,6 +3024,7 @@ footer p {
 @media (max-width:1000px) {
 
     .event-grid {
+
         grid-template-columns:
             repeat(2,1fr);
     }
@@ -2018,81 +3038,126 @@ footer p {
 @media (max-width:800px) {
 
     .nav-links {
-        display: none;
 
-        position: absolute;
+        display:
+            none;
 
-        top: 70px;
+        position:
+            absolute;
 
-        left: 0;
-        right: 0;
+        top:
+            70px;
 
-        background: var(--paper);
+        left:
+            0;
 
-        padding: 20px;
+        right:
+            0;
 
-        flex-direction: column;
+        background:
+            var(--paper);
 
-        text-align: center;
+        padding:
+            20px;
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
 
         border-bottom:
             1px solid
             var(--line);
     }
 
+
     .nav-links.open {
-        display: flex;
+
+        display:
+            flex;
     }
 
+
     .menu-toggle {
-        display: block;
+
+        display:
+            block;
     }
+
 
     .nav {
-        justify-content: space-between;
+
+        justify-content:
+            space-between;
     }
+
 
     .music-btn {
-        order: 2;
+        order:
+            2;
     }
+
 
     .menu-toggle {
-        order: 3;
+        order:
+            3;
     }
+
 
     .brand {
-        order: 1;
+        order:
+            1;
     }
+
 
     .hero-content {
-        padding-top: 100px;
-        padding-bottom: 160px;
+
+        padding-top:
+            100px;
+
+        padding-bottom:
+            160px;
     }
+
 
     .hero-countdown {
-        bottom: 70px;
+
+        bottom:
+            70px;
     }
+
 
     .gallery-arrow {
-        display: none;
+
+        display:
+            none;
     }
+
 
     .gallery-slide {
-        flex-basis: 72%;
+
+        flex-basis:
+            72%;
     }
+
 
     .gallery-track {
-        gap: 14px;
 
-        padding-left: 14%;
-        padding-right: 14%;
+        gap:
+            14px;
 
-        scroll-padding-left: 14%;
-        scroll-padding-right: 14%;
-    }
+        padding-left:
+            14%;
 
-    .envelope-container {
-        width: 88vw;
+        padding-right:
+            14%;
+
+        scroll-padding-left:
+            14%;
+
+        scroll-padding-right:
+            14%;
     }
 }
 
@@ -2104,86 +3169,140 @@ footer p {
 @media (max-width:520px) {
 
     .section {
-        padding: 75px 0;
+
+        padding:
+            75px 0;
     }
 
-   .seal {
-    width: 68px;
-    height: 68px;
-    font-size: .85rem;
-}
 
     .hero h3 {
-        font-size: clamp(2.5rem,12vw,4rem);
+
+        font-size:
+            clamp(
+                2.5rem,
+                12vw,
+                4rem
+            );
     }
 
+
     .hero-countdown {
-        gap: 5px;
+
+        gap:
+            5px;
 
         width:
             calc(100% - 24px);
 
-        bottom: 62px;
+        bottom:
+            62px;
     }
+
 
     .hero-countdown div {
-        padding: 10px 4px;
+
+        padding:
+            10px 4px;
     }
+
 
     .hero-countdown strong {
-        font-size: 1.7rem;
+
+        font-size:
+            1.7rem;
     }
+
 
     .hero-countdown span {
-        font-size: .45rem;
-        letter-spacing: .08em;
+
+        font-size:
+            .45rem;
+
+        letter-spacing:
+            .08em;
     }
+
 
     .bismillah-arabic {
-        font-size: 1.2rem;
+
+        font-size:
+            1.2rem;
     }
+
 
     .bismillah-english {
-        font-size: .75rem;
+
+        font-size:
+            .75rem;
     }
+
 
     .event-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
+
 
     .memories-section {
-        padding: 70px 0 75px;
+
+        padding:
+            70px 0 75px;
     }
+
 
     .memories-label {
-        font-size: 9px;
-        letter-spacing: 3px;
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            3px;
     }
+
 
     .memories-title {
-        font-size: 36px;
-        margin-bottom: 30px;
+
+        font-size:
+            36px;
+
+        margin-bottom:
+            30px;
     }
+
 
     .gallery-slide {
-        flex: 0 0 72%;
+
+        flex:
+            0 0 72%;
     }
 
+
     .gallery-slide img {
-        aspect-ratio: 4 / 5;
+
+        aspect-ratio:
+            4 / 5;
 
         box-shadow:
             0 12px 30px
             rgba(65,45,30,.18);
     }
+}
 
-    .envelope-container {
-        width: 92vw;
-    }
 
-    .letter-instruction {
-        bottom: -45px;
-        font-size: .58rem;
+/* =====================================================
+   MOBILE PETALS
+===================================================== */
+
+@media (max-width:600px) {
+
+    .rose-petal {
+
+        width:
+            12px;
+
+        height:
+            18px;
     }
 }
 
@@ -2191,80 +3310,108 @@ footer p {
 
 </head>
 
+
 <body class="locked">
+
+
+<!-- =====================================================
+     FALLING ROSE PETALS
+===================================================== -->
+
+<div
+    id="petalContainer"
+    aria-hidden="true"
+></div>
+
 
 <!-- =====================================================
      ENVELOPE INTRO
-====================================================== -->
+===================================================== -->
 
 <div id="letterIntro">
 
+    <div class="envelope-container">
 
-<div class="envelope-container">
+        <div class="envelope" id="envelope">
 
-    <div class="envelope" id="envelope">
 
-        <div class="envelope-letter">
+            <!-- INVITATION CARD -->
 
-            <div class="letter-content">
+            <div class="envelope-letter">
 
-                <div class="small">
-                    Together with their families
+                <div class="letter-content">
+
+                    <div class="small">
+                        Together with their families
+                    </div>
+
+                    <h2>
+                        Shaheen &amp; Darwesh
+                    </h2>
+
+                    <p>
+                        22 · 11 · 2026
+                    </p>
+
                 </div>
 
-                <h2>
-                    Shaheen &amp; Darwesh
-                </h2>
-
-                <p>
-                    22 · 11 · 2026
-                </p>
-
             </div>
+
+
+            <!-- ENVELOPE BODY -->
+
+            <div class="envelope-base"></div>
+
+
+            <!-- LOWER FOLD -->
+
+            <div class="envelope-bottom"></div>
+
+
+            <!-- TOP FLAP -->
+
+            <div class="envelope-flap"></div>
+
+
+            <!-- GOLD SEAL -->
+
+            <button
+                class="seal"
+                id="seal"
+                type="button"
+                aria-label="Open wedding invitation"
+            >
+
+                <span>
+                    S ♥ D
+                </span>
+
+            </button>
+
 
         </div>
 
 
-        <div class="envelope-base"></div>
+        <div class="letter-instruction">
+            Tap the seal to open
+        </div>
 
-        <div class="envelope-bottom"></div>
-
-        <div class="envelope-flap"></div>
-
-
-        <button
-            class="seal"
-            id="seal"
-            type="button"
-            aria-label="Open wedding invitation"
-        >
-
-            <span>
-                S ♥ D
-            </span>
-
-        </button>
-
-    </div>
-
-
-    <div class="letter-instruction">
-        Tap the seal to open
     </div>
 
 </div>
 
-
-</div>
 
 <!-- =====================================================
      HEADER
-====================================================== -->
+===================================================== -->
 
-<header class="site-header" id="top">
-
+<header
+    class="site-header"
+    id="top"
+>
 
 <nav class="nav">
+
 
     <a
         class="brand"
@@ -2279,13 +3426,21 @@ footer p {
         id="navLinks"
     >
 
-        <a href="#home">Home</a>
+        <a href="#home">
+            Home
+        </a>
 
-        <a href="#story">Our Story</a>
+        <a href="#story">
+            Our Story
+        </a>
 
-        <a href="#events">Events</a>
+        <a href="#events">
+            Events
+        </a>
 
-        <a href="#memories">Gallery</a>
+        <a href="#memories">
+            Gallery
+        </a>
 
     </div>
 
@@ -2310,20 +3465,22 @@ footer p {
         ☰
     </button>
 
-</nav>
 
+</nav>
 
 </header>
 
+
 <!-- =====================================================
      MAIN
-====================================================== -->
+===================================================== -->
 
 <main>
 
+
 <!-- =====================================================
      HERO
-====================================================== -->
+===================================================== -->
 
 <section
     class="hero section"
@@ -2331,115 +3488,157 @@ footer p {
 >
 
 
-<div class="hero-content reveal">
-
-    <p class="eyebrow">
-        Nikah Invitation · 2026
-    </p>
+    <div class="hero-content reveal">
 
 
-    <div class="bismillah">
+        <p class="eyebrow">
+            Nikah Invitation · 2026
+        </p>
 
-        <div
-            class="bismillah-arabic"
-            dir="rtl"
+
+        <div class="bismillah">
+
+            <div
+                class="bismillah-arabic"
+                dir="rtl"
+            >
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            </div>
+
+            <div class="bismillah-english">
+                In the name of Allah, the Most Gracious,
+                the Most Merciful
+            </div>
+
+        </div>
+
+
+        <h3>
+
+
+            <span>
+
+                Dr. Shaheen Salamat
+
+                <small class="parents">
+                    D/o Mr. Salamat Ali &amp; Mrs. Radha Bai
+                </small>
+
+            </span>
+
+
+            <small class="and">
+                &amp;
+            </small>
+
+
+            <span>
+
+                Darwesh Tasleem
+
+                <small class="parents">
+                    S/o Mr. Taquim &amp; Mrs. Chandralekha Reddy
+                </small>
+
+            </span>
+
+
+        </h3>
+
+
+        <p class="hero-date">
+            Sunday · 22 November 2026
+        </p>
+
+
+        <a
+            class="gold-btn"
+            href="#events"
         >
-            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            View Celebration
+        </a>
+
+
+    </div>
+
+
+    <!-- COUNTDOWN -->
+
+    <div class="hero-countdown">
+
+
+        <div>
+
+            <strong id="heroDays">
+                00
+            </strong>
+
+            <span>
+                Days
+            </span>
+
         </div>
 
-        <div class="bismillah-english">
-            In the name of Allah, the Most Gracious,
-            the Most Merciful
+
+        <div>
+
+            <strong id="heroHours">
+                00
+            </strong>
+
+            <span>
+                Hours
+            </span>
+
         </div>
 
+
+        <div>
+
+            <strong id="heroMinutes">
+                00
+            </strong>
+
+            <span>
+                Minutes
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong id="heroSeconds">
+                00
+            </strong>
+
+            <span>
+                Seconds
+            </span>
+
+        </div>
+
+
     </div>
 
 
-    <h3>
+    <div class="scroll-hint">
+
+        Scroll to explore
 
         <span>
-
-            Dr. Shaheen Salamat
-
-            <small class="parents">
-                D/o Mr. Salamat Ali &amp; Mrs. Radha Bai
-            </small>
-
+            ↓
         </span>
 
-
-        <small class="and">
-            &amp;
-        </small>
-
-
-        <span>
-
-            Darwesh Tasleem
-
-            <small class="parents">
-                S/o Mr. Taquim &amp; Mrs. Chandralekha Reddy
-            </small>
-
-        </span>
-
-    </h3>
-
-
-    <p class="hero-date">
-        Sunday · 22 November 2026
-    </p>
-
-
-    <a
-        class="gold-btn"
-        href="#events"
-    >
-        View Celebration
-    </a>
-
-</div>
-
-
-<div class="hero-countdown">
-
-    <div>
-        <strong id="heroDays">00</strong>
-        <span>Days</span>
     </div>
-
-    <div>
-        <strong id="heroHours">00</strong>
-        <span>Hours</span>
-    </div>
-
-    <div>
-        <strong id="heroMinutes">00</strong>
-        <span>Minutes</span>
-    </div>
-
-    <div>
-        <strong id="heroSeconds">00</strong>
-        <span>Seconds</span>
-    </div>
-
-</div>
-
-
-<div class="scroll-hint">
-
-    Scroll to explore
-
-    <span>↓</span>
-
-</div>
 
 
 </section>
 
+
 <!-- =====================================================
-     STORY / INTRO
-====================================================== -->
+     STORY
+===================================================== -->
 
 <section
     class="intro section"
@@ -2447,37 +3646,40 @@ footer p {
 >
 
 
-<div class="container narrow reveal">
-
-    <p class="eyebrow">
-        A beautiful beginning
-    </p>
+    <div class="container narrow reveal">
 
 
-    <h2>
-        Two hearts, one beautiful journey.
-    </h2>
+        <p class="eyebrow">
+            A beautiful beginning
+        </p>
 
 
-    <p>
-        With joyful hearts and the blessings
-        of our families, we invite you to
-        celebrate the beginning of our forever.
-    </p>
+        <h2>
+            Two hearts, one beautiful journey.
+        </h2>
 
 
-    <div class="floral-divider">
-        ✦ ✦ ✦
+        <p>
+            With joyful hearts and the blessings
+            of our families, we invite you to
+            celebrate the beginning of our forever.
+        </p>
+
+
+        <div class="floral-divider">
+            ✦ ✦ ✦
+        </div>
+
+
     </div>
-
-</div>
 
 
 </section>
 
+
 <!-- =====================================================
      EVENTS
-====================================================== -->
+===================================================== -->
 
 <section
     class="events section"
@@ -2485,199 +3687,239 @@ footer p {
 >
 
 
-<div class="container">
+    <div class="container">
 
-    <div class="section-heading reveal">
 
-        <p class="eyebrow">
-            Join us
-        </p>
+        <div class="section-heading reveal">
 
-        <h2>
-            The Wedding Celebrations
-        </h2>
 
-        <p>
-            We would be delighted to have you
-            with us for these special moments.
-        </p>
+            <p class="eyebrow">
+                Join us
+            </p>
+
+
+            <h2>
+                The Wedding Celebrations
+            </h2>
+
+
+            <p>
+                We would be delighted to have you
+                with us for these special moments.
+            </p>
+
+
+        </div>
+
+
+        <div class="event-grid">
+
+
+            <!-- ENGAGEMENT -->
+
+            <article class="event-card reveal">
+
+
+                <div class="event-icon">
+                    💍
+                </div>
+
+
+                <p class="event-label">
+                    SUNDAY · 25 OCTOBER
+                </p>
+
+
+                <h3 style="color:#5f7f5a;">
+                    Engagement
+                </h3>
+
+
+                <p class="event-time">
+                    6:00 PM onwards
+                </p>
+
+
+                <p>
+                    Megapode Resort
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/ociKsQ4F3346cstN6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Map
+                </a>
+
+
+            </article>
+
+
+            <!-- HALDI -->
+
+            <article class="event-card featured reveal">
+
+
+                <div class="event-icon">
+                    ✿
+                </div>
+
+
+                <p class="event-label">
+                    THURSDAY · 19 NOVEMBER
+                </p>
+
+
+                <h3 style="color:#5f7f5a;">
+                    Haldi
+                </h3>
+
+
+                <p class="event-time">
+                    6:00 PM onwards
+                </p>
+
+
+                <p>
+                    Birdline Junction Pvt. Property
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Map
+                </a>
+
+
+            </article>
+
+
+            <!-- MEHENDI -->
+
+            <article class="event-card reveal">
+
+
+                <div class="event-icon">
+                    ✦
+                </div>
+
+
+                <p class="event-label">
+                    FRIDAY · 20 NOVEMBER
+                </p>
+
+
+                <h3 style="color:#5f7f5a;">
+                    Mehendi &amp; Sangeet
+                </h3>
+
+
+                <p class="event-time">
+                    6:00 PM onwards
+                </p>
+
+
+                <p>
+                    Birdline Junction Pvt. Property
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Map
+                </a>
+
+
+            </article>
+
+
+            <!-- NIKAH -->
+
+            <article class="event-card reveal">
+
+
+                <div class="event-icon">
+                    ♡
+                </div>
+
+
+                <p class="event-label">
+                    SUNDAY · 22 NOVEMBER
+                </p>
+
+
+                <h3 style="color:#5f7f5a;">
+                    Nikah &amp; Walima
+                </h3>
+
+
+                <p class="event-time">
+                    6:00 PM onwards
+                </p>
+
+
+                <p>
+
+                    Tushnabad Ground
+
+                    <br><br>
+
+                    <strong>
+                        In case of heavy rainfall,
+                        the venue shifts to
+                        Ograbraj Community Hall.
+                    </strong>
+
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/ne5eprfUVdqDNnwe8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Map
+                </a>
+
+
+            </article>
+
+
+        </div>
+
+
+        <div class="calendar-wrap reveal">
+
+
+            <button
+                class="outline-btn"
+                id="calendarBtn"
+                type="button"
+            >
+                ＋ Add Wedding to Calendar
+            </button>
+
+
+        </div>
+
 
     </div>
-
-
-    <div class="event-grid">
-
-
-        <!-- ENGAGEMENT -->
-
-        <article class="event-card reveal">
-
-            <div class="event-icon">
-                💍
-            </div>
-
-            <p class="event-label">
-                SUNDAY · 25 OCTOBER
-            </p>
-
-            <h3 style="color: #5f7f5a;">
-    Engagement
-</h3>
-
-            <p class="event-time">
-                6:00 PM onwards
-            </p>
-
-            <p>
-                Megapode Resort
-            </p>
-
-            <a
-                href="https://maps.app.goo.gl/ociKsQ4F3346cstN6"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Map
-            </a>
-
-        </article>
-
-
-        <!-- HALDI -->
-
-        <article class="event-card featured reveal">
-
-            <div class="event-icon">
-                ✿
-            </div>
-
-            <p class="event-label">
-                THURSDAY · 19 NOVEMBER
-            </p>
-
-            <h3 style="color: #5f7f5a;">
-                Haldi
-            </h3>
-
-            <p class="event-time">
-                6:00 PM onwards
-            </p>
-
-            <p>
-                Birdline Junction Pvt. Property
-            </p>
-
-            <a
-                href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Map
-            </a>
-
-        </article>
-
-
-        <!-- MEHENDI -->
-
-        <article class="event-card reveal">
-
-            <div class="event-icon">
-                ✦
-            </div>
-
-            <p class="event-label">
-                FRIDAY · 20 NOVEMBER
-            </p>
-
-            <h3 style="color: #5f7f5a;">
-                Mehendi &amp; Sangeet
-            </h3>
-
-            <p class="event-time">
-                6:00 PM onwards
-            </p>
-
-            <p>
-                Birdline Junction Pvt. Property
-            </p>
-
-            <a
-                href="https://maps.app.goo.gl/xUzRFHhwHhBnKPrq6"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Map
-            </a>
-
-        </article>
-
-
-        <!-- NIKAH -->
-
-        <article class="event-card reveal">
-
-            <div class="event-icon">
-                ♡
-            </div>
-
-            <p class="event-label">
-                SUNDAY · 22 NOVEMBER
-            </p>
-
-            <h3 style="color: #5f7f5a;">
-                Nikah &amp; Walima
-            </h3>
-
-            <p class="event-time">
-                6:00 PM onwards
-            </p>
-
-            <p>
-                Tushnabad Ground
-                <br><br>
-
-                <strong>
-                    In case of heavy rainfall,
-                    the venue shifts to
-                    Ograbraj Community Hall.
-                </strong>
-            </p>
-
-            <a
-                href="https://maps.app.goo.gl/ne5eprfUVdqDNnwe8"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Map
-            </a>
-
-        </article>
-
-
-    </div>
-
-
-    <div class="calendar-wrap reveal">
-
-        <button
-            class="outline-btn"
-            id="calendarBtn"
-            type="button"
-        >
-            ＋ Add Wedding to Calendar
-        </button>
-
-    </div>
-
-</div>
 
 
 </section>
 
+
 <!-- =====================================================
      MEMORIES
-====================================================== -->
+===================================================== -->
 
 <section
     class="memories-section"
@@ -2685,170 +3927,188 @@ footer p {
 >
 
 
-<p class="memories-label">
-    OUR MEMORIES
-</p>
+    <p class="memories-label">
+        OUR MEMORIES
+    </p>
 
 
-<h2 class="memories-title">
-    Moments we cherish
-</h2>
+    <h2 class="memories-title">
+        Moments we cherish
+    </h2>
 
 
-<div class="premium-gallery">
-
-    <button
-        class="gallery-arrow gallery-prev"
-        id="galleryPrev"
-        type="button"
-        aria-label="Previous photo"
-    >
-        &#10094;
-    </button>
+    <div class="premium-gallery">
 
 
-    <div class="gallery-window">
+        <button
+            class="gallery-arrow gallery-prev"
+            id="galleryPrev"
+            type="button"
+            aria-label="Previous photo"
+        >
+            &#10094;
+        </button>
 
-        <div class="gallery-track">
+
+        <div class="gallery-window">
 
 
-            <div
-                class="gallery-slide"
-                tabindex="0"
-            >
+            <div class="gallery-track">
 
-                <img
-                    src="memory1.jpg"
-                    alt="Our memory 1"
-                    loading="lazy"
+
+                <div
+                    class="gallery-slide"
+                    tabindex="0"
                 >
 
-            </div>
+                    <img
+                        src="memory1.jpg"
+                        alt="Our memory 1"
+                        loading="lazy"
+                    >
+
+                </div>
 
 
-            <div
-                class="gallery-slide"
-                tabindex="0"
-            >
-
-                <img
-                    src="memory2.jpg"
-                    alt="Our memory 2"
-                    loading="lazy"
+                <div
+                    class="gallery-slide"
+                    tabindex="0"
                 >
 
-            </div>
+                    <img
+                        src="memory2.jpg"
+                        alt="Our memory 2"
+                        loading="lazy"
+                    >
+
+                </div>
 
 
-            <div
-                class="gallery-slide"
-                tabindex="0"
-            >
-
-                <img
-                    src="memory3.jpg"
-                    alt="Our memory 3"
-                    loading="lazy"
+                <div
+                    class="gallery-slide"
+                    tabindex="0"
                 >
+
+                    <img
+                        src="memory3.jpg"
+                        alt="Our memory 3"
+                        loading="lazy"
+                    >
+
+                </div>
+
 
             </div>
 
 
         </div>
 
+
+        <button
+            class="gallery-arrow gallery-next"
+            id="galleryNext"
+            type="button"
+            aria-label="Next photo"
+        >
+            &#10095;
+        </button>
+
+
     </div>
 
 
-    <button
-        class="gallery-arrow gallery-next"
-        id="galleryNext"
-        type="button"
-        aria-label="Next photo"
-    >
-        &#10095;
-    </button>
-
-</div>
+    <div class="gallery-counter">
 
 
-<div class="gallery-counter">
-
-    <span id="currentPhoto">
-        01
-    </span>
-
-    <span class="counter-line"></span>
-
-    <span id="totalPhotos">
-        03
-    </span>
-
-</div>
+        <span id="currentPhoto">
+            01
+        </span>
 
 
-<p class="swipe-hint">
-    Swipe to explore
-</p>
+        <span class="counter-line"></span>
+
+
+        <span id="totalPhotos">
+            03
+        </span>
+
+
+    </div>
+
+
+    <p class="swipe-hint">
+        Swipe to explore
+    </p>
 
 
 </section>
 
+
 <!-- =====================================================
      FINAL
-====================================================== -->
+===================================================== -->
 
 <section class="final section">
 
 
-<div class="container narrow reveal">
+    <div class="container narrow reveal">
 
-    <div class="ornament">
-        S & D
+
+        <div class="ornament">
+            S &amp; D
+        </div>
+
+
+        <p class="eyebrow">
+            With love
+        </p>
+
+
+        <h2>
+            We can't wait to celebrate with you.
+        </h2>
+
+
+        <p>
+            Thank you for being a part of our story.
+        </p>
+
+
+        <a
+            href="#top"
+            class="back-top"
+        >
+            ↑ Back to top
+        </a>
+
+
     </div>
-
-    <p class="eyebrow">
-        With love
-    </p>
-
-    <h2>
-        We can't wait to celebrate with you.
-    </h2>
-
-    <p>
-        Thank you for being a part of our story.
-    </p>
-
-    <a
-        href="#top"
-        class="back-top"
-    >
-        ↑ Back to top
-    </a>
-
-</div>
 
 
 </section>
 
+
 </main>
+
 
 <!-- =====================================================
      FOOTER
-====================================================== -->
+===================================================== -->
 
 <footer>
 
 
-<p>
-    Crafted by Creative_MoodOn ♥
-</p>
+    <p>
+        Crafted by Creative_MoodOn ♥
+    </p>
 
 
 </footer>
 
+
 <!-- =====================================================
      LIGHTBOX
-====================================================== -->
+===================================================== -->
 
 <div
     class="lightbox"
@@ -2857,167 +4117,358 @@ footer p {
 >
 
 
-<button
-    class="lightbox-close"
-    id="lightboxClose"
-    type="button"
-    aria-label="Close image"
->
-    ×
-</button>
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Close image"
+    >
+        ×
+    </button>
 
 
-<img
-    id="lightboxImage"
-    src=""
-    alt="Gallery image"
->
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Gallery image"
+    >
 
 
 </div>
 
+
 <!-- =====================================================
      AUDIO
-====================================================== -->
+===================================================== -->
 
 <audio
-id="weddingAudio"
-loop
-preload="none"
-
+    id="weddingAudio"
+    loop
+    preload="none"
 >
 
-
-<source
-    src="Think They Call This Love (Cover).mp4"
-    type="audio/mpeg"
->
-
+    <source
+        src="Think They Call This Love (Cover).mp4"
+        type="audio/mp4"
+    >
 
 </audio>
 
+
 <!-- =====================================================
      JAVASCRIPT
-====================================================== -->
+===================================================== -->
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
-   /* =================================================
-   ENVELOPE OPENING
-================================================= */
+    /* =================================================
+       FALLING ROSE PETALS
+    ================================================= */
 
-const letterIntro = document.getElementById("letterIntro");
-const envelope = document.getElementById("envelope");
-const seal = document.getElementById("seal");
+    const petalContainer =
+        document.getElementById(
+            "petalContainer"
+        );
 
-document.body.classList.add("locked");
 
-if (letterIntro && envelope && seal) {
+    if (petalContainer) {
 
-    seal.addEventListener("click", function (event) {
+        const isMobile =
+            window.innerWidth <= 600;
 
-        event.preventDefault();
-        event.stopPropagation();
 
-        if (envelope.classList.contains("open")) {
-            return;
+        const petalCount =
+            isMobile ? 18 : 30;
+
+
+        for (
+            let i = 0;
+            i < petalCount;
+            i++
+        ) {
+
+
+            const petal =
+                document.createElement(
+                    "span"
+                );
+
+
+            petal.className =
+                "rose-petal";
+
+
+            /* Random horizontal position */
+
+            petal.style.left =
+                Math.random() * 100 + "%";
+
+
+            /* Random size */
+
+            const scale =
+                0.65 +
+                Math.random() * 0.75;
+
+
+            petal.style.transform =
+                "scale(" +
+                scale +
+                ")";
+
+
+            /* Different falling speeds */
+
+            petal.style.animationDuration =
+                (
+                    7 +
+                    Math.random() * 8
+                ) + "s";
+
+
+            /* Different starting points */
+
+            petal.style.animationDelay =
+                (
+                    -Math.random() * 14
+                ) + "s";
+
+
+            /* Natural opacity */
+
+            petal.style.opacity =
+                0.45 +
+                Math.random() * 0.4;
+
+
+            petalContainer.appendChild(
+                petal
+            );
+
         }
 
-        envelope.classList.add("open");
+    }
 
-        const instruction =
-            document.querySelector(".letter-instruction");
 
-        if (instruction) {
-            instruction.style.opacity = "0";
-        }
+    /* =================================================
+       ENVELOPE OPENING
+    ================================================= */
 
-        setTimeout(function () {
+    const letterIntro =
+        document.getElementById(
+            "letterIntro"
+        );
 
-            letterIntro.classList.add("hidden");
 
-            document.body.classList.remove("locked");
+    const envelope =
+        document.getElementById(
+            "envelope"
+        );
 
-            window.scrollTo({
-                top: 0,
-                behavior: "instant"
-            });
 
-        }, 1500);
+    const seal =
+        document.getElementById(
+            "seal"
+        );
 
-    });
 
-}
+    document.body.classList.add(
+        "locked"
+    );
+
+
+    if (
+        letterIntro &&
+        envelope &&
+        seal
+    ) {
+
+
+        seal.addEventListener(
+            "click",
+            function (event) {
+
+
+                event.preventDefault();
+
+                event.stopPropagation();
+
+
+                if (
+                    envelope.classList.contains(
+                        "open"
+                    )
+                ) {
+                    return;
+                }
+
+
+                envelope.classList.add(
+                    "open"
+                );
+
+
+                const instruction =
+                    document.querySelector(
+                        ".letter-instruction"
+                    );
+
+
+                if (instruction) {
+
+                    instruction.style.opacity =
+                        "0";
+                }
+
+
+                /*
+                   Give the flap/card animation
+                   enough time to complete
+                */
+
+                setTimeout(
+                    function () {
+
+
+                        letterIntro.classList.add(
+                            "hidden"
+                        );
+
+
+                        document.body.classList.remove(
+                            "locked"
+                        );
+
+
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "instant"
+                        });
+
+
+                    },
+                    1500
+                );
+
+            }
+        );
+
+    }
+
+
     /* =================================================
        MUSIC
     ================================================= */
 
     const musicBtn =
-        document.getElementById("musicBtn");
+        document.getElementById(
+            "musicBtn"
+        );
+
 
     const audio =
-        document.getElementById("weddingAudio");
+        document.getElementById(
+            "weddingAudio"
+        );
 
 
-    if (musicBtn && audio) {
+    if (
+        musicBtn &&
+        audio
+    ) {
 
-        musicBtn.addEventListener("click", async function () {
 
-            if (audio.paused) {
+        musicBtn.addEventListener(
+            "click",
+            async function () {
 
-                try {
 
-                    await audio.play();
+                if (audio.paused) {
 
-                    musicBtn.textContent = "❚❚";
 
-                    musicBtn.classList.add("playing");
+                    try {
+
+
+                        await audio.play();
+
+
+                        musicBtn.textContent =
+                            "❚❚";
+
+
+                        musicBtn.classList.add(
+                            "playing"
+                        );
+
+
+                        musicBtn.setAttribute(
+                            "aria-label",
+                            "Pause music"
+                        );
+
+
+                    }
+
+                    catch (error) {
+
+
+                        alert(
+                            "Music could not be played. Please check that the MP4 audio file is in the same folder as this HTML file."
+                        );
+
+
+                    }
+
+
+                }
+
+                else {
+
+
+                    audio.pause();
+
+
+                    musicBtn.textContent =
+                        "♫";
+
+
+                    musicBtn.classList.remove(
+                        "playing"
+                    );
+
 
                     musicBtn.setAttribute(
                         "aria-label",
-                        "Pause music"
-                    );
-
-                }
-
-                catch (error) {
-
-                    alert(
-                        "Music could not be played. Please check that audio/wedding-music.mp3 exists in your website folder."
+                        "Play music"
                     );
 
                 }
 
             }
+        );
 
-            else {
 
-                audio.pause();
+        audio.addEventListener(
+            "ended",
+            function () {
 
-                musicBtn.textContent = "♫";
 
-                musicBtn.classList.remove("playing");
+                musicBtn.textContent =
+                    "♫";
 
-                musicBtn.setAttribute(
-                    "aria-label",
-                    "Play music"
+
+                musicBtn.classList.remove(
+                    "playing"
                 );
 
+
             }
-
-        });
-
-
-        audio.addEventListener("ended", function () {
-
-            musicBtn.textContent = "♫";
-
-            musicBtn.classList.remove("playing");
-
-        });
+        );
 
     }
 
@@ -3027,57 +4478,91 @@ if (letterIntro && envelope && seal) {
     ================================================= */
 
     const menuToggle =
-        document.getElementById("menuToggle");
+        document.getElementById(
+            "menuToggle"
+        );
+
 
     const navLinks =
-        document.getElementById("navLinks");
+        document.getElementById(
+            "navLinks"
+        );
 
 
-    if (menuToggle && navLinks) {
+    if (
+        menuToggle &&
+        navLinks
+    ) {
 
-        menuToggle.addEventListener("click", function () {
 
-            navLinks.classList.toggle("open");
+        menuToggle.addEventListener(
+            "click",
+            function () {
 
-            const isOpen =
-                navLinks.classList.contains("open");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
+                navLinks.classList.toggle(
+                    "open"
+                );
 
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Close menu"
-                    : "Open menu"
-            );
 
-        });
+                const isOpen =
+                    navLinks.classList.contains(
+                        "open"
+                    );
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                        ? "true"
+                        : "false"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Close menu"
+                        : "Open menu"
+                );
+
+            }
+        );
 
 
         navLinks
             .querySelectorAll("a")
-            .forEach(function (link) {
+            .forEach(
+                function (link) {
 
-                link.addEventListener("click", function () {
 
-                    navLinks.classList.remove("open");
+                    link.addEventListener(
+                        "click",
+                        function () {
 
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
+
+                            navLinks.classList.remove(
+                                "open"
+                            );
+
+
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+
+                            menuToggle.setAttribute(
+                                "aria-label",
+                                "Open menu"
+                            );
+
+
+                        }
                     );
 
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "Open menu"
-                    );
-
-                });
-
-            });
+                }
+            );
 
     }
 
@@ -3093,19 +4578,31 @@ if (letterIntro && envelope && seal) {
 
 
     const heroDays =
-        document.getElementById("heroDays");
+        document.getElementById(
+            "heroDays"
+        );
+
 
     const heroHours =
-        document.getElementById("heroHours");
+        document.getElementById(
+            "heroHours"
+        );
+
 
     const heroMinutes =
-        document.getElementById("heroMinutes");
+        document.getElementById(
+            "heroMinutes"
+        );
+
 
     const heroSeconds =
-        document.getElementById("heroSeconds");
+        document.getElementById(
+            "heroSeconds"
+        );
 
 
     function updateCountdown() {
+
 
         if (
             !heroDays ||
@@ -3122,15 +4619,28 @@ if (letterIntro && envelope && seal) {
 
 
         const distance =
-            weddingDate - now;
+            weddingDate -
+            now;
 
 
         if (distance <= 0) {
 
-            heroDays.textContent = "00";
-            heroHours.textContent = "00";
-            heroMinutes.textContent = "00";
-            heroSeconds.textContent = "00";
+
+            heroDays.textContent =
+                "00";
+
+
+            heroHours.textContent =
+                "00";
+
+
+            heroMinutes.textContent =
+                "00";
+
+
+            heroSeconds.textContent =
+                "00";
+
 
             return;
 
@@ -3140,7 +4650,12 @@ if (letterIntro && envelope && seal) {
         const days =
             Math.floor(
                 distance /
-                (1000 * 60 * 60 * 24)
+                (
+                    1000 *
+                    60 *
+                    60 *
+                    24
+                )
             );
 
 
@@ -3148,9 +4663,18 @@ if (letterIntro && envelope && seal) {
             Math.floor(
                 (
                     distance %
-                    (1000 * 60 * 60 * 24)
+                    (
+                        1000 *
+                        60 *
+                        60 *
+                        24
+                    )
                 ) /
-                (1000 * 60 * 60)
+                (
+                    1000 *
+                    60 *
+                    60
+                )
             );
 
 
@@ -3158,9 +4682,16 @@ if (letterIntro && envelope && seal) {
             Math.floor(
                 (
                     distance %
-                    (1000 * 60 * 60)
+                    (
+                        1000 *
+                        60 *
+                        60
+                    )
                 ) /
-                (1000 * 60)
+                (
+                    1000 *
+                    60
+                )
             );
 
 
@@ -3168,28 +4699,47 @@ if (letterIntro && envelope && seal) {
             Math.floor(
                 (
                     distance %
-                    (1000 * 60)
+                    (
+                        1000 *
+                        60
+                    )
                 ) /
                 1000
             );
 
 
         heroDays.textContent =
-            String(days).padStart(2,"0");
+            String(days).padStart(
+                2,
+                "0"
+            );
+
 
         heroHours.textContent =
-            String(hours).padStart(2,"0");
+            String(hours).padStart(
+                2,
+                "0"
+            );
+
 
         heroMinutes.textContent =
-            String(minutes).padStart(2,"0");
+            String(minutes).padStart(
+                2,
+                "0"
+            );
+
 
         heroSeconds.textContent =
-            String(seconds).padStart(2,"0");
+            String(seconds).padStart(
+                2,
+                "0"
+            );
 
     }
 
 
     updateCountdown();
+
 
     setInterval(
         updateCountdown,
@@ -3202,30 +4752,47 @@ if (letterIntro && envelope && seal) {
     ================================================= */
 
     const revealElements =
-        document.querySelectorAll(".reveal");
+        document.querySelectorAll(
+            ".reveal"
+        );
 
 
-    if ("IntersectionObserver" in window) {
+    if (
+        "IntersectionObserver"
+        in window
+    ) {
+
 
         const revealObserver =
             new IntersectionObserver(
-                function (entries, observer) {
+                function (
+                    entries,
+                    observer
+                ) {
 
-                    entries.forEach(function (entry) {
 
-                        if (entry.isIntersecting) {
+                    entries.forEach(
+                        function (entry) {
 
-                            entry.target.classList.add(
-                                "visible"
-                            );
 
-                            observer.unobserve(
-                                entry.target
-                            );
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
 
                         }
-
-                    });
+                    );
 
                 },
                 {
@@ -3234,21 +4801,30 @@ if (letterIntro && envelope && seal) {
             );
 
 
-        revealElements.forEach(function (element) {
+        revealElements.forEach(
+            function (element) {
 
-            revealObserver.observe(element);
+                revealObserver.observe(
+                    element
+                );
 
-        });
+            }
+        );
 
     }
 
     else {
 
-        revealElements.forEach(function (element) {
 
-            element.classList.add("visible");
+        revealElements.forEach(
+            function (element) {
 
-        });
+                element.classList.add(
+                    "visible"
+                );
+
+            }
+        );
 
     }
 
@@ -3258,22 +4834,39 @@ if (letterIntro && envelope && seal) {
     ================================================= */
 
     const galleryTrack =
-        document.querySelector(".gallery-track");
+        document.querySelector(
+            ".gallery-track"
+        );
+
 
     const gallerySlides =
-        document.querySelectorAll(".gallery-slide");
+        document.querySelectorAll(
+            ".gallery-slide"
+        );
+
 
     const previousButton =
-        document.getElementById("galleryPrev");
+        document.getElementById(
+            "galleryPrev"
+        );
+
 
     const nextButton =
-        document.getElementById("galleryNext");
+        document.getElementById(
+            "galleryNext"
+        );
+
 
     const currentPhoto =
-        document.getElementById("currentPhoto");
+        document.getElementById(
+            "currentPhoto"
+        );
+
 
     const totalPhotos =
-        document.getElementById("totalPhotos");
+        document.getElementById(
+            "totalPhotos"
+        );
 
 
     if (
@@ -3287,28 +4880,40 @@ if (letterIntro && envelope && seal) {
         totalPhotos.textContent =
             String(
                 gallerySlides.length
-            ).padStart(2,"0");
+            ).padStart(
+                2,
+                "0"
+            );
 
 
         function updateGalleryCounter() {
 
+
             const trackCenter =
                 galleryTrack.scrollLeft +
-                galleryTrack.clientWidth / 2;
+                galleryTrack.clientWidth /
+                2;
 
 
-            let closestIndex = 0;
+            let closestIndex =
+                0;
+
 
             let closestDistance =
                 Infinity;
 
 
             gallerySlides.forEach(
-                function (slide,index) {
+                function (
+                    slide,
+                    index
+                ) {
+
 
                     const slideCenter =
                         slide.offsetLeft +
-                        slide.offsetWidth / 2;
+                        slide.offsetWidth /
+                        2;
 
 
                     const distance =
@@ -3323,8 +4928,10 @@ if (letterIntro && envelope && seal) {
                         closestDistance
                     ) {
 
+
                         closestDistance =
                             distance;
+
 
                         closestIndex =
                             index;
@@ -3338,12 +4945,16 @@ if (letterIntro && envelope && seal) {
             currentPhoto.textContent =
                 String(
                     closestIndex + 1
-                ).padStart(2,"0");
+                ).padStart(
+                    2,
+                    "0"
+                );
 
         }
 
 
         function goToSlide(index) {
+
 
             index =
                 Math.max(
@@ -3369,14 +4980,20 @@ if (letterIntro && envelope && seal) {
                 (
                     galleryTrack.clientWidth -
                     slide.offsetWidth
-                ) / 2;
+                ) /
+                2;
 
 
             galleryTrack.scrollTo({
 
-                left: Math.max(0,left),
+                left:
+                    Math.max(
+                        0,
+                        left
+                    ),
 
-                behavior: "smooth"
+                behavior:
+                    "smooth"
 
             });
 
@@ -3385,9 +5002,11 @@ if (letterIntro && envelope && seal) {
 
         if (nextButton) {
 
+
             nextButton.addEventListener(
                 "click",
                 function () {
+
 
                     const current =
                         Number(
@@ -3395,7 +5014,9 @@ if (letterIntro && envelope && seal) {
                         ) - 1;
 
 
-                    goToSlide(current + 1);
+                    goToSlide(
+                        current + 1
+                    );
 
                 }
             );
@@ -3405,9 +5026,11 @@ if (letterIntro && envelope && seal) {
 
         if (previousButton) {
 
+
             previousButton.addEventListener(
                 "click",
                 function () {
+
 
                     const current =
                         Number(
@@ -3415,7 +5038,9 @@ if (letterIntro && envelope && seal) {
                         ) - 1;
 
 
-                    goToSlide(current - 1);
+                    goToSlide(
+                        current - 1
+                    );
 
                 }
             );
@@ -3426,6 +5051,7 @@ if (letterIntro && envelope && seal) {
         galleryTrack.addEventListener(
             "scroll",
             function () {
+
 
                 window.requestAnimationFrame(
                     updateGalleryCounter
@@ -3445,13 +5071,21 @@ if (letterIntro && envelope && seal) {
     ================================================= */
 
     const lightbox =
-        document.getElementById("lightbox");
+        document.getElementById(
+            "lightbox"
+        );
+
 
     const lightboxImage =
-        document.getElementById("lightboxImage");
+        document.getElementById(
+            "lightboxImage"
+        );
+
 
     const lightboxClose =
-        document.getElementById("lightboxClose");
+        document.getElementById(
+            "lightboxClose"
+        );
 
 
     if (
@@ -3462,42 +5096,50 @@ if (letterIntro && envelope && seal) {
 
 
         document
-            .querySelectorAll(".gallery-slide img")
-            .forEach(function (image) {
-
-                image.addEventListener(
-                    "click",
-                    function () {
-
-                        lightboxImage.src =
-                            image.src;
-
-                        lightboxImage.alt =
-                            image.alt;
+            .querySelectorAll(
+                ".gallery-slide img"
+            )
+            .forEach(
+                function (image) {
 
 
-                        lightbox.classList.add(
-                            "open"
-                        );
+                    image.addEventListener(
+                        "click",
+                        function () {
 
 
-                        lightbox.setAttribute(
-                            "aria-hidden",
-                            "false"
-                        );
+                            lightboxImage.src =
+                                image.src;
 
 
-                        document.body.classList.add(
-                            "locked"
-                        );
+                            lightboxImage.alt =
+                                image.alt;
 
-                    }
-                );
 
-            });
+                            lightbox.classList.add(
+                                "open"
+                            );
+
+
+                            lightbox.setAttribute(
+                                "aria-hidden",
+                                "false"
+                            );
+
+
+                            document.body.classList.add(
+                                "locked"
+                            );
+
+                        }
+                    );
+
+                }
+            );
 
 
         function closeLightbox() {
+
 
             lightbox.classList.remove(
                 "open"
@@ -3518,13 +5160,16 @@ if (letterIntro && envelope && seal) {
             setTimeout(
                 function () {
 
+
                     if (
                         !lightbox.classList.contains(
                             "open"
                         )
                     ) {
 
-                        lightboxImage.src = "";
+
+                        lightboxImage.src =
+                            "";
 
                     }
 
@@ -3545,9 +5190,12 @@ if (letterIntro && envelope && seal) {
             "click",
             function (event) {
 
+
                 if (
-                    event.target === lightbox
+                    event.target ===
+                    lightbox
                 ) {
+
 
                     closeLightbox();
 
@@ -3561,10 +5209,14 @@ if (letterIntro && envelope && seal) {
             "keydown",
             function (event) {
 
+
                 if (
                     event.key === "Escape" &&
-                    lightbox.classList.contains("open")
+                    lightbox.classList.contains(
+                        "open"
+                    )
                 ) {
+
 
                     closeLightbox();
 
@@ -3581,10 +5233,13 @@ if (letterIntro && envelope && seal) {
     ================================================= */
 
     const calendarBtn =
-        document.getElementById("calendarBtn");
+        document.getElementById(
+            "calendarBtn"
+        );
 
 
     if (calendarBtn) {
+
 
         calendarBtn.addEventListener(
             "click",
@@ -3592,6 +5247,7 @@ if (letterIntro && envelope && seal) {
 
 
                 const ics = [
+
 
                     "BEGIN:VCALENDAR",
 
@@ -3613,7 +5269,7 @@ if (letterIntro && envelope && seal) {
 
                     "SUMMARY:Shaheen & Darwesh Wedding",
 
-                    "LOCATION:Birdline Junction Pvt.",
+                    "LOCATION:Tushnabad Ground",
 
                     "DESCRIPTION:Nikah & Walima of Dr. Shaheen Salamat and Darwesh Tasleem.",
 
@@ -3621,7 +5277,10 @@ if (letterIntro && envelope && seal) {
 
                     "END:VCALENDAR"
 
-                ].join("\r\n");
+
+                ].join(
+                    "\r\n"
+                );
 
 
                 const blob =
@@ -3635,22 +5294,32 @@ if (letterIntro && envelope && seal) {
 
 
                 const url =
-                    URL.createObjectURL(blob);
+                    URL.createObjectURL(
+                        blob
+                    );
 
 
                 const link =
-                    document.createElement("a");
+                    document.createElement(
+                        "a"
+                    );
 
 
-                link.href = url;
+                link.href =
+                    url;
+
 
                 link.download =
                     "Shaheen-Darwesh-Wedding.ics";
 
 
-                document.body.appendChild(link);
+                document.body.appendChild(
+                    link
+                );
+
 
                 link.click();
+
 
                 link.remove();
 
@@ -3658,7 +5327,11 @@ if (letterIntro && envelope && seal) {
                 setTimeout(
                     function () {
 
-                        URL.revokeObjectURL(url);
+
+                        URL.revokeObjectURL(
+                            url
+                        );
+
 
                     },
                     1000
