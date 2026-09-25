@@ -80,13 +80,9 @@ html {
 
 body {
     margin: 0;
-
     background: var(--cream);
-
     color: var(--ink);
-
     font-family: var(--sans);
-
     line-height: 1.7;
 }
 
@@ -121,36 +117,27 @@ img {
 
 .container {
     width: min(1120px, calc(100% - 40px));
-
     margin: auto;
 }
 
 .narrow {
     width: min(760px, calc(100% - 40px));
-
     margin-left: auto;
     margin-right: auto;
-
     text-align: center;
 }
 
 .section {
     padding: 100px 0;
-
     position: relative;
 }
 
 .eyebrow {
     margin: 0 0 10px;
-
     color: var(--gold-dark);
-
     letter-spacing: .22em;
-
     font-size: .72rem;
-
     font-weight: 600;
-
     text-transform: uppercase;
 }
 
@@ -158,16 +145,12 @@ h1,
 h2,
 h3 {
     font-family: var(--serif);
-
     font-weight: 500;
-
     line-height: 1.05;
 }
 
 h2 {
-    font-size:
-        clamp(2.5rem,5vw,4.5rem);
-
+    font-size: clamp(2.5rem,5vw,4.5rem);
     margin: 0 0 18px;
 }
 
@@ -185,6 +168,7 @@ p {
 ===================================================== */
 
 #petalContainer {
+
     position: fixed;
 
     inset: 0;
@@ -196,15 +180,12 @@ p {
 
     pointer-events: none;
 
-    /*
-       Below envelope intro,
-       above normal website
-    */
     z-index: 9990;
 }
 
 
 .rose-petal {
+
     position: absolute;
 
     top: -60px;
@@ -216,6 +197,7 @@ p {
         85% 15% 75% 25%;
 
     background:
+
         radial-gradient(
             ellipse at 28% 22%,
             rgba(255,255,255,.42),
@@ -231,6 +213,7 @@ p {
         );
 
     box-shadow:
+
         0 3px 7px rgba(0,0,0,.2),
 
         inset -2px -3px 5px
@@ -248,9 +231,8 @@ p {
 }
 
 
-/* Petal highlight */
-
 .rose-petal::after {
+
     content: "";
 
     position: absolute;
@@ -281,11 +263,7 @@ p {
     0% {
 
         transform:
-            translate3d(
-                0,
-                -70px,
-                0
-            )
+            translate3d(0,-70px,0)
             rotate(0deg)
             rotateX(0deg)
             rotateY(0deg);
@@ -294,11 +272,7 @@ p {
     20% {
 
         transform:
-            translate3d(
-                45px,
-                20vh,
-                0
-            )
+            translate3d(45px,20vh,0)
             rotate(95deg)
             rotateX(25deg)
             rotateY(20deg);
@@ -307,11 +281,7 @@ p {
     40% {
 
         transform:
-            translate3d(
-                -35px,
-                42vh,
-                0
-            )
+            translate3d(-35px,42vh,0)
             rotate(190deg)
             rotateX(60deg)
             rotateY(45deg);
@@ -320,11 +290,7 @@ p {
     60% {
 
         transform:
-            translate3d(
-                50px,
-                64vh,
-                0
-            )
+            translate3d(50px,64vh,0)
             rotate(275deg)
             rotateX(35deg)
             rotateY(70deg);
@@ -333,11 +299,7 @@ p {
     80% {
 
         transform:
-            translate3d(
-                -25px,
-                84vh,
-                0
-            )
+            translate3d(-25px,84vh,0)
             rotate(365deg)
             rotateX(65deg)
             rotateY(35deg);
@@ -346,11 +308,7 @@ p {
     100% {
 
         transform:
-            translate3d(
-                30px,
-                115vh,
-                0
-            )
+            translate3d(30px,115vh,0)
             rotate(480deg)
             rotateX(10deg)
             rotateY(80deg);
@@ -359,7 +317,7 @@ p {
 
 
 /* =====================================================
-   LUXURY DESIGNER ENVELOPE
+   LUXURY DESIGNER ENVELOPE INTRO
 ===================================================== */
 
 #letterIntro {
@@ -378,9 +336,16 @@ p {
 
     overflow: hidden;
 
-   background:
-        linear-gradient(rgba(7,25,18,.35), rgba(7,25,18,.55)),
-        url("envelope-bg.jpg") center center / cover no-repeat;
+    background:
+
+        linear-gradient(
+            rgba(7,25,18,.35),
+            rgba(7,25,18,.55)
+        ),
+
+        url("envelope-bg.jpg")
+        center center / cover no-repeat;
+
     opacity: 1;
 
     visibility: visible;
@@ -390,8 +355,6 @@ p {
         visibility 1s ease;
 }
 
-
-/* Fade intro away */
 
 #letterIntro.hidden {
 
@@ -431,9 +394,9 @@ p {
 }
 
 
-/* Top decoration */
-
 #letterIntro::after {
+
+    content: "S & D";
 
     position: absolute;
 
@@ -476,7 +439,7 @@ p {
     position: relative;
 
     width:
-        min(88vw, 720px);
+        min(88vw,720px);
 
     aspect-ratio:
         1.55 / 1;
@@ -524,17 +487,17 @@ p {
 }
 
 
-/* Gentle floating */
-
 @keyframes envelopeFloat {
 
     0%,
     100% {
+
         transform:
             translateY(0);
     }
 
     50% {
+
         transform:
             translateY(-6px);
     }
@@ -745,7 +708,19 @@ p {
 }
 
 
-/* Card inner frame */
+.envelope.open .envelope-letter {
+
+    transform:
+        translateY(-48%);
+
+    z-index:
+        6;
+}
+
+
+/* =====================================================
+   CARD INNER FRAME
+===================================================== */
 
 .envelope-letter::before {
 
@@ -766,9 +741,14 @@ p {
 }
 
 
-/* Card top ornament */
+/* =====================================================
+   CARD TOP ORNAMENT
+===================================================== */
 
 .envelope-letter::after {
+
+    content:
+        "✦";
 
     position:
         absolute;
@@ -915,8 +895,6 @@ p {
 }
 
 
-/* Gold fold details */
-
 .envelope-bottom::before {
 
     content:
@@ -1017,10 +995,15 @@ p {
 }
 
 
+.envelope.open .envelope-flap {
+
+    transform:
+        rotateX(-180deg);
+}
 
 
 /* =====================================================
-   GOLD SEAL
+   3D WAX SEAL
 ===================================================== */
 
 .seal {
@@ -1035,36 +1018,26 @@ p {
         55%;
 
     transform:
-        translate(-50%, -50%);
+        translate(-50%,-50%)
+        rotate(-3deg);
 
     width:
-        96px;
+        104px;
 
     height:
-        96px;
+        104px;
 
     z-index:
         20;
 
+    border:
+        none;
+
+    padding:
+        0;
+
     border-radius:
         50%;
-
-    border:
-        3px solid
-        #e5c47d;
-
-    background:
-
-        radial-gradient(
-            circle at 30% 25%,
-            #f0d58e 0%,
-            #d0a957 28%,
-            #aa7e35 62%,
-            #725323 100%
-        );
-
-    color:
-        #fffaf0;
 
     display:
         flex;
@@ -1074,15 +1047,6 @@ p {
 
     justify-content:
         center;
-
-    font-family:
-        var(--serif);
-
-    font-size:
-        1rem;
-
-    font-weight:
-        600;
 
     cursor:
         pointer;
@@ -1099,32 +1063,65 @@ p {
     -webkit-user-select:
         none;
 
+    font-family:
+        var(--serif);
+
+    background:
+
+        radial-gradient(
+            circle at 32% 25%,
+            rgba(255,255,255,.30) 0%,
+            rgba(255,255,255,.10) 10%,
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 62% 70%,
+            rgba(55,0,8,.32) 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 48% 45%,
+            #b83c4d 0%,
+            #9c293b 38%,
+            #7b1c2d 68%,
+            #57101d 100%
+        );
+
     box-shadow:
 
-        0 10px 25px
-        rgba(0,0,0,.42),
+        0 7px 0 #4b0d18,
+
+        0 10px 16px
+        rgba(0,0,0,.35),
 
         0 0 0 4px
-        rgba(224,190,112,.13),
+        rgba(105,18,32,.35),
 
-        inset 0 0 0 3px
-        rgba(255,255,255,.22);
+        inset 4px 5px 7px
+        rgba(255,255,255,.18),
+
+        inset -6px -8px 10px
+        rgba(48,0,8,.42),
+
+        inset 0 0 0 2px
+        rgba(255,210,210,.12);
 
     transition:
-
         transform .3s ease,
-
         box-shadow .3s ease,
-
         opacity .4s ease;
 
     animation:
-        luxurySealGlow
-        2.8s ease-in-out infinite;
+        waxSealFloat
+        3s ease-in-out infinite;
 }
 
 
-/* Inner seal ring */
+/* =====================================================
+   IRREGULAR MELTED WAX EDGE
+===================================================== */
 
 .seal::before {
 
@@ -1135,46 +1132,78 @@ p {
         absolute;
 
     inset:
-        8px;
+        -5px;
 
-    border:
-        1px solid
-        rgba(255,246,215,.85);
+    z-index:
+        -1;
 
     border-radius:
-        50%;
+        47% 53% 49% 51% /
+        53% 46% 54% 47%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #a83243,
+            #7b1b2b 70%,
+            #54101b 100%
+        );
 
     box-shadow:
-        inset 0 0 0 1px
-        rgba(255,255,255,.12);
+
+        0 5px 8px
+        rgba(0,0,0,.30),
+
+        inset 2px 2px 4px
+        rgba(255,255,255,.12),
+
+        inset -3px -4px 5px
+        rgba(35,0,5,.30);
+
+    pointer-events:
+        none;
 }
 
 
-/* Seal star */
+/* =====================================================
+   RAISED INNER WAX RIM
+===================================================== */
 
 .seal::after {
 
     content:
-        "✦";
+        "";
 
     position:
         absolute;
 
-    top:
-        8px;
+    inset:
+        9px;
 
-    right:
-        17px;
+    border-radius:
+        50%;
 
-    font-size:
-        10px;
+    border:
+        2px solid
+        rgba(255,190,195,.22);
 
-    color:
-        rgba(255,248,220,.95);
+    box-shadow:
+
+        inset 2px 2px 4px
+        rgba(255,255,255,.12),
+
+        inset -3px -4px 5px
+        rgba(45,0,8,.35);
+
+    pointer-events:
+        none;
 }
 
 
-/* Seal text */
+/* =====================================================
+   3D WAX INITIALS
+===================================================== */
 
 .seal span {
 
@@ -1182,105 +1211,211 @@ p {
         relative;
 
     z-index:
-        2;
+        3;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        66px;
+
+    height:
+        66px;
+
+    border-radius:
+        50%;
 
     color:
-        #fffaf2;
+        #651321;
 
     font-family:
         var(--serif);
 
     font-size:
-        1rem;
+        1.15rem;
+
+    font-weight:
+        700;
 
     letter-spacing:
-        .05em;
+        .04em;
 
     transform:
-        rotate(-7deg);
+        rotate(-4deg);
+
+    text-shadow:
+
+        -1px -1px 1px
+        rgba(255,190,195,.32),
+
+        2px 2px 3px
+        rgba(48,0,8,.55);
+
+    box-shadow:
+
+        inset 2px 2px 3px
+        rgba(55,0,8,.22);
 }
 
 
 /* =====================================================
-   SEAL GLOW
+   SMALL HEART
 ===================================================== */
 
-@keyframes luxurySealGlow {
+.seal span::after {
+
+    content:
+        "♥";
+
+    position:
+        absolute;
+
+    bottom:
+        4px;
+
+    right:
+        8px;
+
+    font-size:
+        9px;
+
+    color:
+        rgba(255,215,215,.30);
+
+    text-shadow:
+        1px 1px 2px
+        rgba(50,0,5,.5);
+}
+
+
+/* =====================================================
+   NATURAL WAX HIGHLIGHT
+===================================================== */
+
+.seal span::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        7px;
+
+    left:
+        10px;
+
+    width:
+        22px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.12);
+
+    filter:
+        blur(2px);
+
+    transform:
+        rotate(-25deg);
+}
+
+
+/* =====================================================
+   SUBTLE MOVEMENT
+===================================================== */
+
+@keyframes waxSealFloat {
 
     0%,
     100% {
 
-        box-shadow:
-
-            0 10px 25px
-            rgba(0,0,0,.42),
-
-            0 0 0 4px
-            rgba(224,190,112,.13),
-
-            inset 0 0 0 3px
-            rgba(255,255,255,.22);
+        transform:
+            translate(-50%,-50%)
+            rotate(-3deg);
     }
 
     50% {
 
-        box-shadow:
-
-            0 12px 30px
-            rgba(0,0,0,.46),
-
-            0 0 0 8px
-            rgba(224,190,112,.12),
-
-            0 0 25px
-            rgba(224,190,112,.22),
-
-            inset 0 0 0 3px
-            rgba(255,255,255,.25);
+        transform:
+            translate(-50%,-53%)
+            rotate(-1deg);
     }
 }
 
 
 /* =====================================================
-   SEAL HOVER
+   HOVER
 ===================================================== */
 
 .seal:hover {
 
     transform:
-        translate(-50%, -50%)
-        scale(1.08);
-}
+        translate(-50%,-50%)
+        rotate(0deg)
+        scale(1.07);
 
+    box-shadow:
 
-.seal:active {
+        0 8px 0 #4b0d18,
 
-    transform:
-        translate(-50%, -50%)
-        scale(.94);
+        0 15px 25px
+        rgba(0,0,0,.40),
+
+        0 0 0 6px
+        rgba(105,18,32,.28),
+
+        0 0 25px
+        rgba(180,55,75,.25),
+
+        inset 4px 5px 7px
+        rgba(255,255,255,.20),
+
+        inset -6px -8px 10px
+        rgba(48,0,8,.42);
 }
 
 
 /* =====================================================
-   OPENING ANIMATION
+   PRESS EFFECT
 ===================================================== */
 
-.envelope.open .envelope-flap {
+.seal:active {
 
     transform:
-        rotateX(-180deg);
+        translate(-50%,-48%)
+        rotate(-1deg)
+        scale(.94);
+
+    box-shadow:
+
+        0 3px 0 #4b0d18,
+
+        0 6px 10px
+        rgba(0,0,0,.30),
+
+        inset 4px 5px 8px
+        rgba(255,255,255,.10),
+
+        inset -5px -7px 9px
+        rgba(40,0,5,.45);
 }
 
 
-.envelope.open .envelope-letter {
-
-    transform:
-        translateY(-48%);
-
-    z-index:
-        6;
-}
-
+/* =====================================================
+   WHEN ENVELOPE OPENS
+===================================================== */
 
 .envelope.open .seal {
 
@@ -1292,16 +1427,76 @@ p {
 
     animation:
         none;
+
+    transform:
+        translate(-50%,-50%)
+        scale(1.25);
 }
 
 
-.envelope.open {
+/* =====================================================
+   WAX SEAL MOBILE
+===================================================== */
 
-    filter:
-        drop-shadow(
-            0 40px 55px
-            rgba(0,0,0,.5)
-        );
+@media (max-width:800px) {
+
+    .seal {
+
+        width:
+            82px;
+
+        height:
+            82px;
+    }
+
+    .seal span {
+
+        width:
+            54px;
+
+        height:
+            54px;
+
+        font-size:
+            .92rem;
+    }
+
+    .seal span::after {
+
+        font-size:
+            7px;
+
+        bottom:
+            2px;
+
+        right:
+            6px;
+    }
+}
+
+
+@media (max-width:520px) {
+
+    .seal {
+
+        width:
+            74px;
+
+        height:
+            74px;
+    }
+
+    .seal span {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            .82rem;
+    }
 }
 
 
@@ -1354,7 +1549,7 @@ p {
    MOBILE ENVELOPE
 ===================================================== */
 
-@media (max-width: 800px) {
+@media (max-width:800px) {
 
     #letterIntro::before {
         inset:
@@ -1379,24 +1574,8 @@ p {
             90vw;
     }
 
-    .seal {
-
-        width:
-            78px;
-
-        height:
-            78px;
-
-        font-size:
-            .82rem;
-    }
-
-    .seal span {
-        font-size:
-            .85rem;
-    }
-
     .letter-content {
+
         padding:
             18px;
     }
@@ -1412,20 +1591,23 @@ p {
     }
 
     .letter-content .small {
+
         font-size:
             .52rem;
     }
 
     .letter-content p {
+
         font-size:
             .78rem;
     }
 }
 
 
-@media (max-width: 520px) {
+@media (max-width:520px) {
 
     #letterIntro::before {
+
         inset:
             10px;
     }
@@ -1464,21 +1646,6 @@ p {
 
         inset:
             8px;
-    }
-
-    .seal {
-
-        width:
-            70px;
-
-        height:
-            70px;
-    }
-
-    .seal span {
-
-        font-size:
-            .78rem;
     }
 
     .envelope-flap::before {
@@ -1664,11 +1831,13 @@ p {
 
     0%,
     100% {
+
         transform:
             scale(1);
     }
 
     50% {
+
         transform:
             scale(1.08);
     }
@@ -2660,11 +2829,13 @@ p {
 
     0%,
     100% {
+
         opacity:
             .45;
     }
 
     50% {
+
         opacity:
             1;
     }
@@ -3184,7 +3355,10 @@ footer p {
 
     <div class="envelope-container">
 
-        <div class="envelope" id="envelope">
+        <div
+            class="envelope"
+            id="envelope"
+        >
 
 
             <!-- INVITATION CARD -->
@@ -3225,7 +3399,7 @@ footer p {
             <div class="envelope-flap"></div>
 
 
-            <!-- GOLD SEAL -->
+            <!-- 3D WAX SEAL -->
 
             <button
                 class="seal"
@@ -3235,7 +3409,7 @@ footer p {
             >
 
                 <span>
-                    S ♥ D
+                    S &amp; D
                 </span>
 
             </button>
@@ -4033,7 +4207,6 @@ document.addEventListener(
         const isMobile =
             window.innerWidth <= 600;
 
-
         const petalCount =
             isMobile ? 18 : 30;
 
@@ -4044,28 +4217,22 @@ document.addEventListener(
             i++
         ) {
 
-
             const petal =
                 document.createElement(
                     "span"
                 );
 
-
             petal.className =
                 "rose-petal";
 
 
-            /* Random horizontal position */
-
-            petal.style.left =
-                Math.random() * 100 + "%";
-
-
-            /* Random size */
-
             const scale =
                 0.65 +
                 Math.random() * 0.75;
+
+
+            petal.style.left =
+                Math.random() * 100 + "%";
 
 
             petal.style.transform =
@@ -4074,8 +4241,6 @@ document.addEventListener(
                 ")";
 
 
-            /* Different falling speeds */
-
             petal.style.animationDuration =
                 (
                     7 +
@@ -4083,15 +4248,11 @@ document.addEventListener(
                 ) + "s";
 
 
-            /* Different starting points */
-
             petal.style.animationDelay =
                 (
                     -Math.random() * 14
                 ) + "s";
 
-
-            /* Natural opacity */
 
             petal.style.opacity =
                 0.45 +
@@ -4140,11 +4301,9 @@ document.addEventListener(
         seal
     ) {
 
-
         seal.addEventListener(
             "click",
             function (event) {
-
 
                 event.preventDefault();
 
@@ -4178,14 +4337,8 @@ document.addEventListener(
                 }
 
 
-                /*
-                   Give the flap/card animation
-                   enough time to complete
-                */
-
                 setTimeout(
                     function () {
-
 
                         letterIntro.classList.add(
                             "hidden"
@@ -4201,7 +4354,6 @@ document.addEventListener(
                             top: 0,
                             behavior: "instant"
                         });
-
 
                     },
                     1500
@@ -4234,17 +4386,13 @@ document.addEventListener(
         audio
     ) {
 
-
         musicBtn.addEventListener(
             "click",
             async function () {
 
-
                 if (audio.paused) {
 
-
                     try {
-
 
                         await audio.play();
 
@@ -4263,24 +4411,19 @@ document.addEventListener(
                             "Pause music"
                         );
 
-
                     }
 
                     catch (error) {
-
 
                         alert(
                             "Music could not be played. Please check that the MP4 audio file is in the same folder as this HTML file."
                         );
 
-
                     }
-
 
                 }
 
                 else {
-
 
                     audio.pause();
 
@@ -4309,7 +4452,6 @@ document.addEventListener(
             "ended",
             function () {
 
-
                 musicBtn.textContent =
                     "♫";
 
@@ -4317,7 +4459,6 @@ document.addEventListener(
                 musicBtn.classList.remove(
                     "playing"
                 );
-
 
             }
         );
@@ -4346,11 +4487,9 @@ document.addEventListener(
         navLinks
     ) {
 
-
         menuToggle.addEventListener(
             "click",
             function () {
-
 
                 navLinks.classList.toggle(
                     "open"
@@ -4387,11 +4526,9 @@ document.addEventListener(
             .forEach(
                 function (link) {
 
-
                     link.addEventListener(
                         "click",
                         function () {
-
 
                             navLinks.classList.remove(
                                 "open"
@@ -4408,7 +4545,6 @@ document.addEventListener(
                                 "aria-label",
                                 "Open menu"
                             );
-
 
                         }
                     );
@@ -4455,7 +4591,6 @@ document.addEventListener(
 
     function updateCountdown() {
 
-
         if (
             !heroDays ||
             !heroHours ||
@@ -4477,25 +4612,19 @@ document.addEventListener(
 
         if (distance <= 0) {
 
-
             heroDays.textContent =
                 "00";
-
 
             heroHours.textContent =
                 "00";
 
-
             heroMinutes.textContent =
                 "00";
-
 
             heroSeconds.textContent =
                 "00";
 
-
             return;
-
         }
 
 
@@ -4614,7 +4743,6 @@ document.addEventListener(
         in window
     ) {
 
-
         const revealObserver =
             new IntersectionObserver(
                 function (
@@ -4622,15 +4750,12 @@ document.addEventListener(
                     observer
                 ) {
 
-
                     entries.forEach(
                         function (entry) {
-
 
                             if (
                                 entry.isIntersecting
                             ) {
-
 
                                 entry.target.classList.add(
                                     "visible"
@@ -4666,7 +4791,6 @@ document.addEventListener(
     }
 
     else {
-
 
         revealElements.forEach(
             function (element) {
@@ -4728,7 +4852,6 @@ document.addEventListener(
         totalPhotos
     ) {
 
-
         totalPhotos.textContent =
             String(
                 gallerySlides.length
@@ -4739,7 +4862,6 @@ document.addEventListener(
 
 
         function updateGalleryCounter() {
-
 
             const trackCenter =
                 galleryTrack.scrollLeft +
@@ -4761,7 +4883,6 @@ document.addEventListener(
                     index
                 ) {
 
-
                     const slideCenter =
                         slide.offsetLeft +
                         slide.offsetWidth /
@@ -4780,10 +4901,8 @@ document.addEventListener(
                         closestDistance
                     ) {
 
-
                         closestDistance =
                             distance;
-
 
                         closestIndex =
                             index;
@@ -4806,7 +4925,6 @@ document.addEventListener(
 
 
         function goToSlide(index) {
-
 
             index =
                 Math.max(
@@ -4854,11 +4972,9 @@ document.addEventListener(
 
         if (nextButton) {
 
-
             nextButton.addEventListener(
                 "click",
                 function () {
-
 
                     const current =
                         Number(
@@ -4878,11 +4994,9 @@ document.addEventListener(
 
         if (previousButton) {
 
-
             previousButton.addEventListener(
                 "click",
                 function () {
-
 
                     const current =
                         Number(
@@ -4903,7 +5017,6 @@ document.addEventListener(
         galleryTrack.addEventListener(
             "scroll",
             function () {
-
 
                 window.requestAnimationFrame(
                     updateGalleryCounter
@@ -4946,7 +5059,6 @@ document.addEventListener(
         lightboxClose
     ) {
 
-
         document
             .querySelectorAll(
                 ".gallery-slide img"
@@ -4954,11 +5066,9 @@ document.addEventListener(
             .forEach(
                 function (image) {
 
-
                     image.addEventListener(
                         "click",
                         function () {
-
 
                             lightboxImage.src =
                                 image.src;
@@ -4992,7 +5102,6 @@ document.addEventListener(
 
         function closeLightbox() {
 
-
             lightbox.classList.remove(
                 "open"
             );
@@ -5012,13 +5121,11 @@ document.addEventListener(
             setTimeout(
                 function () {
 
-
                     if (
                         !lightbox.classList.contains(
                             "open"
                         )
                     ) {
-
 
                         lightboxImage.src =
                             "";
@@ -5042,12 +5149,10 @@ document.addEventListener(
             "click",
             function (event) {
 
-
                 if (
                     event.target ===
                     lightbox
                 ) {
-
 
                     closeLightbox();
 
@@ -5061,14 +5166,12 @@ document.addEventListener(
             "keydown",
             function (event) {
 
-
                 if (
                     event.key === "Escape" &&
                     lightbox.classList.contains(
                         "open"
                     )
                 ) {
-
 
                     closeLightbox();
 
@@ -5092,14 +5195,11 @@ document.addEventListener(
 
     if (calendarBtn) {
 
-
         calendarBtn.addEventListener(
             "click",
             function () {
 
-
                 const ics = [
-
 
                     "BEGIN:VCALENDAR",
 
@@ -5128,7 +5228,6 @@ document.addEventListener(
                     "END:VEVENT",
 
                     "END:VCALENDAR"
-
 
                 ].join(
                     "\r\n"
@@ -5179,11 +5278,9 @@ document.addEventListener(
                 setTimeout(
                     function () {
 
-
                         URL.revokeObjectURL(
                             url
                         );
-
 
                     },
                     1000
