@@ -391,10 +391,77 @@ p {
 }
 
 .seal {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+
+    transform: translate(-50%, -50%);
+
+    width: 82px;
+    height: 82px;
+
+    border-radius: 50%;
+
+    border: 3px solid #b28a45;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #d8b878,
+            #b28a45 55%,
+            #87682f 100%
+        );
+
+    color: #fffaf2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.25),
+        inset 0 0 0 3px rgba(255,255,255,.2);
+
+    z-index: 20;
+
+    cursor: pointer;
+
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+
     user-select: none;
     -webkit-user-select: none;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        opacity .4s ease;
+}
+
+.seal:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.30),
+        inset 0 0 0 3px rgba(255,255,255,.25);
+}
+
+.seal:active {
+    transform:
+        translate(-50%, -50%)
+        scale(.96);
+}
+
+.seal span {
+    display: block;
+    transform: rotate(-8deg);
+    color: #fffaf2;
 }
 
 .seal:hover {
@@ -1431,6 +1498,12 @@ footer p {
         padding: 75px 0;
     }
 
+   .seal {
+    width: 68px;
+    height: 68px;
+    font-size: .85rem;
+}
+
     .hero h3 {
         font-size: clamp(2.5rem,12vw,4rem);
     }
@@ -2223,24 +2296,7 @@ preload="none"
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    /* =================================================
-       ENVELOPE OPENING
-    ================================================= */
-
-    const letterIntro =
-        document.getElementById("letterIntro");
-
-    const envelope =
-        document.getElementById("envelope");
-
-    const seal =
-        document.getElementById("seal");
-
-
-    document.body.classList.add("locked");
-
-
-/* =================================================
+   /* =================================================
    ENVELOPE OPENING
 ================================================= */
 
@@ -2248,24 +2304,21 @@ const letterIntro = document.getElementById("letterIntro");
 const envelope = document.getElementById("envelope");
 const seal = document.getElementById("seal");
 
+document.body.classList.add("locked");
+
 if (letterIntro && envelope && seal) {
 
-    function openEnvelope(event) {
+    seal.addEventListener("click", function (event) {
 
-        if (event) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
+        event.preventDefault();
+        event.stopPropagation();
 
-        /* Prevent double clicking */
         if (envelope.classList.contains("open")) {
             return;
         }
 
-        /* Open envelope */
         envelope.classList.add("open");
 
-        /* Hide instruction immediately */
         const instruction =
             document.querySelector(".letter-instruction");
 
@@ -2273,36 +2326,22 @@ if (letterIntro && envelope && seal) {
             instruction.style.opacity = "0";
         }
 
-        /* Remove intro after animation */
         setTimeout(function () {
 
             letterIntro.classList.add("hidden");
 
             document.body.classList.remove("locked");
 
-            window.scrollTo(0, 0);
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
 
-        }, 1400);
-    }
+        }, 1500);
 
-
-    /* Desktop mouse */
-    seal.addEventListener(
-        "click",
-        openEnvelope
-    );
-
-
-    /* Mobile touch */
-    seal.addEventListener(
-        "touchend",
-        openEnvelope,
-        { passive: false }
-    );
+    });
 
 }
-
-
     /* =================================================
        MUSIC
     ================================================= */
